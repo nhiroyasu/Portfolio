@@ -138,7 +138,9 @@
       </div>
     </div>
     <div class="main-view">
-
+      <div class="portfolio-tiles">
+        <tile v-for="(index, value) in portfolio_list" :key="index" class="tile" />
+      </div>
     </div>
     <div class="menu">
       <b>MENU</b>
@@ -146,15 +148,12 @@
   </div>
 </template>
 
-<script>
-import Logo from "~/components/Logo.vue";
-
-export default {
-  components: {}
-};
-</script>
-
 <style>
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .container {
   position: relative;
   min-width: 100vw;
@@ -169,7 +168,7 @@ export default {
     stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
     stroke-width: 15; /*線の太さを指定する*/
     stroke-linecap: round;
-    animation: stroke-ani 3s ease-in-out 2s normal forwards;
+    animation: stroke-ani 3s ease-in-out 2.0s normal forwards;
   }
   @keyframes stroke-ani {
     0% {
@@ -210,12 +209,9 @@ export default {
     text-align: center;
     font-size: 1rem;
     overflow: hidden;
-    /* background: -moz-linear-gradient(45deg, #b2bec3, #dfe6e9);
-    background: -webkit-linear-gradient(45deg, #b2bec3, #dfe6e9);
-    background: linear-gradient(45deg, #b2bec3, #dfe6e9); */
     background-color: #2d3436;
     background-size: 600% 600%;
-    animation: sign-tile-ani 2s ease-in-out 0s normal forwards;
+    animation: sign-tile-ani 2.0s cubic-bezier(0.86, 0, 0.07, 1) 0s normal forwards;
   }
   @keyframes sign-tile-ani {
     0% {
@@ -237,11 +233,45 @@ export default {
     width: 100%;
     height: 100%;
   }
+
   .main-view {
     position: relative;
+    padding: 5vh 10vw;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .portfolio-tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+  .portfolio-tiles .tile {
+    margin: 0px 10px;
+    max-width: 20vw;
   }
 }
 
 @media screen and (orientation: portrait) {
 }
 </style>
+
+
+<script>
+import Logo from "~/components/Logo.vue";
+import Tile from '~/components/portfolio_tile.vue';
+
+export default {
+  components: {
+    Tile,
+  },
+  data: function() {
+    return {
+      portfolio_list: ["1","2","3","4"],
+    }
+  }
+};
+</script>
