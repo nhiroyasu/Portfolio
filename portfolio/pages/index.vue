@@ -139,11 +139,28 @@
     </div>
     <div class="main-view">
       <div class="portfolio-tiles">
-        <tile v-for="(index, value) in portfolio_list" :key="index" class="tile" />
+        <tile v-for="(index, value) in portfolio_list" :key="index" />
       </div>
     </div>
-    <div class="menu">
+    <div class="menu-block" v-on:click="menu_clicked" v-bind:class="{ 'menu-clicked' : menu_disp }">
       <b>MENU</b>
+    </div>
+    <div class="menu-list-block" v-show="false">
+      <div class="menu-child">
+        <p>HOME</p>
+      </div>
+      <div class="menu-child">
+        <p>PORTFOLIO</p>
+      </div>
+      <div class="menu-child">
+        <p>BLOG</p>
+      </div>
+      <div class="menu-child">
+        <p>ABOUT</p>
+      </div>
+      <div class="menu-child">
+        <p>CONTACT</p>
+      </div>
     </div>
   </div>
 </template>
@@ -168,13 +185,14 @@
     stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
     stroke-width: 15; /*線の太さを指定する*/
     stroke-linecap: round;
-    animation: stroke-ani 3s ease-in-out 2.0s normal forwards;
+    animation: stroke-ani 3s cubic-bezier(0.645, 0.045, 0.355, 1) 2s normal
+      forwards;
   }
   @keyframes stroke-ani {
     0% {
       stroke-dashoffset: 3000;
       fill: transparent;
-      stroke: transparent; /*線の色を指定する*/
+      stroke: transparent;
     }
     100% {
       stroke-dashoffset: 0;
@@ -183,24 +201,6 @@
     }
   }
 
-  .menu {
-    position: absolute;
-    bottom: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 70px;
-    min-height: 70px;
-    width: 5vh;
-    height: 5vh;
-    background-color: #0abde3;
-    box-shadow: #718093 0px 5px 5px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 70px;
-    font-size: 1.2em;
-    color: #2d3436;
-    cursor: pointer;
-  }
   .sign-tile {
     position: relative;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -211,7 +211,8 @@
     overflow: hidden;
     background-color: #2d3436;
     background-size: 600% 600%;
-    animation: sign-tile-ani 2.0s cubic-bezier(0.86, 0, 0.07, 1) 0s normal forwards;
+    animation: sign-tile-ani 2s cubic-bezier(0.86, 0, 0.07, 1) 0s normal
+      forwards;
   }
   @keyframes sign-tile-ani {
     0% {
@@ -250,8 +251,49 @@
     align-content: stretch;
   }
   .portfolio-tiles .tile {
-    margin: 0px 10px;
+    margin: 0px 2.5vh;
     max-width: 20vw;
+    box-shadow: #2f3542 10px 7px 15px;
+    opacity: 0;
+    animation: tile-ani 2s cubic-bezier(0.165, 0.84, 0.44, 1) 5s normal forwards;
+  }
+  @keyframes tile-ani {
+    0% {
+      opacity: 0;
+      transform: translate(100%, 0%) rotate(60deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  .menu-block {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 70px;
+    min-height: 70px;
+    width: 5vh;
+    height: 5vh;
+    /* background: linear-gradient(-45deg, #24afff, #51dcff); */
+    background-color: #2f3542;
+    box-shadow: #718093 0px 5px 5px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.2em;
+    color: #dfe4ea;
+    cursor: pointer;
+  }
+
+  .menu-clicked {
+    animation: menu-clicked-ani 1.0s ease-in-out 0s normal forwards;
+  }
+  @keyframes menu-clicked-ani {
+    0% {transform: translateX(-50%);}
+    100% {transform: translateX(400%);}
   }
 }
 
@@ -262,16 +304,27 @@
 
 <script>
 import Logo from "~/components/Logo.vue";
-import Tile from '~/components/portfolio_tile.vue';
+import Tile from "~/components/portfolio_tile.vue";
+
+import anime from 'animejs';
 
 export default {
   components: {
-    Tile,
+    Tile
   },
   data: function() {
     return {
-      portfolio_list: ["1","2","3","4"],
-    }
+      portfolio_list: ["1", "2", "3", "4"],
+      menu_disp: false,
+    };
+  },
+  created: function() {
+
+  },
+  methods: {
+    menu_clicked: function() {
+      this.menu_disp = !this.menu_disp;
+    },
   }
 };
 </script>
