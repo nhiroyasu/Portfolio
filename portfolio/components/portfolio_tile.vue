@@ -18,6 +18,18 @@
   </div>
 </template>
 
+<script>
+import google_icon from "~/static/tmp2.png";
+export default {
+  data: function() {
+    return {
+      tmp_img: google_icon
+    };
+  }
+};
+</script>
+
+
 <style scoped>
 * {
   margin: 0px;
@@ -27,7 +39,7 @@
 .tile {
   width: 100%;
   height: 100%;
-  
+
   border-radius: 2rem 2rem;
   overflow: hidden;
 }
@@ -38,7 +50,7 @@
   width: 100%;
   height: auto;
   text-align: center;
-  background: linear-gradient(45deg, #243aff, #51ffa8)
+  background: #0abde3;
 }
 .title p {
   font-size: 1.5rem;
@@ -70,13 +82,3 @@
 }
 </style>
 
-<script>
-import google_icon from "~/static/tmp2.png";
-export default {
-  data: function() {
-    return {
-      tmp_img: google_icon
-    };
-  }
-};
-</script>
