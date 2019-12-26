@@ -1,8 +1,11 @@
 <template>
-  <div class="container">
-    <navigationbar />
-    <div class="sign-tile">
-      <div class="main-space">
+  <div class="box">
+    <div class="fixed-top">
+      <navigationbar />
+    </div>
+    <!-- "Cyan" Sign -->
+    <div class="container sign-tile my-3">
+      <div class="sign-space p-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="6.4in"
@@ -138,9 +141,19 @@
         </svg>
       </div>
     </div>
-    <div class="main-view">
-      <div class="portfolio-tiles">
-        <tile v-for="(index, value) in portfolio_list" :key="index" />
+    <!-- Context View -->
+    <div class="container main-view mb-5">
+      <div id="portfolio-place">
+        <h1 style="text-indent: 2rem">Portfolio</h1>
+        <hr>
+        <div class="row portfolio-tiles">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4" v-for="(index, value) in portfolio_list" :key="index">
+            <tile />
+          </div>
+          <div class="col-12 text-right">
+            <a href="#" class="lead">Show more...</a>
+          </div>
+        </div>
       </div>
     </div>
     <menu-field />
@@ -163,7 +176,7 @@ export default {
   },
   data: function() {
     return {
-      portfolio_list: ["1", "2", "3", "4"],
+      portfolio_list: ["1", "2", "3"],
     };
   },
   created: function() {
@@ -179,102 +192,51 @@ export default {
 
 
 <style>
-* {
-  margin: 0px;
-  padding: 0px;
-}
 
-.container {
+.box {
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: #ecf0f1;
+  background-color: rgb(255, 255, 255);
 }
 
-@media screen and (orientation: landscape) {
-  #cyan-path {
-    stroke: transparent; /*線の色を指定する*/
-    stroke-dasharray: 3000; /*線の間隔を指定する*/
-    stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
-    stroke-width: 15; /*線の太さを指定する*/
-    stroke-linecap: round;
-    fill: #00000000;
-    stroke: cyan;
-    /* animation: stroke-ani 3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s normal forwards; */
-  }
-  /* @keyframes stroke-ani {
-    0% {
-      stroke-dashoffset: 3000;
-      fill: transparent;
-      stroke: transparent;
-    }
-    100% {
-      stroke-dashoffset: 0;
-      fill: #00000000;
-      stroke: cyan;
-    }
-  } */
+#cyan-path {
+  stroke: transparent; /*線の色を指定する*/
+  stroke-dasharray: 3000; /*線の間隔を指定する*/
+  stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
+  stroke-width: 15; /*線の太さを指定する*/
+  stroke-linecap: round;
+  fill: #0fbcf9;
+  stroke: #0fbcf9;
+}
 
-  .sign-tile {
-    position: relative;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    width: 100vw;
-    height: 30vh;
-    padding: 0;
-    text-align: center;
-    font-size: 1rem;
-    overflow: hidden;
-    background: linear-gradient(45deg, #dddddd, #9ea7a8);
-    z-index: 1;
-  }
+.sign-tile {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100vw;
+  height: 30vh;
+  padding: 0;
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
 
-  .main-space {
-    position: relative;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    color: cyan;
-  }
-  .main-space svg {
-    width: 100%;
-    height: 100%;
-  }
+  z-index: 1;
+}
 
-  .main-view {
-    position: relative;
-    padding: 5vh 10vw;
-    width: 100%;
-    height: 60vh;
-  }
+.sign-space {
+  position: relative;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  color: cyan;
+}
+.sign-space svg {
+  width: 100%;
+  height: 100%;
+}
 
-  .portfolio-tiles {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: stretch;
-  }
-  .portfolio-tiles .tile {
-    margin: 0px 2.5vh;
-    max-width: 20vw;
-    min-width: 13rem;
-    box-shadow: #2f3542 10px 7px 15px;
-    opacity: 1;
-    /* animation: tile-ani 2s cubic-bezier(0.165, 0.84, 0.44, 1) 5s normal forwards; */
-  }
-  /* @keyframes tile-ani {
-    0% {
-      opacity: 0;
-      transform: translate(100%, 0%) rotate(60deg);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0, 0) rotate(0deg);
-    }
-  } */
-
-
+.main-view {
+  position: relative;
 }
 
 @media screen and (orientation: portrait) {
