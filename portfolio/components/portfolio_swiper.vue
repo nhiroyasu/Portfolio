@@ -58,7 +58,7 @@ export default {
 .portfoio-box {
   background: linear-gradient(135deg, rgb(52, 165, 231), rgb(2, 227, 214));
   border-radius: 30px;
-  padding: 5px;
+  padding: 2px;
 }
 
 .portfolio-component {
@@ -66,7 +66,7 @@ export default {
   &__swiper {
     background: #fff;
     box-shadow: 0px 14px 80px rgba(34, 46, 58, 0.2);
-    border-radius: 25px;
+    border-radius: 28px;
   }
 
   &__pagination {

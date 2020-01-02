@@ -21,7 +21,9 @@ export default {
       { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' }
     ],
     bodyAttrs: {
-      class: 'body-class'
+      class: 'body-class',
+      'data-spy': 'scroll',
+      'data-target': '#Navbar'
     }
   },
   /*

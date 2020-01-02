@@ -222,6 +222,7 @@ export default {
   --my-active-color: #0fbcf9;
   --my-active2-color: #0da8e0;
   --my-black: #1e272e;
+  --my-gray: #636e72;
   --my-white: #ecf0f1;
   --my-barkblue: #15293d;
 }
@@ -248,8 +249,7 @@ export default {
   height: 50vh;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(62, 126, 216, 0.8), rgba(2, 227, 214,0.8)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9);
-  background-size: cover;
+  background: linear-gradient(90deg, rgba(62, 126, 216, 0.8), rgba(2, 227, 214,0.8)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
 }
 
 .sign-space {

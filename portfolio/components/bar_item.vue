@@ -1,6 +1,6 @@
 <template>
   <div class="nav-item">
-    <a class="nav-link cus-nav-link p-3" v-bind:href="link">{{value}}</a>
+    <nuxt-link class="nav-link cus-nav-link p-2 p-md-3" v-bind:to="link">{{value}}</nuxt-link>
   </div>
 </template>
 
