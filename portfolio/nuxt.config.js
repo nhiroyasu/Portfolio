@@ -1,6 +1,6 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -19,7 +19,10 @@ export default {
     script: [
       { src: 'https://code.jquery.com/jquery-1.12.4.js' },
       { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' }
-    ]
+    ],
+    bodyAttrs: {
+      class: 'body-class'
+    }
   },
   /*
   ** Customize the progress-bar color
@@ -29,11 +32,14 @@ export default {
   ** Global CSS
   */
   css: [
+    'swiper/dist/css/swiper.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    "~/plugins/fb_init.js",
+    { src: '~plugins/vue-awesome-swiper', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,6 +59,9 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    vendor: [
+      'vue-awesome-swiper'
+    ]
   }
 }

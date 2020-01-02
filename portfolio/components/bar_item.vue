@@ -1,6 +1,6 @@
 <template>
   <div class="nav-item">
-    <a class="nav-link" v-bind:href="link">{{value}}</a>
+    <a class="nav-link cus-nav-link p-3" v-bind:href="link">{{value}}</a>
   </div>
 </template>
 
@@ -13,23 +13,20 @@ export default {
 }
 </script>
 
-<style scoped>
-* {
-  /* margin: 0; */
-  /* padding: 0; */
-  /* font-size: 1.2rem; */
-  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+<style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+.nav-item {
+  height: auto;
+
+  .cus-nav-link {
+    font-family: 'Baloo Bhai', cursive;
+    font-weight: 500;
+    color: #fff;
+
+    &:hover {
+      color: var(--my-active-color);
+    }
+  }
 }
-/*
-.bar-item {
-  padding: 0.1rem;
-  margin: 0.1rem 0.5rem;
-  position: relative;
-  cursor: pointer;
-}
-.bar-item a{
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  color: #dfe6e9;
-} */
 </style>

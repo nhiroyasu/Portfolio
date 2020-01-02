@@ -1,46 +1,44 @@
 <template>
-  <div class="card tile my-3">
-    <div class="title p-2">
-      <p class="p-0 m-0">Title</p>
-    </div>
-    <div class="content">
-      <img class="card-img" v-bind:src="tmp_img" alt="#" />
-      <div class="card-body explanation">
-        <p class="card-text lead">
-          ここに説明分が入ります!!!
-          <br />Hoge Piyo Fuga
-        </p>
-        <a href="#" class="detail-btn btn btn-primary">Detail</a>
+  <div class="card tile my-3 shadow">
+    <img class="card-img-top px-3 pt-3 cus-card-img" v-bind:src="tile_info.img_link" alt="#" />
+    <div class="card-body explanation">
+      <div class="card-title title text-truncate">
+        <h4 class="p-0 m-0">{{tile_info.title}}</h4>
       </div>
+      <p class="card-text tile-detail">{{tile_info.detail}}</p>
+      <a href="#" class="detail-btn btn btn-primary stretched-link">Detail</a>
     </div>
   </div>
 </template>
 
 <script>
-import google_icon from "~/static/tmp2.png";
 export default {
   data: function() {
     return {
-      tmp_img: google_icon
     };
-  }
+  },
+  props: {
+    tile_info: {
+      title: String,
+      detail: String,
+      img_link: String,
+    },
+  },
 };
 </script>
 
 
 <style scoped>
 
+.cus-card-img {
+}
+
 .tile {
+  position: relative;
   width: 100%;
   height: auto;
-  border-radius: 10px;
   overflow: hidden;
-  /* border-top: solid 3px #34e7e4; */
-  /* border-right: solid 2px #00d8d6;
-  border-bottom: solid 2px #0be881;
-  border-left: solid 2px #0fbcf9; */
-  border: solid 1px #485460;
-  /* box-shadow: 2px 5px 10px #39474d; */
+  background: white;
 }
 
 .title {
@@ -48,11 +46,7 @@ export default {
   width: 100%;
   height: auto;
   text-align: center;
-  background: #0fbcf9;
-}
-.title p {
-  font-size: 1.8rem;
-  color: #ffffff;
+  color: var(--my-active-color);
   font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
     "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
     "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -77,11 +71,16 @@ export default {
 
 .explanation {
   position: relative;
+  color: var(--my-black);
+}
+
+.tile-detail {
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 .detail-btn {
-  background: #0da1d6;
-  border: solid 1px #0da1d6;
+  background: var(--my-active2-color);
+  border: solid 1px var(--my-active2-color);
 }
 </style>
 

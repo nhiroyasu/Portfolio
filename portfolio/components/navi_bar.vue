@@ -1,10 +1,9 @@
 <template>
-  <div class="navbar navbar-expand-lg navbar-custom">
+  <div class="navbar navbar-expand-lg navbar-custom p-0">
     <bar-item  value="HOME" link="#" />
     <bar-item value="PORTFOLIO" link="#" />
-    <bar-item value="REPORT" link="#" />
-    <bar-item value="CONECT" link="#" />
     <bar-item value="ABOUT" link="#" />
+    <bar-item value="CONTACT" link="#" />
   </div>
 </template>
 
@@ -20,10 +19,11 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 
 .navbar-custom {
-  background-color: #1e272e;
-  box-shadow: 0px 10px 15px #808e9b;
+  /* background-color: #1e272e; */
+  background-color: var(--my-black);
+  box-shadow: 0px 5px 10px #CBEEFB;
 }
 </style>
