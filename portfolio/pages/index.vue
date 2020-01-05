@@ -1,330 +1,169 @@
 <template>
-  <div class="container">
-    <div class="sign-tile">
-      <div class="main-space">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="6.4in"
-          height="3.6in"
-          viewBox="0 0 1920 1080"
-        >
-          <path
-            id="パス"
-            fill="none"
-            stroke="black"
-            stroke-width="1"
-            d="M 429.39,677.00
-           C 438.91,677.00 443.67,682.85 443.67,694.55
-             443.67,706.73 430.12,724.15 403.02,746.81
-             375.92,769.47 344.61,787.50 309.09,800.89
-             273.57,814.30 241.04,821.00 211.50,821.00
-             168.28,821.00 128.91,806.72 93.39,778.17
-             57.87,749.61 40.11,708.24 40.11,654.06
-             40.11,555.22 82.65,459.00 167.73,365.41
-             252.82,271.80 334.79,225.00 413.66,225.00
-             443.20,225.00 466.82,234.09 484.52,252.28
-             502.21,270.46 511.06,291.63 511.06,315.80
-             511.06,338.25 509.78,355.94 507.22,368.88
-             504.66,381.81 496.90,392.73 483.95,401.64
-             471.02,410.55 460.64,415.00 452.83,415.00
-             447.21,415.00 442.33,412.56 438.17,407.67
-             434.02,402.78 431.95,396.17 431.95,387.86
-             431.95,382.23 434.03,370.50 438.19,352.66
-             442.33,335.05 444.41,321.97 444.41,313.41
-             444.41,288.47 433.54,276.00 411.81,276.00
-             378.12,276.00 336.44,295.35 286.75,334.05
-             237.07,372.75 194.90,421.82 160.23,481.28
-             125.57,540.73 108.23,595.48 108.23,645.53
-             108.23,678.98 118.18,706.76 138.08,728.86
-             157.97,750.95 186.35,762.00 223.22,762.00
-             244.46,762.00 270.27,756.71 300.67,746.14
-             331.07,735.56 358.96,721.39 384.34,703.62
-             409.74,685.88 424.75,677.00 429.39,677.00 Z
-           M 841.34,658.59
-           C 796.41,697.55 756.92,725.86 722.86,743.52
-             688.80,761.17 662.74,770.00 644.67,770.00
-             620.50,770.00 602.01,759.93 589.19,739.80
-             576.38,719.66 569.97,696.17 569.97,669.33
-             569.97,631.75 577.60,585.31 592.86,530.03
-             608.12,474.75 619.47,441.93 626.92,431.56
-             634.37,421.19 646.27,416.00 662.62,416.00
-             669.46,416.00 675.07,420.03 679.47,428.09
-             683.86,436.16 686.06,445.32 686.06,455.59
-             686.06,461.70 683.25,469.64 677.64,479.41
-             664.45,502.38 657.55,515.09 656.94,517.53
-             656.33,519.98 651.63,534.70 642.84,561.70
-             634.06,588.70 629.67,614.05 629.67,637.75
-             629.67,646.06 631.68,659.02 635.70,676.61
-             639.73,694.20 648.10,703.00 660.80,703.00
-             674.22,703.00 690.77,698.91 710.42,690.73
-             730.08,682.56 752.23,669.20 776.89,650.64
-             801.55,632.09 818.14,617.08 826.69,605.61
-             835.24,594.13 841.28,581.07 844.81,566.42
-             848.35,551.78 850.86,520.05 852.33,471.23
-             853.80,422.41 865.63,398.00 887.84,398.00
-             901.03,398.00 909.58,401.48 913.48,408.44
-             917.39,415.39 919.34,428.62 919.34,448.14
-             919.34,464.25 918.24,484.38 916.05,508.53
-             913.36,539.03 911.65,560.75 910.92,573.69
-             907.50,640.79 898.77,708.20 884.73,775.92
-             870.69,843.63 850.24,900.23 823.39,945.73
-             796.54,991.24 759.55,1014.00 712.44,1014.00
-             664.58,1014.00 622.04,1001.45 584.80,976.34
-             547.57,951.25 528.95,930.01 528.95,912.62
-             528.95,904.54 530.84,896.58 534.62,888.75
-             538.41,880.91 543.24,877.00 549.09,877.00
-             552.03,877.00 555.21,879.33 558.62,884.00
-             590.60,933.33 640.89,958.00 709.50,958.00
-             744.91,958.00 774.63,926.95 798.67,864.84
-             822.72,802.74 835.97,744.48 838.41,690.08
-             838.89,679.58 839.88,669.09 841.34,658.59 Z
-           M 1260.53,656.14
-           C 1226.35,702.10 1192.54,736.57 1159.09,759.55
-             1125.64,782.52 1095.00,794.00 1067.17,794.00
-             1048.37,794.00 1032.13,786.04 1018.45,770.11
-             1004.79,754.18 997.95,733.73 997.95,708.73
-             997.95,644.30 1026.64,574.90 1084.02,500.55
-             1141.39,426.18 1198.39,389.00 1255.03,389.00
-             1275.54,389.00 1290.80,400.75 1300.81,424.25
-             1303.99,432.09 1308.99,436.00 1315.83,436.00
-             1335.36,436.00 1345.12,443.61 1345.12,458.83
-             1345.12,466.43 1343.91,476.86 1341.47,490.11
-             1328.28,562.50 1321.69,613.54 1321.69,643.23
-             1321.69,702.61 1332.92,738.19 1355.39,749.97
-             1366.13,755.84 1371.50,763.04 1371.50,771.58
-             1371.50,779.14 1366.25,786.77 1355.75,794.45
-             1345.25,802.15 1335.12,806.00 1325.36,806.00
-             1306.55,806.00 1291.05,793.02 1278.84,767.06
-             1266.63,741.11 1260.53,704.13 1260.53,656.14 Z
-           M 1238.20,449.00
-           C 1205.97,449.00 1168.49,479.20 1125.77,539.61
-             1083.05,600.02 1061.69,650.11 1061.69,689.89
-             1061.69,717.96 1070.96,732.00 1089.52,732.00
-             1116.37,732.00 1153.60,704.91 1201.20,650.73
-             1248.82,596.55 1272.62,546.76 1272.62,501.36
-             1272.62,466.45 1261.15,449.00 1238.20,449.00 Z
-           M 1703.09,507.00
-           C 1690.39,507.00 1676.54,515.30 1661.52,531.91
-             1646.50,548.50 1623.62,585.73 1592.86,643.59
-             1552.34,721.23 1526.16,765.42 1514.31,776.16
-             1502.47,786.90 1492.64,792.27 1484.83,792.27
-             1456.02,792.27 1441.62,778.35 1441.62,750.52
-             1441.62,738.80 1443.58,722.20 1447.48,700.72
-             1460.91,626.99 1467.62,549.16 1467.62,467.23
-             1467.62,457.91 1471.59,447.54 1479.52,436.12
-             1487.45,424.71 1494.96,419.00 1502.05,419.00
-             1514.74,419.00 1523.77,423.00 1529.14,430.98
-             1534.52,438.96 1537.20,454.79 1537.20,478.47
-             1537.20,503.14 1529.88,553.92 1515.23,630.81
-             1510.35,656.21 1507.91,672.32 1507.91,679.16
-             1507.91,683.06 1508.88,685.02 1510.83,685.02
-             1514.49,685.02 1531.46,655.84 1561.73,597.50
-             1592.25,538.17 1618.99,496.42 1641.94,472.25
-             1664.88,448.09 1690.15,436.00 1717.73,436.00
-             1739.71,436.00 1757.60,446.00 1771.39,466.00
-             1785.18,486.00 1795.25,522.46 1801.59,575.38
-             1808.44,635.62 1814.60,673.12 1820.09,687.88
-             1825.58,702.62 1834.31,710.00 1846.28,710.00
-             1853.84,710.00 1863.36,707.32 1874.84,701.95
-             1876.79,700.65 1878.25,700.00 1879.23,700.00
-             1889.73,700.00 1894.98,706.22 1894.98,718.66
-             1894.98,729.59 1887.78,741.22 1873.38,753.53
-             1858.97,765.84 1841.63,772.00 1821.38,772.00
-             1800.62,772.00 1784.57,763.75 1773.22,747.23
-             1761.86,730.71 1752.89,686.61 1746.30,614.91
-             1739.46,542.97 1725.06,507.00 1703.09,507.00 Z"
-          />
-        </svg>
+  <div class="box">
+    <!-- "Cyan" Sign -->
+    <div class="sign-tile my-5 pt-5 pb-4">
+      <div class="sign-space px-5">
+        <span class="sign-forward">CYA</span><span class="sign-back">N</span>
       </div>
     </div>
-    <div class="main-view">
-      <div class="portfolio-tiles">
-        <tile v-for="(index, value) in portfolio_list" :key="index" />
+
+    <!-- Context View -->
+    <div class="container main-view py-3 px-md-5 px-3">
+      <!-- Portfolio Space -->
+      <div id="portfolio-place" class="plate mb-3 mb-md-5">
+        <h1 class="plate__title">PORTFOLIO</h1>
+        <hr class="plate__bar" />
+        <portfolio-swiper />
       </div>
+
+      <!-- About Space -->
+      <div id="about-place" class="plate mb-3 mb-md-5">
+        <h1 class="plate__title">ABOUT</h1>
+        <hr class="plate__bar">
+        <about-content />
+      </div>
+
+      <!-- Contact Space -->
+      <div id="contact-place" class="plate mb-3 mb-md-5">
+        <h1 class="plate__title">CONTACT</h1>
+        <hr class="plate__bar">
+        <contact-content />
+      </div>
+
     </div>
-    <div class="menu-block" v-on:click="menu_clicked" v-bind:class="{ 'menu-clicked' : menu_disp }">
-      <b>MENU</b>
-    </div>
-    <div class="menu-list-block" v-show="false">
-      <div class="menu-child">
-        <p>HOME</p>
-      </div>
-      <div class="menu-child">
-        <p>PORTFOLIO</p>
-      </div>
-      <div class="menu-child">
-        <p>BLOG</p>
-      </div>
-      <div class="menu-child">
-        <p>ABOUT</p>
-      </div>
-      <div class="menu-child">
-        <p>CONTACT</p>
-      </div>
-    </div>
+    <menu-field />
   </div>
 </template>
 
-<style>
-* {
-  margin: 0px;
-  padding: 0px;
+<script>
+import Logo from "~/components/Logo.vue";
+import Tile from "~/components/portfolio_tile.vue";
+import MenuField from "~/components/menu_field.vue";
+import Navigationbar from "~/components/navi_bar.vue";
+import SwiperSample from "~/components/swiper_sample.vue";
+import PortfolioSwiper from "~/components/portfolio_swiper.vue";
+import AboutContent from "~/components/cyan_about.vue";
+import ContactContent from "~/components/cyan_contact.vue";
+
+import firestore from "~/plugins/fb_firestore.js";
+
+export default {
+  components: {
+    Tile,
+    MenuField,
+    Navigationbar,
+    SwiperSample,
+    PortfolioSwiper,
+    AboutContent,
+    ContactContent
+  },
+  data: function() {
+    return {
+      // portfolio_list:
+    };
+  },
+  computed: {
+    portfolio_list(event) {
+      return this.$store.state.portfolio.portfolios_data.slice(0, 3);
+    }
+  },
+  created: function() {
+    firestore.load_ptf_datas(this.$store);
+  },
+  mounted() {
+  },
+  methods: {
+    menu_clicked: function() {}
+  },
+  asyncData({ params }) {
+    return {};
+  }
+};
+</script>
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');   // font-family: 'Muli', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Bitter&display=swap"); // font-family: "Bitter", serif;
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+:root {
+  --my-active-color: #0fbcf9;
+  --my-active2-color: #0da8e0;
+  --my-sub-color: #03fdb7;
+  --my-black: #1e272e;
+  --my-gray: #636e72;
+  --my-white: #ecf0f1;
+  --my-barkblue: #15293d;
 }
 
-.container {
+.box {
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: #ecf0f1;
 }
 
-@media screen and (orientation: landscape) {
-  path {
-    stroke: transparent; /*線の色を指定する*/
-    stroke-dasharray: 3000; /*線の間隔を指定する*/
-    stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
-    stroke-width: 15; /*線の太さを指定する*/
-    stroke-linecap: round;
-    animation: stroke-ani 3s cubic-bezier(0.645, 0.045, 0.355, 1) 2s normal
-      forwards;
-  }
-  @keyframes stroke-ani {
-    0% {
-      stroke-dashoffset: 3000;
-      fill: transparent;
-      stroke: transparent;
-    }
-    100% {
-      stroke-dashoffset: 0;
-      fill: #636e72;
-      stroke: cyan;
-    }
+// #cyan-path {
+//   stroke: transparent; /*線の色を指定する*/
+//   stroke-dasharray: 3000; /*線の間隔を指定する*/
+//   stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
+//   stroke-width: 15; /*線の太さを指定する*/
+//   stroke-linecap: round;
+//   fill: var(--my-active-color);
+//   stroke: var(--my-white);
+// }
+
+.sign-tile {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  line-height: 50vh;
+  font-size: 15rem;
+  font-family: 'Baloo Bhai', cursive;
+  letter-spacing: 0.1em;
+  user-select: none;
+
+  background: linear-gradient(90deg, rgba(62, 126, 216, 0.3), rgba(2, 227, 214,0.3)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
+  // background:url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
+
+  .sign-forward {
+    color: var(--my-active-color);
+
   }
 
-  .sign-tile {
-    position: relative;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    width: 100vw;
-    height: 40vh;
-    text-align: center;
-    font-size: 1rem;
-    overflow: hidden;
-    background-color: #2d3436;
-    background-size: 600% 600%;
-    animation: sign-tile-ani 2s cubic-bezier(0.86, 0, 0.07, 1) 0s normal
-      forwards;
+  .sign-back {
+    color: var(--my-sub-color);
   }
-  @keyframes sign-tile-ani {
-    0% {
-      top: -40vh;
+}
+
+.sign-space {
+  position: relative;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  color: cyan;
+}
+.sign-space svg {
+  width: 100%;
+  height: 100%;
+}
+
+.main-view {
+  position: relative;
+  font-family: 'Muli', sans-serif;
+
+  .plate {
+    &__title {
+      text-align: center;
     }
-    100% {
-      top: 0vh;
+    &__bar {
+      background-color: var(--my-black);
     }
-  }
-
-  .main-space {
-    position: relative;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    color: cyan;
-  }
-  .main-space svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .main-view {
-    position: relative;
-    padding: 5vh 10vw;
-    width: 100%;
-    height: 60vh;
-  }
-
-  .portfolio-tiles {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: stretch;
-  }
-  .portfolio-tiles .tile {
-    margin: 0px 2.5vh;
-    max-width: 20vw;
-    box-shadow: #2f3542 10px 7px 15px;
-    opacity: 0;
-    animation: tile-ani 2s cubic-bezier(0.165, 0.84, 0.44, 1) 5s normal forwards;
-  }
-  @keyframes tile-ani {
-    0% {
-      opacity: 0;
-      transform: translate(100%, 0%) rotate(60deg);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(0, 0) rotate(0deg);
-    }
-  }
-
-  .menu-block {
-    position: absolute;
-    bottom: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 70px;
-    min-height: 70px;
-    width: 5vh;
-    height: 5vh;
-    /* background: linear-gradient(-45deg, #24afff, #51dcff); */
-    background-color: #2f3542;
-    box-shadow: #718093 0px 5px 5px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 70px;
-    font-size: 1.2em;
-    color: #dfe4ea;
-    cursor: pointer;
-  }
-
-  .menu-clicked {
-    animation: menu-clicked-ani 1.0s ease-in-out 0s normal forwards;
-  }
-  @keyframes menu-clicked-ani {
-    0% {transform: translateX(-50%);}
-    100% {transform: translateX(400%);}
   }
 }
 
 @media screen and (orientation: portrait) {
 }
 </style>
-
-
-<script>
-import Logo from "~/components/Logo.vue";
-import Tile from "~/components/portfolio_tile.vue";
-
-import anime from 'animejs';
-
-export default {
-  components: {
-    Tile
-  },
-  data: function() {
-    return {
-      portfolio_list: ["1", "2", "3", "4"],
-      menu_disp: false,
-    };
-  },
-  created: function() {
-
-  },
-  methods: {
-    menu_clicked: function() {
-      this.menu_disp = !this.menu_disp;
-    },
-  }
-};
-</script>
