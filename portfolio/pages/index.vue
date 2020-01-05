@@ -203,7 +203,6 @@ export default {
     firestore.load_ptf_datas(this.$store);
   },
   mounted() {
-    console.log("ptf lists", this.portfolio_list);
   },
   methods: {
     menu_clicked: function() {}
