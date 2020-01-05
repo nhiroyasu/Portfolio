@@ -1,7 +1,7 @@
 <template>
   <swiper-slide class="swiper-slide container mt-3 mb-4">
     <div class="slider-item row px-lg-5 justify-content-center align-items-center">
-      <div class="slider-item__img col-md-5 col-12">
+      <div class="slider-item__img col-md-5 col-10">
         <div
           class="img-cover"
           :style="{ backgroundImage: 'url(' + slider_info.img_link + ')' }"
@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-      <div class="slider-item__body my-lg-3 mt-3 mx-lg-3 mx-2 col-md-6 col-12">
+      <div class="slider-item__body my-lg-3 mt-3 mx-lg-3 mx-2 col-md-6 col-10">
         <div class="date px-4 px-lg-2">9 November 12</div>
         <div class="title px-4 px-lg-2 mb-2">{{ slider_info.title }}</div>
         <!-- <div class="detail px-1">{{ slider_info.detail }}</div> -->
@@ -29,8 +29,8 @@
             <div class="meta__data meta__lang"><span class="px-1" v-for="(value, index) in slider_info.platform" :key="index">{{value}}</span></div>
           </div>
         </div>
-        <div class="slider-item__button my-3">
-          <a class="py-3 px-4 rounded-pill" href="#">READ MORE</a>
+        <div class="slider-item__button text-center my-3" v-if="read_more_link">
+          <a class="py-3 px-4 rounded-pill" target="_blank" :href="read_more_link">READ MORE</a>
         </div>
       </div>
     </div>
@@ -51,7 +51,17 @@ export default {
       platform: Array
     }
   },
-  computed: {}
+  computed: {
+    read_more_link() {
+      if ("github" in this.slider_info) {
+        return this.slider_info.github;
+      } else if ("event_link" in this.slider_info) {
+        return this.slider_info.event_link;
+      } else {
+        return null;
+      }
+    }
+  }
 };
 </script>
 
@@ -77,7 +87,7 @@ export default {
     }
 
     .img-cover {
-      width: 100%;
+      width: auto;
       background-size: cover;
       display: block;
       border-radius: 20px;
