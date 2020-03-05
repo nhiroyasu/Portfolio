@@ -8,10 +8,7 @@
           :key="index"
           :slider_info="value"
         />
-        <div
-          class="swiper-pagination portfolio-component__pagination m-1"
-          slot="pagination"
-        ></div>
+        <div class="swiper-pagination portfolio-component__pagination m-1" slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -32,6 +29,17 @@ export default {
         pagination: {
           el: ".swiper-pagination",
           clickable: true
+        },
+        navigation: { // 付けないとLoopしない？
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        loop: true,
+        freeMode: true, // 付けないとLoopしない？
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: true
         }
       }
     };
@@ -62,7 +70,6 @@ export default {
 }
 
 .portfolio-component {
-
   &__swiper {
     background: #fff;
     box-shadow: 0px 14px 80px rgba(34, 46, 58, 0.2);

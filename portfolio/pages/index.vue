@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <!-- "Cyan" Sign -->
-    <div class="sign-tile my-5 pt-5 pb-4">
+    <div class="sign-tile mb-md-5 mb-3">
       <div class="sign-space px-5">
         <span class="sign-forward">CYA</span><span class="sign-back">N</span>
       </div>
@@ -55,12 +55,15 @@ export default {
     SwiperSample,
     PortfolioSwiper,
     AboutContent,
-    ContactContent
+    ContactContent,
   },
   data: function() {
     return {
-      // portfolio_list:
     };
+  },
+  asyncData () {
+    return new Promise((resolve) => {
+    })
   },
   computed: {
     portfolio_list(event) {
@@ -71,6 +74,7 @@ export default {
     firestore.load_ptf_datas(this.$store);
   },
   mounted() {
+
   },
   methods: {
     menu_clicked: function() {}
@@ -85,6 +89,20 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');   // font-family: 'Muli', sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Bitter&display=swap"); // font-family: "Bitter", serif;
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
 
 :root {
   --my-active-color: #0fbcf9;
@@ -124,6 +142,13 @@ export default {
   font-family: 'Baloo Bhai', cursive;
   letter-spacing: 0.1em;
   user-select: none;
+
+  @include tab {
+    font-size: 10rem;
+  };
+  @include sp {
+    font-size: 6rem;
+  };
 
   background: linear-gradient(90deg, rgba(62, 126, 216, 0.3), rgba(2, 227, 214,0.3)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
   // background:url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
