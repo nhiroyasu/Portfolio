@@ -3,19 +3,41 @@
     <div class="fixed-top">
       <navigation-bar />
     </div>
-    <div>
 
+    <div style="visibility: hidden;">
+      <navigation-bar />
     </div>
+
+    <loading v-bind:on_load="loading" v-bind:on_loaded="loaded" />
+
     <nuxt />
   </div>
 </template>
 
 <script>
 import NavigationBar from '@/components/navi_bar.vue';
+import Loading from "@/components/loading.vue";
 
 export default {
   components: {
     NavigationBar,
+    Loading,
+  },
+  data: function() {
+    return {
+      loading: false,
+      loaded: false,
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      this.loading = true;
+      setTimeout(() => {
+        this.$nuxt.$loading.finish();
+        this.loaded = true;
+      }, 2000);
+    })
   },
 }
 </script>
@@ -38,11 +60,6 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.body-class {
-  /* background-image: url("https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fportfolio%20backimage.jpg?alt=media&token=9cbbfa5c-c720-4128-b251-cf9c57ec0169");
-  background-size: cover; */
 }
 
 .button--green {

@@ -5,11 +5,15 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Portfolio of Cyan' || '',
+    title: 'Cyan\'s Portfolio' || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'og:title', content: 'Cyan\'s Portfolio' },
+      { name: 'og:description', content: '' },
+      { name: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2FCyan%20Twitter%20Card%20v1.0.png?alt=media&token=5541cb6a-3ab4-422c-8208-40a627733a88'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -29,7 +33,10 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    color: 'black',
+    height: '5px'
+  },
   /*
   ** Global CSS
   */

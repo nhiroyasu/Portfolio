@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+  <g id="C" transform="">
+    <circle id="c_back" cx="175" cy="175" r="175" transform="" fill="#40fbc6"/>
+    <g id="C-2" data-name="C" transform="" fill="none" stroke="#0fbcf9" stroke-linecap="round" stroke-width="70" stroke-dasharray="650 350" stroke-dashoffset="900">
+      <circle cx="175" cy="175" r="175" stroke="none"/>
+      <circle cx="175" cy="175" r="140" fill="none"/>
+    </g>
+  </g>
+</svg>
