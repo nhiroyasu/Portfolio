@@ -89,6 +89,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');   // font-family: 'Muli', sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Bitter&display=swap"); // font-family: "Bitter", serif;
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");/* font-family: 'Noto Sans JP', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap'); /* font-family: 'Noto Serif JP', serif; */
 
 $tab: 680px; // タブレット
 $sp: 480px;  // スマホ
@@ -151,7 +153,6 @@ $sp: 480px;  // スマホ
   };
 
   background: linear-gradient(90deg, rgba(62, 126, 216, 0.3), rgba(2, 227, 214,0.3)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
-  // background:url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
 
   .sign-forward {
     color: var(--my-active-color);

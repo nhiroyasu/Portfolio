@@ -9,6 +9,8 @@
           :slider_info="value"
         />
         <div class="swiper-pagination portfolio-component__pagination m-1" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
     </div>
   </div>
@@ -30,17 +32,16 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         },
-        navigation: { // 付けないとLoopしない？
+        navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
-        loop: true,
-        freeMode: true, // 付けないとLoopしない？
-        speed: 500,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: true
-        }
+        loop: true
+        // speed: 500
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: true
+        // }
       }
     };
   },
@@ -63,6 +64,20 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap");
 
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
 .portfoio-box {
   background: linear-gradient(135deg, rgb(52, 165, 231), rgb(2, 227, 214));
   border-radius: 15px;
@@ -74,6 +89,41 @@ export default {
     background: #fff;
     box-shadow: 0px 14px 80px rgba(34, 46, 58, 0.2);
     border-radius: 13px;
+
+    /deep/ .swiper-button-prev {
+      background: url("~assets/arrow-left.svg") no-repeat center center /
+        contain;
+    }
+    /deep/ .swiper-button-next {
+      background: url("~assets/arrow-right.svg") no-repeat center center /
+        contain;
+    }
+
+    @include tab {
+      /deep/ .swiper-button-prev {
+        background: url("~assets/arrow-left.svg") no-repeat center center /
+          contain;
+        display: none;
+      }
+      /deep/ .swiper-button-next {
+        background: url("~assets/arrow-right.svg") no-repeat center center /
+          contain;
+        display: none;
+      }
+    }
+
+    @include sp {
+      /deep/ .swiper-button-prev {
+        background: url("~assets/arrow-left.svg") no-repeat center center /
+          contain;
+        display: none;
+      }
+      /deep/ .swiper-button-next {
+        background: url("~assets/arrow-right.svg") no-repeat center center /
+          contain;
+        display: none;
+      }
+    }
   }
 
   &__pagination {

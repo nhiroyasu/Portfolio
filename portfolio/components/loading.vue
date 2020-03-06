@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 $tab: 680px; // タブレット
-$sp: 480px;  // スマホ
+$sp: 480px; // スマホ
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -67,6 +67,7 @@ $sp: 480px;  // スマホ
   .icon-field {
     margin: 38vh 40vw;
     min-height: 100vh;
+    background-color: white;
 
     .cyan-icon,
     .cyan-name {
@@ -77,6 +78,7 @@ $sp: 480px;  // スマホ
     .cyan-name {
       opacity: 0;
       transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
     }
 
     @include tab {
@@ -112,46 +114,60 @@ $sp: 480px;  // スマホ
 }
 .disapper-view {
   animation: disapper_view 1s ease-out 0s forwards;
+  -webkit-animation: disapper_view 1s ease-in-out 0s forwards;
 }
 
 @keyframes loading_icon {
   0% {
     transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
   }
   50% {
     transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
   }
   100% {
     transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
   }
 }
 .loading-icon {
-  animation: loading_icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s infinite;
+  animation: loading_icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s forwards;
+  -webkit-animation: loading_icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s
+    forwards;
 }
 
 @keyframes up_icon {
   0% {
     transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
   }
   100% {
     transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+    -moz-transform: translateY(-30%);
   }
 }
 .up-icon {
   animation: up_icon 0.8s ease-in-out 0.2s forwards;
+  -webkit-animation: up_icon 0.8s ease-in-out 0.2s forwards;
 }
 
 @keyframes up_name {
   0% {
     transform: translateX(-100%) rotateY(90deg);
+    -webkit-tranform: translateX(-100%) rotateY(90deg);
     opacity: 0;
   }
   100% {
     transform: translateX(0%) rotateY(0deg);
+    -webkit-transform: translateX(0%) rotateY(0deg);
     opacity: 1;
   }
 }
 .up-name {
   animation: up_name 0.8s ease-out 0.2s forwards;
+  -webkit-animation: up_name 0.8s ease-out 0.2s forwards;
 }
 </style>

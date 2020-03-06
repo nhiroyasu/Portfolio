@@ -47,7 +47,8 @@ export default {
       overflow: hidden;
 
       &:hover {
-        box-shadow: 0px 0px 10px rgba($color: #2d3436, $alpha: 0.6)
+        box-shadow: 0px 0px 10px rgba($color: #2d3436, $alpha: 0.6);
+        transition: 0.3s;
       }
     }
 
