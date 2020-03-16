@@ -28,7 +28,7 @@
         <h4 class="text-center rounded">Description</h4>
         <div class="about-container__item__desc px-md-3 px-1">
           <p>
-            田舎在住、エンジニアを夢見る高専生です。<br>
+            エンジニアを夢見る高専生です。<br>
             ネット上では<i>Cyan</i>と名乗ってます。
           </p>
           <p>
