@@ -152,7 +152,7 @@ $sp: 480px;  // スマホ
     font-size: 6rem;
   };
 
-  background: linear-gradient(90deg, rgba(62, 126, 216, 0.3), rgba(2, 227, 214,0.3)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fmy_back_thumbnail6.jpg?alt=media&token=d00241ca-5759-4b77-a0a9-cb4cf8835ee9) center top / cover no-repeat;
+  background: linear-gradient(90deg, rgba(62, 126, 216, 0.3), rgba(2, 227, 214,0.3)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fbackground.jpg?alt=media&token=40899406-27d7-4b04-ba06-0d72c4f455dc) center top / cover no-repeat;
 
   .sign-forward {
     color: var(--my-active-color);
