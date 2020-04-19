@@ -48,7 +48,8 @@ export default {
   */
   plugins: [
     "~/plugins/fb_init.js",
-    { src: '~plugins/vue-awesome-swiper', ssr: false }
+    { src: '~plugins/vue-awesome-swiper', ssr: false },
+    { src: '~plugins/aos', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
@@ -59,6 +60,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['vue-scrollto/nuxt', { duration: 700 }],
   ],
   /*
   ** Build configuration

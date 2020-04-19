@@ -21,25 +21,28 @@
       </div>
       <div class="about-container__item about-container__profession text-center col-md-3 col-12">
         <h4 class="rounded">Hobby</h4>
-        <p>ガジェット集め</p>
+        <p>？</p>
       </div>
       <div class="about-container__gap col-md-2 col-12"></div>
       <div class="about-container__item about-container__profession col-md-8 col-12">
         <h4 class="text-center rounded">Description</h4>
         <div class="about-container__item__desc px-md-3 px-1">
           <p>
-            エンジニアを夢見る高専生です。<br>
-            ネット上では<i>Cyan</i>と名乗ってます。
+            こんにちは！ポートフォリオサイトを見てくださりありがとうございます。
+            <br />
           </p>
           <p>
-            主に<i>Swift</i> や<i>Kotlin</i>で、アプリ開発の勉強しています。
-            たまに、<i>Vue.js</i> や<i>Nuxt.js</i> を使ってWeb系の勉強もします。
+            ITエンジニアを目指して日々勉強している者です。
+            <br />ネット上では
+            <i>Cyan</i>と名乗って活動しているので、SNS等で交流してくれるとうれしいです。
           </p>
           <p>
-            「就職するなら東京かな〜」と思う今日この頃。
-          </p>
-          <p>
-            都会に行きたい...。
+            主に
+            <i>Swift</i> や
+            <i>Kotlin</i>で、アプリ開発の勉強しています。
+            最近は、
+            <i>Vue.js</i> や
+            <i>Nuxt.js</i> を使ってWeb系の分野にも手を出しています。
           </p>
         </div>
       </div>
@@ -99,7 +102,7 @@ $sp: 480px; // スマホ
       box-shadow: 0px 5px 10px rgba(15, 188, 249, 0.2);
     }
     p {
-      font-family: 'Noto Serif JP', serif;
+      font-family: "M PLUS Rounded 1c", serif;
       font-size: 1.2rem;
     }
 
