@@ -8,7 +8,7 @@
     </div>
 
     <!-- Context View -->
-    <div class="container main-view py-3 px-md-5 px-3">
+    <div class="container main-view py-3 px-md-5 px-3" data-aos="" data-aos-duration="1000">
       <!-- Portfolio Space -->
       <div id="portfolio-place" class="plate mb-3 mb-md-5">
         <h1 class="plate__title">PORTFOLIO</h1>
@@ -16,15 +16,17 @@
         <portfolio-swiper />
       </div>
 
+      <!-- TODO : My Skill -->
+
       <!-- About Space -->
-      <div id="about-place" class="plate mb-3 mb-md-5">
+      <div id="about-place" class="plate mb-3 mb-md-5" data-aos="" data-aos-duration="1000">
         <h1 class="plate__title">ABOUT</h1>
         <hr class="plate__bar">
         <about-content />
       </div>
 
       <!-- Contact Space -->
-      <div id="contact-place" class="plate mb-3 mb-md-5">
+      <div id="contact-place" class="plate mb-3 mb-md-5" data-aos="" data-aos-duration="1000">
         <h1 class="plate__title">CONTACT</h1>
         <hr class="plate__bar">
         <contact-content />
@@ -40,7 +42,6 @@ import Logo from "~/components/Logo.vue";
 import Tile from "~/components/portfolio_tile.vue";
 import MenuField from "~/components/menu_field.vue";
 import Navigationbar from "~/components/navi_bar.vue";
-import SwiperSample from "~/components/swiper_sample.vue";
 import PortfolioSwiper from "~/components/portfolio_swiper.vue";
 import AboutContent from "~/components/cyan_about.vue";
 import ContactContent from "~/components/cyan_contact.vue";
@@ -52,7 +53,6 @@ export default {
     Tile,
     MenuField,
     Navigationbar,
-    SwiperSample,
     PortfolioSwiper,
     AboutContent,
     ContactContent,
@@ -91,6 +91,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");/* font-family: 'Noto Sans JP', sans-serif; */
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap'); /* font-family: 'Noto Serif JP', serif; */
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap');
 
 $tab: 680px; // タブレット
 $sp: 480px;  // スマホ

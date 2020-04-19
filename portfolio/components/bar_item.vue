@@ -9,7 +9,7 @@ export default {
   props: {
     value: String,
     link: String
-  }
+  },
 }
 </script>
 
