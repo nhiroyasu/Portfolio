@@ -7,33 +7,47 @@
       </div>
     </div>
 
-    <!-- Context View -->
-    <div class="container main-view py-3 px-md-5 px-3" data-aos="" data-aos-duration="1000">
-      <!-- Portfolio Space -->
-      <div id="portfolio-place" class="plate mb-3 mb-md-5">
-        <h1 class="plate__title">PORTFOLIO</h1>
-        <hr class="plate__bar" />
-        <portfolio-swiper />
-      </div>
+    <div class="container main-view">
+      <dir class="row p-0 justify-content-center align-items-stretch">
+        <!-- Portfolio Space -->
+        <div id="portfolio-place" class="plate col-12 col-md-9">
+          <h1 class="plate__title">PORTFOLIO</h1>
+          <hr class="plate__bar" />
+          <portfolio-swiper />
+        </div>
 
-      <!-- TODO : My Skill -->
+        <div class="plate col-10 col-md-3">
+          <h1 class="plate__title">TIMELINE</h1>
+          <hr class="plate__bar" />
+          <div class="overflow-auto">
+            <a
+              class="twitter-timeline"
+              data-height="500"
+              href="https://twitter.com/cyan_Programing?ref_src=twsrc%5Etfw"
+            >Tweets by cyan_Programing</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
 
-      <!-- About Space -->
-      <div id="about-place" class="plate mb-3 mb-md-5" data-aos="" data-aos-duration="1000">
-        <h1 class="plate__title">ABOUT</h1>
-        <hr class="plate__bar">
-        <about-content />
-      </div>
+        <!-- TODO : My Skill -->
 
-      <!-- Contact Space -->
-      <div id="contact-place" class="plate mb-3 mb-md-5" data-aos="" data-aos-duration="1000">
-        <h1 class="plate__title">CONTACT</h1>
-        <hr class="plate__bar">
-        <contact-content />
-      </div>
+        <!-- About Space -->
+        <div id="about-place" class="plate mb-3 mb-md-5 col-12">
+          <h1 class="plate__title">ABOUT</h1>
+          <hr class="plate__bar" />
+          <about-content />
+        </div>
 
+        <!-- Contact Space -->
+        <div id="contact-place" class="plate mb-3 mb-md-5">
+          <h1 class="plate__title">CONTACT</h1>
+          <hr class="plate__bar" />
+          <contact-content />
+        </div>
+        <!-- Context View -->
+        <menu-field />
+      </dir>
     </div>
-    <menu-field />
   </div>
 </template>
 
@@ -55,15 +69,13 @@ export default {
     Navigationbar,
     PortfolioSwiper,
     AboutContent,
-    ContactContent,
+    ContactContent
   },
   data: function() {
-    return {
-    };
+    return {};
   },
-  asyncData () {
-    return new Promise((resolve) => {
-    })
+  asyncData() {
+    return new Promise(resolve => {});
   },
   computed: {
     portfolio_list(event) {
@@ -73,9 +85,7 @@ export default {
   created: function() {
     firestore.load_ptf_datas(this.$store);
   },
-  mounted() {
-
-  },
+  mounted() {},
   methods: {
     menu_clicked: function() {}
   },
@@ -86,15 +96,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');   // font-family: 'Muli', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap"); // font-family: 'Muli', sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Bitter&display=swap"); // font-family: "Bitter", serif;
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");/* font-family: 'Noto Sans JP', sans-serif; */
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap'); /* font-family: 'Noto Serif JP', serif; */
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"); /* font-family: 'Noto Sans JP', sans-serif; */
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap"); /* font-family: 'Noto Serif JP', serif; */
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap");
 
 $tab: 680px; // タブレット
-$sp: 480px;  // スマホ
+$sp: 480px; // スマホ
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -142,22 +152,27 @@ $sp: 480px;  // スマホ
   text-align: center;
   line-height: 50vh;
   font-size: 15rem;
-  font-family: 'Baloo Bhai', cursive;
+  font-family: "Baloo Bhai", cursive;
   letter-spacing: 0.1em;
   user-select: none;
 
   @include tab {
     font-size: 10rem;
-  };
+  }
   @include sp {
     font-size: 6rem;
-  };
+  }
 
-  background: linear-gradient(90deg, rgba(62, 126, 216, 0.3), rgba(2, 227, 214,0.3)), url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fbackground.jpg?alt=media&token=40899406-27d7-4b04-ba06-0d72c4f455dc) center top / cover no-repeat;
+  background: linear-gradient(
+      90deg,
+      rgba(62, 126, 216, 0.3),
+      rgba(2, 227, 214, 0.3)
+    ),
+    url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fbackground.jpg?alt=media&token=40899406-27d7-4b04-ba06-0d72c4f455dc)
+      center top / cover no-repeat;
 
   .sign-forward {
     color: var(--my-active-color);
-
   }
 
   .sign-back {
@@ -179,9 +194,10 @@ $sp: 480px;  // スマホ
 
 .main-view {
   position: relative;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
 
   .plate {
+    margin: 10px 0px;
     &__title {
       text-align: center;
     }

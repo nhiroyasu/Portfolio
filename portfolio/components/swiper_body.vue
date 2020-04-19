@@ -1,7 +1,7 @@
 <template>
   <swiper-slide class="swiper-slide container mt-3 mb-4">
     <div class="slider-item row px-lg-5 justify-content-center align-items-center">
-      <div class="slider-item__img col-md-5 col-10">
+      <div class="slider-item__img col-md-5 col-7">
         <div
           class="img-cover"
           :style="{ backgroundImage: 'url(' + slider_info.img_link + ')' }"
@@ -181,9 +181,10 @@ export default {
         rgb(3, 253, 183)
       );
       background: linear-gradient(109deg, rgb(15, 188, 249), rgb(3, 253, 183));
-
+      box-shadow: 0px 0px 3px lightgrey;
+      transition: all 0.3s ease-out;
       &:hover {
-        box-shadow: 0px 0px 10px var(--my-active-color);
+        box-shadow: 0px 0px 8px rgb(180, 180, 180);
       }
     }
   }
