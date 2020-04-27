@@ -8,7 +8,7 @@
     </div>
 
     <div class="container main-view">
-      <dir class="row p-0 justify-content-center align-items-stretch">
+      <div class="row p-0 justify-content-center align-items-stretch">
         <!-- Portfolio Space -->
         <div id="portfolio-place" class="plate col-12 col-md-9">
           <h1 class="plate__title">PORTFOLIO</h1>
@@ -46,19 +46,18 @@
         </div>
         <!-- Context View -->
         <menu-field />
-      </dir>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
-import Tile from "~/components/portfolio_tile.vue";
-import MenuField from "~/components/menu_field.vue";
-import Navigationbar from "~/components/navi_bar.vue";
-import PortfolioSwiper from "~/components/portfolio_swiper.vue";
-import AboutContent from "~/components/cyan_about.vue";
-import ContactContent from "~/components/cyan_contact.vue";
+import Tile from "~/components/PortfolioTile.vue";
+import MenuField from "~/components/MenuField.vue";
+import NavigationBar from "~/components/NavigationBar.vue";
+import PortfolioSwiper from "~/components/PortfolioSwiper.vue";
+import AboutContent from "~/components/MyAbout.vue";
+import ContactContent from "~/components/MyContact.vue";
 
 import firestore from "~/plugins/fb_firestore.js";
 
@@ -66,7 +65,7 @@ export default {
   components: {
     Tile,
     MenuField,
-    Navigationbar,
+    NavigationBar,
     PortfolioSwiper,
     AboutContent,
     ContactContent

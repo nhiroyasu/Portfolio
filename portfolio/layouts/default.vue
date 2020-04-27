@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import NavigationBar from '@/components/navi_bar.vue';
-import Loading from "@/components/loading.vue";
+import NavigationBar from '@/components/NavigationBar.vue';
+import Loading from "@/components/Loading.vue";
 
 export default {
   components: {

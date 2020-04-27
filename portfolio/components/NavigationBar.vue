@@ -9,7 +9,7 @@
 
 
 <script>
-import BarItem from "~/components/bar_item.vue";
+import BarItem from "~/components/BarItem.vue";
 
 export default {
   components: {
