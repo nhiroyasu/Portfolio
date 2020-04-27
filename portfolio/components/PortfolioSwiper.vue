@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import CyanSwiper from "~/components/swiper_body.vue";
+import CyanSwiper from "~/components/SwiperBody.vue";
 
 import firestore from "~/plugins/fb_firestore.js";
 
