@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="slider-item__body my-lg-3 mt-3 mx-lg-3 mx-2 col-md-6 col-10">
-        <div class="date px-4 px-lg-2">9 November 12</div>
+        <div class="date px-4 px-lg-2">{{ date }}</div>
         <div class="title px-4 px-lg-2 mb-2">{{ slider_info.title }}</div>
         <!-- <div class="detail px-1">{{ slider_info.detail }}</div> -->
         <div class="meta my-2">
@@ -39,8 +39,14 @@
 
 <script>
 export default {
+  created () {
+    let date = this.slider_info.date.toDate();
+    this.date = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+  },
   data() {
-    return {};
+    return {
+      date: ""
+    };
   },
   props: {
     slider_info: {
@@ -48,7 +54,7 @@ export default {
       detail: String,
       img_link: String,
       lang: Array,
-      platform: Array
+      platform: Array,
     }
   },
   computed: {
