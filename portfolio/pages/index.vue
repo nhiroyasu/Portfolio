@@ -45,15 +45,12 @@
           <contact-content />
         </div>
         <!-- Context View -->
-        <menu-field />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Tile from "~/components/PortfolioTile.vue";
-import MenuField from "~/components/MenuField.vue";
 import NavigationBar from "~/components/NavigationBar.vue";
 import PortfolioSwiper from "~/components/PortfolioSwiper.vue";
 import AboutContent from "~/components/MyAbout.vue";
@@ -63,8 +60,6 @@ import firestore from "~/plugins/fb_firestore.js";
 
 export default {
   components: {
-    Tile,
-    MenuField,
     NavigationBar,
     PortfolioSwiper,
     AboutContent,

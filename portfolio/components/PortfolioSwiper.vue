@@ -1,5 +1,5 @@
 <template>
-  <div class="portfoio-box">
+  <div class="portfolio-box">
     <div class="portfolio-component">
       <swiper class="portfolio-component__swiper" :options="swiperOption">
         <cyan-swiper
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import CyanSwiper from "~/components/SwiperBody.vue";
+import CyanSwiper from "~/components/PortfolioSwiperBody.vue";
 
 import firestore from "~/plugins/fb_firestore.js";
 
@@ -36,12 +36,12 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
-        loop: true
-        // speed: 500
-        // autoplay: {
-        //   delay: 5000,
-        //   disableOnInteraction: true
-        // }
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: true
+        }
       }
     };
   },
@@ -78,7 +78,7 @@ $sp: 480px; // スマホ
   }
 }
 
-.portfoio-box {
+.portfolio-box {
   background: linear-gradient(135deg, rgb(52, 165, 231), rgb(2, 227, 214));
   border-radius: 15px;
   padding: 2px;
