@@ -8,7 +8,7 @@ let db = firebase.firestore();
 
 export default {
   load_ptf_datas(store) {
-    db.collection("portfolios").get().then((querySnapshot) => {
+    db.collection("portfolios").orderBy('date', 'desc').get().then((querySnapshot) => {
       let doc_list = [];
       querySnapshot.forEach((doc) => {
         doc_list.push(doc.data());

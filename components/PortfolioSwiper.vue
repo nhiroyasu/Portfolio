@@ -45,16 +45,9 @@ export default {
       }
     };
   },
-  created() {
-    // firestore.load_ptf_datas(this.$store);
-  },
   computed: {
     portfolio_list(event) {
-      console.log(
-        "swiper component",
-        this.$store.state.portfolio.portfolios_data
-      );
-      return this.$store.state.portfolio.portfolios_data;
+      return this.$store.state.portfolio.portfolios_data.slice(0,5)
     }
   }
 };
