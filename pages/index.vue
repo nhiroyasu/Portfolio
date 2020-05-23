@@ -1,11 +1,7 @@
 <template>
   <div class="box">
     <!-- "Cyan" Sign -->
-    <div class="sign-tile mb-md-5 mb-3">
-      <div class="sign-space px-5">
-        <span class="sign-forward">CYA</span><span class="sign-back">N</span>
-      </div>
-    </div>
+    <banner />
 
     <div class="container main-view">
       <div class="row p-0 justify-content-center align-items-stretch">
@@ -55,6 +51,7 @@ import NavigationBar from "~/components/NavigationBar.vue";
 import PortfolioSwiper from "~/components/PortfolioSwiper.vue";
 import AboutContent from "~/components/MyAbout.vue";
 import ContactContent from "~/components/MyContact.vue";
+import Banner from "~/components/Banner.vue";
 
 import firestore from "~/plugins/fb_firestore.js";
 
@@ -63,7 +60,8 @@ export default {
     NavigationBar,
     PortfolioSwiper,
     AboutContent,
-    ContactContent
+    ContactContent,
+    Banner
   },
   data: function() {
     return {};
@@ -96,9 +94,10 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"); /* font-family: 'Noto Sans JP', sans-serif; */
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap"); /* font-family: 'Noto Serif JP', serif; */
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); /* font-family: 'Fredoka One', cursive; */
 
-$tab: 680px; // タブレット
-$sp: 480px; // スマホ
+$tab: 768px; // タブレット
+$sp: 544px; // スマホ
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -115,6 +114,8 @@ $sp: 480px; // スマホ
   --my-active-color: #0fbcf9;
   --my-active2-color: #0da8e0;
   --my-sub-color: #03fdb7;
+  --my-dark-blue: #3D4DF5;
+  --my-primary-blue: #B5F8FD;
   --my-black: #1e272e;
   --my-gray: #636e72;
   --my-white: #ecf0f1;
@@ -137,54 +138,6 @@ $sp: 480px; // スマホ
 //   stroke: var(--my-white);
 // }
 
-.sign-tile {
-  position: relative;
-  width: 100vw;
-  height: 50vh;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
-  line-height: 50vh;
-  font-size: 15rem;
-  font-family: "Baloo Bhai", cursive;
-  letter-spacing: 0.1em;
-  user-select: none;
-
-  @include tab {
-    font-size: 10rem;
-  }
-  @include sp {
-    font-size: 6rem;
-  }
-
-  background: linear-gradient(
-      90deg,
-      rgba(62, 126, 216, 0.3),
-      rgba(2, 227, 214, 0.3)
-    ),
-    url(https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2Fbackground.jpg?alt=media&token=40899406-27d7-4b04-ba06-0d72c4f455dc)
-      center top / cover no-repeat;
-
-  .sign-forward {
-    color: var(--my-active-color);
-  }
-
-  .sign-back {
-    color: var(--my-sub-color);
-  }
-}
-
-.sign-space {
-  position: relative;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-  color: cyan;
-}
-.sign-space svg {
-  width: 100%;
-  height: 100%;
-}
 
 .main-view {
   position: relative;
