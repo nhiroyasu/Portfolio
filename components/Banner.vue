@@ -101,21 +101,22 @@ $sp: 544px; // スマホ
     color: white;
 
     .welcome-text {
+      transition: all ease-out 0.3s;
       &:hover {
         animation: font_shadow 3s linear 0s infinite forwards;
       }
     }
 
     .name-box {
-      font-size: 8rem;
+      font-size: 10rem;
       .sign-forward {
-        color: var(--my-active-color);
+        color: white;
         text-shadow: 7px 7px 0px #333333a8;
         transition: all ease-in-out 0.3s;
         &:hover {
-          color: white;
+          color: var(--my-active-color);
         }
-        animation: font_shadow 3s linear 0s infinite forwards;
+        animation: font_shadow 4s linear 0s infinite forwards;
       }
 
       .sign-back {
@@ -125,7 +126,7 @@ $sp: 544px; // スマホ
         &:hover {
           color: white;
         }
-        animation: font_shadow 3s linear 0s infinite forwards;
+        animation: font_shadow 4s linear 0s infinite forwards;
       }
     }
   }
@@ -133,18 +134,23 @@ $sp: 544px; // スマホ
   @keyframes font_shadow {
     0% {
       text-shadow: 7px 7px 0px #333333a8;
+      transform: rotateY(20deg) rotateX(-20deg);
     }
     25% {
       text-shadow: -7px 7px 0px #333333a8;
+      transform: rotateY(-20deg) rotateX(-20deg);
     }
     50% {
       text-shadow: -7px -7px 0px #333333a8;
+      transform: rotateY(-20deg) rotateX(20deg);
     }
     75% {
       text-shadow: 7px -7px 0px #333333a8;
+      transform: rotateY(20deg) rotateX(20deg);
     }
     100% {
       text-shadow: 7px 7px 0px #333333a8;
+      transform: rotateY(20deg) rotateX(-20deg);
     }
   }
 }
@@ -169,16 +175,26 @@ $sp: 544px; // スマホ
       // transform: rotateZ(360deg);
       font-size: 3rem;
     }
-    // animation: fell_effect 2s cubic-bezier(0.22, 1, 0.36, 1) 4s forwards;
+    animation: appeal_effect 2.5s ease-out infinite forwards;
   }
-  @keyframes fell_effect {
+  @keyframes appeal_effect {
     0% {
-      transform: translateY(-100vh) scale(100%);
-      opacity: 0;
+      font-size: 2.5rem;
+    }
+    80% {
+      font-size: 2.5rem;
+    }
+    85% {
+      font-size: 3rem;
+    }
+    90% {
+      font-size: 2.5rem;
+    }
+    95% {
+      font-size: 3rem;
     }
     100% {
-      transform: translateY(0%) scale(100%);
-      opacity: 1;
+      font-size: 2.5rem;
     }
   }
 }
