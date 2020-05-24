@@ -154,6 +154,9 @@ $sp: 544px; // スマホ（Bootstrap - sm）
   &__body {
     .date {
       font-size: 1rem;
+      @include sp {
+        text-align: center;
+      }
     }
     .title {
       font-size: 2.5rem;
@@ -161,11 +164,9 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       letter-spacing: 0.1rem;
       font-family: "Baloo Bhai", cursive;
 
-      @include tab {
-        font-size: 1.5rem;
-      }
       @include sp {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        text-align: center;
       }
     }
     .meta {
