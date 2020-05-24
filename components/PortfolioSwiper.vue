@@ -57,8 +57,8 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap");
 
-$tab: 680px; // タブレット
-$sp: 480px; // スマホ
+$tab: 768px; // タブレット（Bootstrap - md）
+$sp: 544px; // スマホ（Bootstrap - sm）
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -133,7 +133,11 @@ $sp: 480px; // スマホ
       background: #062744;
       opacity: 0.2;
       transition: all 0.3s;
-      &:hover {
+      @include tab {
+        width: 25px;
+      }
+      @include sp {
+        width: 25px;
       }
       &-active {
         opacity: 1;
@@ -141,9 +145,12 @@ $sp: 480px; // スマホ
         width: 50px;
         height: 8px;
         transition: all ease-out 0.3s;
-        @media screen and (max-width: 768px) {
-          width: 20px;
-          height: 20px;
+
+        @include tab {
+          width: 30px;
+        }
+        @include sp {
+          width: 30px;
         }
 
         &::before {
