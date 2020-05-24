@@ -245,13 +245,12 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
 
     &__github {
-      width: 50px;
-      height: 50px;
-      margin: 0px 10px;
-      font-size: 2.2rem;
-      background: var(--my-black);
       a {
-        color: white;
+        width: 50px;
+        height: 50px;
+        margin: 0px 10px;
+        font-size: 3rem;
+        color: var(--my-black);
         text-decoration: none;
       }
     }
