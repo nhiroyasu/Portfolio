@@ -60,7 +60,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['vue-scrollto/nuxt', { duration: 700 }],
+    'vue-scrollto/nuxt',
   ],
   /*
   ** Build configuration

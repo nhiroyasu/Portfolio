@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="text-center box-button">
-      <button type="button" class="open-button">
+      <a class="open-button" href="#" v-scroll-to="'#home-container-place'">
         <i class="fas fa-chevron-down"></i>
-      </button>
+      </a>
     </div>
   </div>
 </template>

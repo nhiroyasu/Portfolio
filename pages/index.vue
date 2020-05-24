@@ -3,8 +3,8 @@
     <!-- "Cyan" Sign -->
     <banner />
 
-    <div class="container main-view">
-      <div class="row p-0 justify-content-center align-items-stretch">
+    <div id="home-container-place" class="container main-view">
+      <div class="row justify-content-center align-items-stretch">
         <!-- Portfolio Space -->
         <div id="portfolio-place" class="plate col-12 col-md-9">
           <h1 class="plate__title">PORTFOLIO</h1>
@@ -47,7 +47,6 @@
 </template>
 
 <script>
-import NavigationBar from "~/components/NavigationBar.vue";
 import PortfolioSwiper from "~/components/PortfolioSwiper.vue";
 import AboutContent from "~/components/MyAbout.vue";
 import ContactContent from "~/components/MyContact.vue";
@@ -57,7 +56,6 @@ import firestore from "~/plugins/fb_firestore.js";
 
 export default {
   components: {
-    NavigationBar,
     PortfolioSwiper,
     AboutContent,
     ContactContent,
@@ -142,6 +140,9 @@ $sp: 544px; // スマホ
 .main-view {
   position: relative;
   font-family: "Muli", sans-serif;
+  min-width: 100vw;
+  height: 100%;
+  background-color: var(--my-active-color);
 
   .plate {
     margin: 10px 0px;
@@ -151,6 +152,12 @@ $sp: 544px; // スマホ
     &__bar {
       background-color: var(--my-black);
     }
+  }
+
+  h1 {
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 0.2rem;
   }
 }
 

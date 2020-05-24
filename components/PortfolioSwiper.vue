@@ -8,9 +8,9 @@
           :key="index"
           :slider_info="value"
         />
-        <div class="swiper-pagination portfolio-component__pagination m-1" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-pagination portfolio-component__pagination" slot="pagination"></div>
+        <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div> -->
       </swiper>
     </div>
   </div>
@@ -32,10 +32,10 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev"
+        // },
         loop: true,
         speed: 600,
         autoplay: {
@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     portfolio_list(event) {
-      return this.$store.state.portfolio.portfolios_data.slice(0,5)
+      return this.$store.state.portfolio.portfolios_data.slice(0, 5);
     }
   }
 };
@@ -121,22 +121,28 @@ $sp: 480px; // スマホ
 
   &__pagination {
     /deep/ .swiper-pagination-bullet {
-      width: 11px;
-      height: 11px;
+      width: 15px;
+      height: 15px;
+      margin: 10px;
       display: inline-block;
-      border-radius: 10px;
+      border-radius: 2px;
       background: #062744;
       opacity: 0.2;
       transition: all 0.3s;
+      transform: rotateZ(45deg);
+      &:hover {
+        transform: rotateZ(45deg) scale(110%);
+      }
       &-active {
         opacity: 1;
         background: rgb(2, 226, 227);
-        width: 30px;
-        box-shadow: 0px 0px 20px rgba(2, 226, 227, 0.3);
+        width: 20px;
+        height: 20px;
+        box-shadow: 0px 0px 20px rgba(2, 226, 227, 0.2);
 
         @media screen and (max-width: 768px) {
-          height: 11px;
-          width: 30px;
+          width: 20px;
+          height: 20px;
         }
       }
     }

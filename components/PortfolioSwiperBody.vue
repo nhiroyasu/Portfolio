@@ -1,7 +1,7 @@
 <template>
   <swiper-slide class="swiper-slide container mt-3 mb-4">
-    <div class="slider-item row px-lg-5 justify-content-center align-items-center">
-      <div class="slider-item__img col-md-5 col-7">
+    <div class="slider-item row justify-content-center align-items-center">
+      <div class="slider-item__img col-md-4 col-7">
         <div
           class="img-cover"
           :style="{ backgroundImage: 'url(' + slider_info.img_link + ')' }"
@@ -122,7 +122,7 @@ export default {
       }
 
       &__data {
-        font-family: "Bitter", serif;
+        font-family: 'Noto Sans JP', sans-serif;
         color: var(--my-black);
       }
 
