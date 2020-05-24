@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio-box">
-    <div class="portfolio-component">
+    <div class="portfolio-component my-3 my-md-5">
       <swiper class="portfolio-component__swiper" :options="swiperOption">
         <cyan-swiper
           class="blog-slider__item swiper-slide"
@@ -8,9 +8,9 @@
           :key="index"
           :slider_info="value"
         />
-        <div class="swiper-pagination portfolio-component__pagination m-1" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-pagination portfolio-component__pagination" slot="pagination"></div>
+        <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
     </div>
   </div>
@@ -32,10 +32,10 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev"
+        // },
         loop: true,
         speed: 600,
         autoplay: {
@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     portfolio_list(event) {
-      return this.$store.state.portfolio.portfolios_data.slice(0,5)
+      return this.$store.state.portfolio.portfolios_data.slice(0, 5);
     }
   }
 };
@@ -57,8 +57,8 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap");
 
-$tab: 680px; // タブレット
-$sp: 480px; // スマホ
+$tab: 768px; // タブレット（Bootstrap - md）
+$sp: 544px; // スマホ（Bootstrap - sm）
 
 @mixin tab {
   @media (max-width: ($tab)) {
@@ -72,16 +72,20 @@ $sp: 480px; // スマホ
 }
 
 .portfolio-box {
-  background: linear-gradient(135deg, rgb(52, 165, 231), rgb(2, 227, 214));
-  border-radius: 15px;
-  padding: 2px;
 }
 
 .portfolio-component {
   &__swiper {
     background: #fff;
-    box-shadow: 0px 14px 80px rgba(34, 46, 58, 0.2);
-    border-radius: 13px;
+
+    box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
+    border-radius: 15px;
+    transition: all ease-out 0.3s;
+    transform: rotateX(0deg) rotateY(0deg);
+    &:hover {
+      box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
+      transform: rotateX(0deg) rotateY(0deg);
+    }
 
     /deep/ .swiper-button-prev {
       background: url("~assets/arrow-left.svg") no-repeat center center /
@@ -121,22 +125,51 @@ $sp: 480px; // スマホ
 
   &__pagination {
     /deep/ .swiper-pagination-bullet {
-      width: 11px;
-      height: 11px;
+      width: 50px;
+      height: 8px;
+      margin: 10px;
       display: inline-block;
-      border-radius: 10px;
+      border-radius: 2px;
       background: #062744;
       opacity: 0.2;
       transition: all 0.3s;
+      @include tab {
+        width: 25px;
+      }
+      @include sp {
+        width: 25px;
+      }
       &-active {
         opacity: 1;
-        background: rgb(2, 226, 227);
-        width: 30px;
-        box-shadow: 0px 0px 20px rgba(2, 226, 227, 0.3);
+        background: var(--my-active-color);
+        width: 50px;
+        height: 8px;
+        transition: all ease-out 0.3s;
 
-        @media screen and (max-width: 768px) {
-          height: 11px;
+        @include tab {
           width: 30px;
+        }
+        @include sp {
+          width: 30px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: var(--my-active-color);
+          transition: all ease-out 0.5s;
+          transform: translateX(-50%) translateY(-100%) rotate(45deg);
+          animation: popup 0.5s ease-out 0s forwards;
+        }
+        @keyframes popup {
+          0% {
+            transform: translateX(-50%) translateY(-100%) rotate(45deg);
+          }
+          100% {
+            transform: translateX(-50%) translateY(-200%) rotate(45deg);
+          }
         }
       }
     }

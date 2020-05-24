@@ -3,23 +3,21 @@
     <div class="background d-flex align-items-center justify-content-center">
       <div class="main-block"></div>
     </div>
-    <div class="row align-items-center mb-md-5 mb-3 sign-tile">
+    <div class="row align-items-center justify-content-center sign-tile">
       <div class="col-12 sign-space">
-        <div>
-          <span class="welcome-text">Welcome to</span>
-          <br />
-          <div class="d-flex align-items-center justify-content-center name-box">
-            <!-- <img class="mx-3 mx-md-4" src="~assets/cyan_icon.svg" alt="#" width="100" /> -->
-            <span class="sign-forward">CYA</span>
-            <span class="sign-back">N</span>
-          </div>
+        <span class="welcome-text">Welcome to</span>
+        <br />
+        <div class="d-flex align-items-center justify-content-center name-box">
+          <!-- <img class="mx-3 mx-md-4" src="~assets/cyan_icon.svg" alt="#" width="100" /> -->
+          <span class="sign-forward">CYA</span>
+          <span class="sign-back">N</span>
         </div>
       </div>
     </div>
     <div class="text-center box-button">
-      <button type="button" class="open-button">
+      <a class="open-button" href="#" v-scroll-to="'#home-container-place'">
         <i class="fas fa-chevron-down"></i>
-      </button>
+      </a>
     </div>
   </div>
 </template>
@@ -62,38 +60,20 @@ $sp: 544px; // スマホ
   }
 }
 
-// .background {
-//   position: absolute;
-//   width: 100vw;
-//   height: 100vh;
-
-//   .main-block {
-//     width: 80vw;
-//     height: 80vw;
-//     background: var(--my-dark);
-//     border-radius: 20px;
-//     transform: rotateZ(45deg);
-//   }
-// }
-
 .sign-tile {
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 0;
+  margin: 0px;
   text-align: center;
   font-size: 6rem;
   letter-spacing: 0.1em;
 
   @include tab {
-    font-size: 6rem;
-    height: 30vh;
-    line-height: 30vh;
+    font-size: 5rem;
   }
   @include sp {
-    font-size: 6rem;
-    height: 30vh;
-    line-height: 30vh;
+    font-size: 2.8rem;
   }
 
   .sign-space {
@@ -109,8 +89,14 @@ $sp: 544px; // スマホ
 
     .name-box {
       font-size: 10rem;
+      @include tab {
+        font-size: 8rem;
+      }
+      @include sp {
+        font-size: 6rem;
+      }
+
       .sign-forward {
-        
         color: var(--my-active-color);
         text-shadow: 7px 7px 0px #333333a8;
         transition: all ease-in-out 0.3s;
