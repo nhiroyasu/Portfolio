@@ -15,9 +15,7 @@
         <!-- TODO : My Skill -->
 
         <!-- About Space -->
-        <div id="about-place" class="plate mb-3 mb-md-5 col-12">
-          <h1 class="plate__title">ABOUT</h1>
-          <hr class="plate__bar" />
+        <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
           <about-content />
         </div>
 
