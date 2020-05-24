@@ -12,19 +12,6 @@
           <portfolio-swiper />
         </div>
 
-        <div class="plate col-10 col-md-3">
-          <h1 class="plate__title">TIMELINE</h1>
-          <hr class="plate__bar" />
-          <div class="overflow-auto">
-            <a
-              class="twitter-timeline"
-              data-height="500"
-              href="https://twitter.com/cyan_Programing?ref_src=twsrc%5Etfw"
-            >Tweets by cyan_Programing</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </div>
-
         <!-- TODO : My Skill -->
 
         <!-- About Space -->
