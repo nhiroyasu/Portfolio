@@ -16,6 +16,8 @@
 
         <!-- About Space -->
         <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
+          <h1 class="plate__title">ABOUT</h1>
+          <hr class="plate__bar" />
           <about-content />
         </div>
 
@@ -77,7 +79,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"); /* font-family: 'Noto Sans JP', sans-serif; */
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap"); /* font-family: 'Noto Serif JP', serif; */
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); /* font-family: 'Fredoka One', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"); /* font-family: 'Fredoka One', cursive; */
 
 $tab: 768px; // タブレット
 $sp: 544px; // スマホ
@@ -97,8 +99,8 @@ $sp: 544px; // スマホ
   --my-active-color: #0fbcf9;
   --my-active2-color: #0da8e0;
   --my-sub-color: #03fdb7;
-  --my-dark-blue: #3D4DF5;
-  --my-primary-blue: #B5F8FD;
+  --my-dark-blue: #3d4df5;
+  --my-primary-blue: #b5f8fd;
   --my-black: #1e272e;
   --my-gray: #636e72;
   --my-white: #ecf0f1;
@@ -121,7 +123,6 @@ $sp: 544px; // スマホ
 //   stroke: var(--my-white);
 // }
 
-
 .main-view {
   position: relative;
   font-family: "Muli", sans-serif;
@@ -141,7 +142,7 @@ $sp: 544px; // スマホ
 
   h1 {
     color: white;
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     letter-spacing: 0.2rem;
   }
 }

@@ -11,26 +11,33 @@
       </div>
 
       <div class="row justify-content-around align-items-center about-container__contents">
-        <div class="col-12 col-md-5 col-lg-5 about-container__group1">
+        <div class="col-10 col-sm-5 mt-4 mt-sm-0 about-container__group">
           <div class="about-container__item about-container__name text-center col-12">
-            <h4 class="rounded-pill">NAME</h4>
+            <h4 class="rounded-pill">
+              <i class="fas fa-user px-2"></i>NAME
+            </h4>
             <p>Hiroyasu</p>
           </div>
           <div class="about-container__item about-container__age text-center col-12">
-            <h4 class="rounded-pill">AGE</h4>
+            <h4 class="rounded-pill">
+              <i class="fas fa-smile px-2"></i>AGE
+            </h4>
             <p>19</p>
           </div>
           <div class="about-container__item about-container__address text-center col-12">
-            <h4 class="rounded-pill">PROFESSION</h4>
+            <h4 class="rounded-pill">
+              <i class="fas fa-graduation-cap px-2"></i>PROFESSION
+            </h4>
             <p>高専生</p>
           </div>
         </div>
         <!-- <div class="about-container__gap col-md-2 col-12"></div> -->
-        <div
-          class="col-12 col-md-5 col-lg-5 mb-5 mb-md-0 about-container__item about-container__group2"
-        >
+        <div class="col-10 col-sm-5 my-4 my-sm-0 about-container__item about-container__group">
           <div class="col-12 about-container__item__desc">
-            <h4 class="text-center rounded-pill">COMMENT</h4>
+            <h4 class="text-center rounded-pill">
+              <i class="fas fa-comment px-1"></i>
+              COMMENT
+            </h4>
             <div class="px-3">
               <p>
                 こんにちは！ポートフォリオサイトを見てくださりありがとうございます。
@@ -62,7 +69,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-
 $tab: 768px; // タブレット
 $sp: 544px; // スマホ
 
@@ -78,8 +84,9 @@ $sp: 544px; // スマホ
 }
 
 .about-container {
-  margin-top: 100px; // for image
-  padding: 30px 0px;
+  position: relative;
+  margin-top: 150px; // for image
+
   background: white;
   color: white;
   box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
@@ -92,48 +99,38 @@ $sp: 544px; // スマホ
   }
 
   &__contents {
+    margin: 30px 0px;
     // padding-top: 100px; // for image
   }
 
-  &__group1 {
+  &__group {
+    position: relative;
     padding: 30px 0px;
     background: var(--my-active2-color);
     box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
     border-radius: 15px;
-    transform: translateX(-25%);
-    @include tab {
-      transform: translateX(0%);
-    }
-    @include sp {
-      transform: translateX(0%);
-    }
-  }
-
-  &__group2 {
-    padding: 30px 0px;
-    background: var(--my-active2-color);
-    box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
-    border-radius: 15px;
-    transform: translateX(25%);
-    @include tab {
-      transform: translateX(0%);
-    }
-    @include sp {
-      transform: translateX(0%);
-    }
+    z-index: -1;
   }
 
   &__top-icon {
     position: absolute;
     text-align: center;
+    transform: translateY(-50%);
     img {
+      width: 250px;
       border: solid 10px white;
+      @include tab {
+        width: 200px;
+      }
+      @include sp {
+        width: 200px;
+      }
     }
-    transform: translateY(-60%);
-
     @include tab {
+      transform: translateY(-60%);
     }
     @include sp {
+      transform: translateY(-60%);
     }
   }
 
@@ -141,51 +138,52 @@ $sp: 544px; // スマホ
     cursor: default;
     h4 {
       width: 100%;
-      padding: 0.5rem;
-      font-size: 1.2rem;
+      margin-bottom: 4px;
+      padding: 0.2rem;
+      font-size: 1.5rem;
       font-family: "Baloo Bhai", cursive;
       font-weight: 700;
       color: white;
       transition: all ease-out 0.3s;
       // background: var(--my-dark-blue);
-      &:hover {
-        // text-shadow: 10px 10px 0px rgba(34, 46, 58, 0.5);
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        display: flex;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 1px;
-        transform: translateX(0%) scaleX(0%);
-        transform-origin: top left;
-        transition: all ease-out 0.3s;
-        background-color: white;
-        z-index: -1;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        display: flex;
-        bottom: 0px;
-        left: 0px;
-        width: 100%;
-        height: 1px;
-        transform: translateX(0%) scaleX(0%);
-        transition: all ease-out 0.3s;
-        transform-origin: top right;
-        background-color: white;
-        z-index: -1;
-        // animation: bar_progress 2s linear 0s infinite alternate forwards;
-      }
-      &:hover::before {
-        transform: translateX(0%) scaleX(100%);
-      }
-      &:hover::after {
-        transform: translateX(0%) scaleX(100%);
-      }
+      // &:hover {
+      //   // text-shadow: 10px 10px 0px rgba(34, 46, 58, 0.5);
+      // }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   display: flex;
+      //   top: 0px;
+      //   left: 0px;
+      //   width: 100%;
+      //   height: 1px;
+      //   transform: translateX(0%) scaleX(0%);
+      //   transform-origin: top left;
+      //   transition: all ease-out 0.3s;
+      //   background-color: white;
+      //   z-index: -1;
+      // }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   display: flex;
+      //   bottom: 0px;
+      //   left: 0px;
+      //   width: 100%;
+      //   height: 1px;
+      //   transform: translateX(0%) scaleX(0%);
+      //   transition: all ease-out 0.3s;
+      //   transform-origin: top right;
+      //   background-color: white;
+      //   z-index: -1;
+      //   // animation: bar_progress 2s linear 0s infinite alternate forwards;
+      // }
+      // &:hover::before {
+      //   transform: translateX(0%) scaleX(100%);
+      // }
+      // &:hover::after {
+      //   transform: translateX(0%) scaleX(100%);
+      // }
     }
     p {
       font-family: "M PLUS Rounded 1c", serif;
