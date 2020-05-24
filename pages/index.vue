@@ -6,7 +6,7 @@
     <div id="home-container-place" class="container main-view">
       <div class="row justify-content-center align-items-stretch">
         <!-- Portfolio Space -->
-        <div id="portfolio-place" class="plate col-12 col-md-10 col-lg-9">
+        <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-9">
           <h1 class="plate__title">PORTFOLIO</h1>
           <hr class="plate__bar" />
           <portfolio-swiper />

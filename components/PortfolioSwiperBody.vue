@@ -15,7 +15,7 @@
         <div class="meta my-2">
           <div class="meta__content">
             <hr class="meta__hr-text" data-content="SUMMARY" />
-            <div class="meta__data meta__detail px-2 px-md-4">{{ slider_info.detail }}</div>
+            <div class="meta__data meta__detail">{{ slider_info.detail }}</div>
           </div>
           <div class="meta__content">
             <hr class="meta__hr-text" data-content="LANGUAGE" />
@@ -170,7 +170,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
     .meta {
       &__content {
-        margin: 5px 0px;
+        margin: 10px 0px 20px 0px;
       }
 
       &__data {
