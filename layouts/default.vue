@@ -1,13 +1,5 @@
 <template>
   <div>
-    <div class="fixed-top">
-      <navigation-bar />
-    </div>
-
-    <div style="visibility: hidden;">
-      <navigation-bar />
-    </div>
-
     <loading v-bind:on_load="loading" v-bind:on_loaded="loaded" />
 
     <nuxt />

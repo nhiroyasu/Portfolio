@@ -110,11 +110,12 @@ $sp: 544px; // スマホ
     .name-box {
       font-size: 10rem;
       .sign-forward {
-        color: white;
+        
+        color: var(--my-active-color);
         text-shadow: 7px 7px 0px #333333a8;
         transition: all ease-in-out 0.3s;
         &:hover {
-          color: var(--my-active-color);
+          color: white;
         }
         animation: font_shadow 4s linear 0s infinite forwards;
       }
