@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio-box">
-    <div class="portfolio-component">
+    <div class="portfolio-component my-3 my-md-5">
       <swiper class="portfolio-component__swiper" :options="swiperOption">
         <cyan-swiper
           class="blog-slider__item swiper-slide"
@@ -10,7 +10,7 @@
         />
         <div class="swiper-pagination portfolio-component__pagination" slot="pagination"></div>
         <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div> -->
+        <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
     </div>
   </div>
@@ -72,16 +72,20 @@ $sp: 480px; // スマホ
 }
 
 .portfolio-box {
-  background: linear-gradient(135deg, rgb(52, 165, 231), rgb(2, 227, 214));
-  border-radius: 15px;
-  padding: 2px;
 }
 
 .portfolio-component {
   &__swiper {
     background: #fff;
-    box-shadow: 0px 14px 80px rgba(34, 46, 58, 0.2);
-    border-radius: 13px;
+
+    box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
+    border-radius: 15px;
+    transition: all ease-out 0.3s;
+    transform: rotateX(0deg) rotateY(0deg);
+    &:hover {
+      box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
+      transform: rotateX(0deg) rotateY(0deg);
+    }
 
     /deep/ .swiper-button-prev {
       background: url("~assets/arrow-left.svg") no-repeat center center /
@@ -121,28 +125,44 @@ $sp: 480px; // スマホ
 
   &__pagination {
     /deep/ .swiper-pagination-bullet {
-      width: 15px;
-      height: 15px;
+      width: 50px;
+      height: 8px;
       margin: 10px;
       display: inline-block;
       border-radius: 2px;
       background: #062744;
       opacity: 0.2;
       transition: all 0.3s;
-      transform: rotateZ(45deg);
       &:hover {
-        transform: rotateZ(45deg) scale(110%);
       }
       &-active {
         opacity: 1;
-        background: rgb(2, 226, 227);
-        width: 20px;
-        height: 20px;
-        box-shadow: 0px 0px 20px rgba(2, 226, 227, 0.2);
-
+        background: var(--my-active-color);
+        width: 50px;
+        height: 8px;
+        transition: all ease-out 0.3s;
         @media screen and (max-width: 768px) {
           width: 20px;
           height: 20px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: var(--my-active-color);
+          transition: all ease-out 0.5s;
+          transform: translateX(-50%) translateY(-100%) rotate(45deg);
+          animation: popup 0.5s ease-out 0s forwards;
+        }
+        @keyframes popup {
+          0% {
+            transform: translateX(-50%) translateY(-100%) rotate(45deg);
+          }
+          100% {
+            transform: translateX(-50%) translateY(-200%) rotate(45deg);
+          }
         }
       }
     }

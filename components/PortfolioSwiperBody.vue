@@ -147,7 +147,7 @@ export default {
           background: linear-gradient(
             to right,
             transparent,
-            var(--my-active-color),
+            var(--my-dark-blue),
             transparent
           );
           position: absolute;
@@ -164,7 +164,7 @@ export default {
           padding: 0 0.5rem;
           line-height: 2rem;
           // this is really the only tricky part, you need to specify the background color of the container element...
-          color: var(--my-active-color);
+          color:var(--my-dark-blue);
           background-color: #fff;
         }
       }
@@ -179,15 +179,9 @@ export default {
       display: inline-flex;
       text-decoration: none;
       letter-spacing: 1px;
-      color: #fff;
+      color: white;
       font-weight: 500;
-      background: -webkit-linear-gradient(
-        109deg,
-        rgb(15, 188, 249),
-        rgb(3, 253, 183)
-      );
-      background: linear-gradient(109deg, rgb(15, 188, 249), rgb(3, 253, 183));
-      box-shadow: 0px 0px 3px lightgrey;
+      background: var(--my-dark-blue);
       transition: all 0.3s ease-out;
       &:hover {
         box-shadow: 0px 0px 8px rgb(180, 180, 180);
