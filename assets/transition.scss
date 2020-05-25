@@ -1,0 +1,15 @@
+.page-enter-active, .page-leave-active {
+  transition: all .5s ease-out;
+}
+.page-enter, .page-leave-to {
+
+}
+/* ページが去る時のアニメーション */
+.page-leave-to {
+  transform: translateX(-100%);
+
+}
+/* ページが入る時のアニメーション（逆再生されている） */
+.page-enter {
+  transform: translateX(0%);
+}

@@ -71,14 +71,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap"); // font-family: 'Muli', sans-serif;
-@import url("https://fonts.googleapis.com/css?family=Bitter&display=swap"); // font-family: "Bitter", serif;
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap"); ///* font-family: 'Baloo Bhai', cursive; */
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"); /* font-family: 'Noto Sans JP', sans-serif; */
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap"); /* font-family: 'Noto Serif JP', serif; */
-@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"); /* font-family: 'Fredoka One', cursive; */
-
 $tab: 768px; // タブレット
 $sp: 544px; // スマホ
 

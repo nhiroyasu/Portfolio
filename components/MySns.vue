@@ -83,6 +83,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       a {
         display: block;
         font: normal 2rem/4rem 'Baloo Bhai', cursive;
+        text-decoration: none;
         color: white;
       }
 

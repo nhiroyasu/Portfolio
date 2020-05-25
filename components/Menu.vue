@@ -22,7 +22,9 @@
         </nuxt-link>
       </div>
       <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
-        <i class="fas fa-comments mr-2"></i>SNS
+        <nuxt-link to="/sns_list">
+          <i class="fas fa-comments mr-2"></i>SNS
+        </nuxt-link>
       </div>
     </div>
   </div>
