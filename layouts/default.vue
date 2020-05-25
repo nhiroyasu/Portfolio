@@ -1,18 +1,18 @@
 <template>
   <div>
     <loading v-bind:on_load="loading" v-bind:on_loaded="loaded" />
-
+    <menu-component />
     <nuxt />
   </div>
 </template>
 
 <script>
-import NavigationBar from '@/components/NavigationBar.vue';
+import MenuComponent from '@/components/Menu.vue';
 import Loading from "@/components/Loading.vue";
 
 export default {
   components: {
-    NavigationBar,
+    MenuComponent,
     Loading,
   },
   data: function() {
