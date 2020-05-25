@@ -1,7 +1,7 @@
 <template>
   <div class="sns-container container">
     <div class="row justify-content-around align-items-center">
-      <div class="col-10 col-md-5
+      <div class="col-10 col-md-5 col-lg-5
       sns-container__to_link">
         <!-- Twitter -->
         <div class="
@@ -35,7 +35,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="col-10 col-md-5
+      <div class="col-12 col-md-6 col-lg-5
       sns-container__timeline">
         <div class="overflow-auto">
           <a
@@ -56,6 +56,20 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+$tab: 768px; // タブレット（Bootstrap - md）
+$sp: 544px; // スマホ（Bootstrap - sm）
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
 .sns-container {
   &__to_link {
     text-align: center;
@@ -68,7 +82,7 @@ export default {};
       margin: 0px 0px;
       a {
         display: block;
-        font: normal 2.2rem/4rem 'Baloo Bhai', cursive;
+        font: normal 2rem/4rem 'Baloo Bhai', cursive;
         color: white;
       }
 
@@ -91,6 +105,13 @@ export default {};
   }
 
   &__timeline {
+    margin: 0px 0px;
+    @include tab {
+      margin: 20px 0px;
+    }
+    @include sp {
+      margin: 20px 0px;
+    }
   }
 }
 </style>
