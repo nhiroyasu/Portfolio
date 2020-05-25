@@ -9,15 +9,19 @@
       </div>
     </div>
     <div class="menu-container__open" :class="{ visible_on : menu_flag, visible_off: !menu_flag }">
-      <div class="rounded-pill menu-item selection">
-        <i class="fas fa-home mr-2"></i>
-        <span>HOME</span>
+      <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
+        <nuxt-link to="/">
+          <i class="fas fa-home mr-2"></i>
+          <span>HOME</span>
+        </nuxt-link>
       </div>
-      <div class="rounded-pill menu-item selection">
-        <i class="fas fa-file-code mr-2"></i>
-        <span>PORTFOLIO</span>
+      <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
+        <nuxt-link class="nuxt-link" to="/portfolio_list">
+          <i class="fas fa-file-code mr-2"></i>
+          <span>PORTFOLIO</span>
+        </nuxt-link>
       </div>
-      <div class="rounded-pill menu-item selection">
+      <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
         <i class="fas fa-comments mr-2"></i>SNS
       </div>
     </div>
@@ -76,6 +80,14 @@ $sp: 544px; // スマホ
     line-height: 60px;
     color: #40fbc6;
     cursor: pointer;
+
+    a {
+      display: block;
+      padding: 0px 30px;
+      width: 100%;
+      color: #40fbc6;
+      text-decoration: none;
+    }
   }
 
   &__hidden {
@@ -92,7 +104,7 @@ $sp: 544px; // スマホ
       }
     }
     &.visible_off {
-      i {  
+      i {
         transition: all ease-out 0.5s;
         left: -200px;
         transform: rotateZ(-180deg);
@@ -107,8 +119,7 @@ $sp: 544px; // スマホ
     }
 
     .selection {
-      padding: 0px 30px;
-      width: auto;;
+      width: auto;
       font-size: 1.2rem;
     }
 

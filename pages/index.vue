@@ -55,9 +55,7 @@ export default {
     return new Promise(resolve => {});
   },
   computed: {
-    portfolio_list(event) {
-      return this.$store.state.portfolio.portfolios_data.slice(0, 3);
-    }
+
   },
   created: function() {
     firestore.load_ptf_datas(this.$store);
@@ -112,16 +110,6 @@ $sp: 544px; // スマホ
   min-width: 100vw;
   min-height: 100vh;
 }
-
-// #cyan-path {
-//   stroke: transparent; /*線の色を指定する*/
-//   stroke-dasharray: 3000; /*線の間隔を指定する*/
-//   stroke-dashoffset: 0; /*線の位置を指定する(IEは効かない属性)*/
-//   stroke-width: 15; /*線の太さを指定する*/
-//   stroke-linecap: round;
-//   fill: var(--my-active-color);
-//   stroke: var(--my-white);
-// }
 
 .main-view {
   position: relative;
