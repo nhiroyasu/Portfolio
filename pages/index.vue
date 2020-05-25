@@ -12,20 +12,20 @@
           <portfolio-swiper />
         </div>
 
-        <!-- TODO : My Skill -->
-
         <!-- About Space -->
-        <div id="about-place" class="plate mb-3 mb-md-5 col-12">
+        <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
           <h1 class="plate__title">ABOUT</h1>
           <hr class="plate__bar" />
           <about-content />
         </div>
 
+        <!-- TODO : My Skill -->
+
         <!-- Contact Space -->
-        <div id="contact-place" class="plate mb-3 mb-md-5">
-          <h1 class="plate__title">CONTACT</h1>
+        <div id="contact-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
+          <h1 class="plate__title">SNS</h1>
           <hr class="plate__bar" />
-          <contact-content />
+          <sns-content />
         </div>
         <!-- Context View -->
       </div>
@@ -36,7 +36,7 @@
 <script>
 import PortfolioSwiper from "~/components/PortfolioSwiper.vue";
 import AboutContent from "~/components/MyAbout.vue";
-import ContactContent from "~/components/MyContact.vue";
+import SnsContent from "~/components/MySns.vue";
 import Banner from "~/components/Banner.vue";
 
 import firestore from "~/plugins/fb_firestore.js";
@@ -45,7 +45,7 @@ export default {
   components: {
     PortfolioSwiper,
     AboutContent,
-    ContactContent,
+    SnsContent,
     Banner
   },
   data: function() {
@@ -75,11 +75,11 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap"); // font-family: 'Muli', sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Bitter&display=swap"); // font-family: "Bitter", serif;
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap"); ///* font-family: 'Baloo Bhai', cursive; */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"); /* font-family: 'Noto Sans JP', sans-serif; */
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap"); /* font-family: 'Noto Serif JP', serif; */
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); /* font-family: 'Fredoka One', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"); /* font-family: 'Fredoka One', cursive; */
 
 $tab: 768px; // タブレット
 $sp: 544px; // スマホ
@@ -99,8 +99,8 @@ $sp: 544px; // スマホ
   --my-active-color: #0fbcf9;
   --my-active2-color: #0da8e0;
   --my-sub-color: #03fdb7;
-  --my-dark-blue: #3D4DF5;
-  --my-primary-blue: #B5F8FD;
+  --my-dark-blue: #3d4df5;
+  --my-primary-blue: #b5f8fd;
   --my-black: #1e272e;
   --my-gray: #636e72;
   --my-white: #ecf0f1;
@@ -123,7 +123,6 @@ $sp: 544px; // スマホ
 //   stroke: var(--my-white);
 // }
 
-
 .main-view {
   position: relative;
   font-family: "Muli", sans-serif;
@@ -143,7 +142,7 @@ $sp: 544px; // スマホ
 
   h1 {
     color: white;
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     letter-spacing: 0.2rem;
   }
 }
