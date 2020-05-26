@@ -29,7 +29,7 @@
         <!-- More -->
         <div class="
         sns-container__to_link__item more">
-          <nuxt-link to="/">
+          <nuxt-link to="/sns_list">
             <i class="fas fa-long-arrow-alt-right"></i>
             More
           </nuxt-link>
