@@ -141,13 +141,6 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       display: block;
       border-radius: 20px;
       overflow: hidden;
-
-      // .one-more {
-      //   width: 100%;
-      //   height: 100%;
-      //   display: block;
-      //   background: linear-gradient(90deg, rgba(2, 95, 227, 0.8), rgba(2, 227, 214,0.8));
-      // }
     }
   }
 
