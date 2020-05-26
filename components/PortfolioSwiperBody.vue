@@ -37,14 +37,42 @@
         <div
           class="d-flex align-items-center justify-content-center slider-item__links text-center"
         >
-          <div class="slider-item__links__event" v-if="event_link">
+          <!-- <div class="slider-item__links__event" v-if="event_link">
             <a class="rounded-pill" target="_blank" :href="event_link">EVENT</a>
-          </div>
-          <div class="rounded-circle slider-item__links__github" v-if="git_hub_link">
+          </div>-->
+          <!-- <div class="rounded-circle slider-item__links__github" v-if="git_hub_link">
             <a target="_blank" :href="git_hub_link">
               <i class="fab fa-github"></i>
             </a>
-          </div>
+          </div>-->
+          <popup-button
+            v-if="web_app_link"
+            class="slider-item__links__web-app"
+            content="WebApp"
+            :link="web_app_link"
+            icon="fas fa-desktop"
+          />
+          <popup-button
+            v-if="google_play_link"
+            class="slider-item__links__google-play"
+            content="GooglePlay"
+            :link="google_play_link"
+            icon="fab fa-google-play"
+          />
+          <popup-button
+            v-if="git_hub_link"
+            class="slider-item__links__github"
+            content="Github"
+            :link="git_hub_link"
+            icon="fab fa-github"
+          />
+          <popup-button
+            v-if="event_link"
+            class="slider-item__links__event"
+            content="Event"
+            :link="event_link"
+            icon="fas fa-flag"
+          />
         </div>
       </div>
     </div>
@@ -52,7 +80,12 @@
 </template>
 
 <script>
+import PopupButton from "@/components/PopupButton.vue";
+
 export default {
+  components: {
+    PopupButton
+  },
   created() {
     let date = this.slider_info.date.toDate();
     this.date = `${date.getFullYear()}-${date.getMonth() +
@@ -73,25 +106,30 @@ export default {
     }
   },
   computed: {
-    read_more_link() {
-      if ("github" in this.slider_info) {
-        return this.slider_info.github;
-      } else if ("event_link" in this.slider_info) {
-        return this.slider_info.event_link;
-      } else {
-        return null;
-      }
-    },
     git_hub_link() {
       if ("github" in this.slider_info) {
         return this.slider_info.github;
       } else {
-        null;
+        return null;
       }
     },
     event_link() {
       if ("event_link" in this.slider_info) {
         return this.slider_info.event_link;
+      } else {
+        return null;
+      }
+    },
+    google_play_link() {
+      if ("google_play_link" in this.slider_info) {
+        return this.slider_info.google_play_link;
+      } else {
+        return null;
+      }
+    },
+    web_app_link() {
+      if ("web_app_link" in this.slider_info) {
+        return this.slider_info.web_app_link;
       } else {
         return null;
       }
@@ -191,6 +229,8 @@ $sp: 544px; // スマホ（Bootstrap - sm）
         height: 2rem;
         margin: 3px 0px;
         opacity: 1;
+        font-family: "Muli", sans-serif;
+        letter-spacing: 0.1rem;
         &:before {
           content: "";
           // use the linear-gradient for the fading effect
@@ -205,7 +245,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
           left: 0;
           top: 50%;
           width: 100%;
-          height: 2px;
+          height: 1px;
         }
         &:after {
           content: attr(data-content);
@@ -223,28 +263,45 @@ $sp: 544px; // スマホ（Bootstrap - sm）
   }
 
   &__links {
-    margin: 20px 0px 40px 0px;
-    &__event {
-      margin: 0px 10px;
-      a {
-        font-family: "Muli", sans-serif;
-        font-weight: bold;
-        font-size: 0.9rem;
-        padding: 7px 15px;
-        background-color: var(--my-dark-blue);
-        color: white;
-        text-decoration: none;
+    margin: 20px 0px;
+
+    &__web-app {
+      /deep/ #target {
+        background-color: #A930FF;
+        &::before,
+        &::after {
+          background-color: #A930FF;
+        }
+      }
+    }
+
+    &__google-play {
+      /deep/ #target {
+        background-color: #4285f4;
+        &::before,
+        &::after {
+          background-color: #4285f4;
+        }
       }
     }
 
     &__github {
-      a {
-        width: 50px;
-        height: 50px;
-        margin: 0px 10px;
-        font-size: 3rem;
-        color: var(--my-black);
-        text-decoration: none;
+      /deep/ #target {
+        background-color: #1e272e;
+        &::before,
+        &::after {
+          background-color: #1e272e;
+        }
+      }
+    }
+
+    &__event {
+      /deep/ #target {
+        background-color: #ff6736;
+        &::before,
+        &::after {
+          background-color: #ff6736;
+        }
       }
     }
   }
