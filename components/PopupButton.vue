@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="link-btn">
-      <a id="target" :href="link" target="_blank" ontouchstart="" :data-content="content">
+      <a id="target" :href="link" target="_blank" ontouchstart :data-content="content">
         <i :class="icon"></i>
       </a>
     </div>
@@ -45,7 +45,6 @@ export default {
         line-height: 50px;
       }
 
-
       &::before {
         content: attr(data-content);
         position: absolute;
@@ -58,13 +57,13 @@ export default {
         font-size: 0.9rem;
         line-height: 20px;
         z-index: 1;
-        transition: all ease-out 0.3s;
+        transition: all 0.3s ease-out 0s;
         transform-origin: center bottom;
-        transform: translateX(-50%) translateY(-120%) scale(0%);
+        transform: translateX(-50%) translateY(-120%) scale(0);
       }
 
-      &:hover::before, &:active::before {
-        transform: translateX(-50%) translateY(-120%) scale(100%);
+      &:hover::before {
+        transform: translateX(-50%) translateY(-120%) scale(1);
       }
 
       &::after {
@@ -76,12 +75,15 @@ export default {
         top: 0px;
         left: 50%;
         z-index: 0;
-        transition: all ease-out 0.3s;
+        transition: all 0.3s ease-out 0s;
         transform-origin: center center;
-        transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(0%);
+        transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(0);
+        -webkit-transition: all 0.3s ease-out 0s;
+        -webkit-transform-origin: center center;
+        -webkit-transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(0);
       }
-      &:hover::after, &:active::after {
-        transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(100%);
+      &:hover::after {
+        transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(1);
       }
     }
   }

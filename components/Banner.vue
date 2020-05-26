@@ -82,13 +82,11 @@ $sp: 544px; // スマホ
 
     .welcome-text {
       transition: all ease-out 0.3s;
-      &:hover {
-        animation: font_shadow 3s linear 0s infinite forwards;
-      }
     }
 
     .name-box {
       font-size: 10rem;
+      
       @include tab {
         font-size: 8rem;
       }
@@ -99,7 +97,7 @@ $sp: 544px; // スマホ
       .sign-forward {
         color: var(--my-active-color);
         text-shadow: 7px 7px 0px #333333a8;
-        transition: all ease-in-out 0.3s;
+        transition: all 0.3s ease-in-out 0s;
         &:hover {
           color: white;
         }
@@ -109,10 +107,11 @@ $sp: 544px; // スマホ
       .sign-back {
         color: var(--my-sub-color);
         text-shadow: 7px 7px 0px #333333a8;
-        transition: all ease-in-out 0.3s;
+        transition: all 0.3s ease-in-out 0s;
         &:hover {
           color: white;
         }
+
         animation: font_shadow 4s linear 0s infinite forwards;
       }
     }
@@ -121,23 +120,23 @@ $sp: 544px; // スマホ
   @keyframes font_shadow {
     0% {
       text-shadow: 7px 7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(-20deg);
+      transform: rotateY(20deg) rotateX(-20deg) rotateZ(0deg);
     }
     25% {
       text-shadow: -7px 7px 0px #333333a8;
-      transform: rotateY(-20deg) rotateX(-20deg);
+      transform: rotateY(-20deg) rotateX(-20deg) rotateZ(0deg);
     }
     50% {
       text-shadow: -7px -7px 0px #333333a8;
-      transform: rotateY(-20deg) rotateX(20deg);
+      transform: rotateY(-20deg) rotateX(20deg) rotateZ(0deg);
     }
     75% {
       text-shadow: 7px -7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(20deg);
+      transform: rotateY(20deg) rotateX(20deg) rotateZ(0deg);
     }
     100% {
       text-shadow: 7px 7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(-20deg);
+      transform: rotateY(20deg) rotateX(-20deg) rotateZ(0deg);
     }
   }
 }

@@ -95,7 +95,7 @@ $sp: 544px; // スマホ
         color: white;
         transition: all ease-out 0.3s;
         &:hover {
-          transform: scale(110%);
+          transform: scale(1.1);
         }
       }
       &.twitter {
