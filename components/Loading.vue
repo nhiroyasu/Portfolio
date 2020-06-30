@@ -156,13 +156,13 @@ $sp: 480px; // スマホ
 
 @keyframes up_name {
   0% {
-    transform: translateX(-100%) rotateY(90deg);
-    -webkit-tranform: translateX(-100%) rotateY(90deg);
+    transform: translateY(100%) rotateX(90deg);
+    -webkit-tranform: translateY(100%) rotateX(90deg);
     opacity: 0;
   }
   100% {
-    transform: translateX(0%) rotateY(0deg);
-    -webkit-transform: translateX(0%) rotateY(0deg);
+    transform: translateY(0%) rotateX(0deg);
+    -webkit-transform: translateY(0%) rotateX(0deg);
     opacity: 1;
   }
 }
