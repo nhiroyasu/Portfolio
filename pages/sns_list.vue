@@ -16,10 +16,10 @@
       <div class="col-6 col-md-4 main-container__contents__item qiita">
         <a href="https://qiita.com/cyan" target="_blank">Qiita</a>
       </div>
-      <div class="col-6 col-md-4 main-container__contents__item facebook">
-        <a href="https://www.facebook.com/profile.php?id=100046633730370" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-          <br />Facebook
+      <div class="col-6 col-md-4 main-container__contents__item codepen">
+        <a href="https://codepen.io/cyan-0fbcf9" target="_blank">
+          <i class="fab fa-codepen"></i>
+          <br />CodePen
         </a>
       </div>
       <div class="col-6 col-md-4 main-container__contents__item pinterest">
@@ -94,6 +94,7 @@ $sp: 544px; // スマホ
         text-decoration: none;
         color: white;
         transition: all ease-out 0.3s;
+        outline: none;
         &:hover {
           transform: scale(1.1);
         }
@@ -113,8 +114,11 @@ $sp: 544px; // スマホ
       &.qiita {
         background-color: #55c500;
       }
-      &.facebook {
-        background-color: #3b5998;
+      &.codepen {
+        background-color: white;
+        a {
+          color: #1e1f26;
+        }
       }
       &.pinterest {
         background-color: #bd081c;
