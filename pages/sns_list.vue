@@ -94,6 +94,7 @@ $sp: 544px; // スマホ
         text-decoration: none;
         color: white;
         transition: all ease-out 0.3s;
+        outline: none;
         &:hover {
           transform: scale(1.1);
         }
@@ -116,7 +117,7 @@ $sp: 544px; // スマホ
       &.codepen {
         background-color: white;
         a {
-          color: #1E1F26;
+          color: #1e1f26;
         }
       }
       &.pinterest {
