@@ -1,8 +1,5 @@
 <template>
-  <div class="conponent-root">
-    <div class="background d-flex align-items-center justify-content-center">
-      <div class="main-block"></div>
-    </div>
+  <div class="component-root">
     <div class="row align-items-center justify-content-center sign-tile">
       <div class="col-12 sign-space">
         <span class="welcome-text">Welcome to</span>
@@ -41,28 +38,21 @@ $sp: 544px; // スマホ
   }
 }
 
-.conponent-root {
+.component-root {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
   overflow: hidden;
   font-family: "Fredoka One", cursive;
   user-select: none;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--my-active-color);
-    transform-origin: center center;
-  }
+  background-color: var(--my-active-color);
 }
 
 .sign-tile {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0px;
   text-align: center;
@@ -79,6 +69,8 @@ $sp: 544px; // スマホ
   .sign-space {
     position: relative;
     color: white;
+    margin: 0px;
+    padding: 0px;
 
     .welcome-text {
       transition: all ease-out 0.3s;
@@ -86,7 +78,7 @@ $sp: 544px; // スマホ
 
     .name-box {
       font-size: 10rem;
-      
+
       @include tab {
         font-size: 8rem;
       }

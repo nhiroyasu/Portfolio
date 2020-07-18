@@ -6,7 +6,10 @@
         v-for="(value, index) in portfolio_list"
         :key="index"
       >
-        <cyan-swiper class="blog-slider__item swiper-slide" :slider_info="value" />
+        <cyan-swiper
+          class="blog-slider__item swiper-slide"
+          :slider_info="value"
+        />
       </div>
     </div>
   </div>
@@ -38,12 +41,11 @@ export default {
   position: relative;
   margin: 0px;
   padding: 0px;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
   background-color: var(--my-active-color);
 
   &__contents {
-    min-width: 100vw;
+    min-width: 100%;
     height: 100%;
     margin: 0px;
     padding: 30px 0px;

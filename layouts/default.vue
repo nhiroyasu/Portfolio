@@ -7,19 +7,19 @@
 </template>
 
 <script>
-import MenuComponent from '@/components/Menu.vue';
+import MenuComponent from "@/components/Menu.vue";
 import Loading from "@/components/Loading.vue";
 
 export default {
   components: {
     MenuComponent,
-    Loading,
+    Loading
   },
   data: function() {
     return {
       loading: false,
-      loaded: false,
-    }
+      loaded: false
+    };
   },
   mounted() {
     this.$nextTick(() => {
@@ -29,9 +29,9 @@ export default {
         this.$nuxt.$loading.finish();
         this.loaded = true;
       }, 2000);
-    })
-  },
-}
+    });
+  }
+};
 </script>
 
 <style lang="scss">
@@ -56,8 +56,9 @@ export default {
 }
 
 html {
-  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
-  "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic,
+    "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo,
+    Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -72,6 +73,6 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
-
 </style>

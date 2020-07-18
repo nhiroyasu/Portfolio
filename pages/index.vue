@@ -4,7 +4,7 @@
     <banner />
 
     <div id="home-container-place" class="container main-view">
-      <div class="row justify-content-center align-items-stretch">
+      <div class="row justify-content-center align-items-stretch main-row">
         <!-- Portfolio Space -->
         <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-9">
           <h1 class="plate__title">RECENT PORTFOLIO</h1>
@@ -13,7 +13,10 @@
         </div>
 
         <!-- About Space -->
-        <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
+        <div
+          id="about-place"
+          class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9"
+        >
           <h1 class="plate__title">ABOUT</h1>
           <hr class="plate__bar" />
           <about-content />
@@ -22,7 +25,10 @@
         <!-- TODO : My Skill -->
 
         <!-- Contact Space -->
-        <div id="contact-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
+        <div
+          id="contact-place"
+          class="plate mb-3 mb-md-5 col-12 col-md-10 col-lg-9"
+        >
           <h1 class="plate__title">SNS</h1>
           <hr class="plate__bar" />
           <sns-content />
@@ -54,9 +60,7 @@ export default {
   asyncData() {
     return new Promise(resolve => {});
   },
-  computed: {
-
-  },
+  computed: {},
   created: function() {
     firestore.load_ptf_datas(this.$store);
   },
@@ -99,16 +103,20 @@ $sp: 544px; // スマホ
 
 .box {
   position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
 }
 
 .main-view {
   position: relative;
   font-family: "Muli", sans-serif;
-  min-width: 100vw;
-  height: 100%;
+  min-width: 100%;
+  padding: 0px;
+  margin: 0px;
   background-color: var(--my-active-color);
+
+  .main-row {
+    width: 100%;
+  }
 
   .plate {
     margin: 10px 0px;
