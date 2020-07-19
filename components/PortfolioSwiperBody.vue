@@ -1,5 +1,5 @@
 <template>
-  <swiper-slide class="swiper-slide col-12 my-4 p-md-3">
+  <swiper-slide class="swiper-slide col-12 my-5 my-md-4 p-md-3">
     <div class="slider-item row justify-content-around align-items-center">
       <div class="slider-item__img col-7 col-md-5 col-lg-4 p-md-3 p-xl-5">
         <div class="img-cover" :style="{ backgroundImage: 'url(' + slider_info.img_link + ')' }">

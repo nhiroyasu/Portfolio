@@ -1,10 +1,10 @@
 <template>
-  <div class="box">
+  <div class="container-fuild">
     <!-- "Cyan" Sign -->
     <banner />
 
-    <div id="home-container-place" class="container main-view">
-      <div class="row justify-content-center align-items-stretch main-row">
+    <div id="home-container-place" class="main-view">
+      <div class="row justify-content-center align-items-stretch">
         <!-- Portfolio Space -->
         <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-9">
           <h1 class="plate__title">RECENT PORTFOLIO</h1>
@@ -95,22 +95,10 @@ $sp: 544px; // スマホ
   --my-barkblue: #15293d;
 }
 
-.box {
-  position: relative;
-  min-width: 100%;
-}
-
 .main-view {
   position: relative;
   font-family: 'Muli', sans-serif;
-  min-width: 100vw;
-  padding: 0px;
-  margin: 0px;
   background-color: var(--my-active-color);
-
-  .main-row {
-    width: 100%;
-  }
 
   .plate {
     margin: 10px 0px;
