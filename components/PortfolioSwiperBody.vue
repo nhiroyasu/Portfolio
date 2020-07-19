@@ -20,17 +20,17 @@
           <div class="meta__content">
             <hr class="meta__hr-text" data-content="LANGUAGE" />
             <div class="meta__data meta__platform">
-              <span class="px-1" v-for="(value, index) in slider_info.lang" :key="index">{{value}}</span>
+              <span class="px-1" v-for="(value, index) in slider_info.lang" :key="index">{{
+                value
+              }}</span>
             </div>
           </div>
           <div class="meta__content">
             <hr class="meta__hr-text" data-content="PLATFORM" />
             <div class="meta__data meta__lang">
-              <span
-                class="px-1"
-                v-for="(value, index) in slider_info.platform"
-                :key="index"
-              >{{value}}</span>
+              <span class="px-1" v-for="(value, index) in slider_info.platform" :key="index">{{
+                value
+              }}</span>
             </div>
           </div>
         </div>
@@ -80,20 +80,19 @@
 </template>
 
 <script>
-import PopupButton from "@/components/PopupButton.vue";
+import PopupButton from '@/components/PopupButton.vue';
 
 export default {
   components: {
-    PopupButton
+    PopupButton,
   },
   created() {
     let date = this.slider_info.date.toDate();
-    this.date = `${date.getFullYear()}-${date.getMonth() +
-      1}-${date.getDate()}`;
+    this.date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   },
   data() {
     return {
-      date: ""
+      date: '',
     };
   },
   props: {
@@ -102,44 +101,44 @@ export default {
       detail: String,
       img_link: String,
       lang: Array,
-      platform: Array
-    }
+      platform: Array,
+    },
   },
   computed: {
     git_hub_link() {
-      if ("github" in this.slider_info) {
+      if ('github' in this.slider_info) {
         return this.slider_info.github;
       } else {
         return null;
       }
     },
     event_link() {
-      if ("event_link" in this.slider_info) {
+      if ('event_link' in this.slider_info) {
         return this.slider_info.event_link;
       } else {
         return null;
       }
     },
     google_play_link() {
-      if ("google_play_link" in this.slider_info) {
+      if ('google_play_link' in this.slider_info) {
         return this.slider_info.google_play_link;
       } else {
         return null;
       }
     },
     web_app_link() {
-      if ("web_app_link" in this.slider_info) {
+      if ('web_app_link' in this.slider_info) {
         return this.slider_info.web_app_link;
       } else {
         return null;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 
 $tab: 768px; // タブレット（Bootstrap - md）
 $sp: 544px; // スマホ（Bootstrap - sm）
@@ -155,11 +154,8 @@ $sp: 544px; // スマホ（Bootstrap - sm）
   }
 }
 
-.swiper-slide {
-}
-
 .slider-item {
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 
   &__img {
     overflow: hidden;
@@ -193,7 +189,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       font-size: 2.5rem;
       font-weight: normal;
       letter-spacing: 0.1rem;
-      font-family: "Baloo Bhai", cursive;
+      font-family: 'Baloo Bhai', cursive;
 
       @include sp {
         font-size: 2rem;
@@ -206,7 +202,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       }
 
       &__data {
-        font-family: "Noto Sans JP", sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         color: var(--my-black);
       }
 
@@ -229,18 +225,13 @@ $sp: 544px; // スマホ（Bootstrap - sm）
         height: 2rem;
         margin: 3px 0px;
         opacity: 1;
-        font-family: "Muli", sans-serif;
+        font-family: 'Muli', sans-serif;
         letter-spacing: 0.1rem;
         &:before {
-          content: "";
+          content: '';
           // use the linear-gradient for the fading effect
           // use a solid background color for a solid bar
-          background: linear-gradient(
-            to right,
-            transparent,
-            var(--my-dark-blue),
-            transparent
-          );
+          background: linear-gradient(to right, transparent, var(--my-dark-blue), transparent);
           position: absolute;
           left: 0;
           top: 50%;
@@ -267,10 +258,10 @@ $sp: 544px; // スマホ（Bootstrap - sm）
 
     &__web-app {
       /deep/ #target {
-        background-color: #A930FF;
+        background-color: #a930ff;
         &::before,
         &::after {
-          background-color: #A930FF;
+          background-color: #a930ff;
         }
       }
     }

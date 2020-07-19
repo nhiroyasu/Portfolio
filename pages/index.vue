@@ -103,7 +103,7 @@ $sp: 544px; // スマホ
 .main-view {
   position: relative;
   font-family: 'Muli', sans-serif;
-  min-width: 100%;
+  min-width: 100vw;
   padding: 0px;
   margin: 0px;
   background-color: var(--my-active-color);
