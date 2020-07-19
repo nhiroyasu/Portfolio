@@ -1,27 +1,24 @@
 <template>
-  <div class="container main-container">
+  <div class="container-fluid main-container">
     <div class="row justify-content-around main-container__contents">
       <div
         class="col-10 col-lg-8 main-container__contents__swiper"
         v-for="(value, index) in portfolio_list"
         :key="index"
       >
-        <cyan-swiper
-          class="blog-slider__item swiper-slide"
-          :slider_info="value"
-        />
+        <cyan-swiper class="blog-slider__item swiper-slide" :slider_info="value" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import firestore from "~/plugins/fb_firestore.js";
-import CyanSwiper from "~/components/PortfolioSwiperBody.vue";
+import firestore from '~/plugins/fb_firestore.js';
+import CyanSwiper from '~/components/PortfolioSwiperBody.vue';
 
 export default {
   components: {
-    CyanSwiper
+    CyanSwiper,
   },
   created() {
     if (this.$store.state.portfolio.portfolios_data.length <= 0) {
@@ -31,23 +28,18 @@ export default {
   computed: {
     portfolio_list() {
       return this.$store.state.portfolio.portfolios_data;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .main-container {
   position: relative;
-  margin: 0px;
-  padding: 0px;
-  min-width: 100%;
   background-color: var(--my-active-color);
 
   &__contents {
     min-width: 100%;
-    height: 100%;
-    margin: 0px;
     padding: 30px 0px;
 
     &__swiper {
