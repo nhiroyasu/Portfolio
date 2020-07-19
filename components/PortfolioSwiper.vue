@@ -17,20 +17,20 @@
 </template>
 
 <script>
-import CyanSwiper from "~/components/PortfolioSwiperBody.vue";
+import CyanSwiper from '~/components/PortfolioSwiperBody.vue';
 
-import firestore from "~/plugins/fb_firestore.js";
+import firestore from '~/plugins/fb_firestore.js';
 
 export default {
   components: {
-    CyanSwiper
+    CyanSwiper,
   },
   data() {
     return {
       swiperOption: {
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true
+          el: '.swiper-pagination',
+          clickable: true,
         },
         // navigation: {
         //   nextEl: ".swiper-button-next",
@@ -40,22 +40,22 @@ export default {
         speed: 600,
         autoplay: {
           delay: 5000,
-          disableOnInteraction: true
-        }
-      }
+          disableOnInteraction: true,
+        },
+      },
     };
   },
   computed: {
     portfolio_list(event) {
       return this.$store.state.portfolio.portfolios_data.slice(0, 5);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
-@import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
 
 $tab: 768px; // タブレット（Bootstrap - md）
 $sp: 544px; // スマホ（Bootstrap - sm）
@@ -69,9 +69,6 @@ $sp: 544px; // スマホ（Bootstrap - sm）
   @media (max-width: ($sp)) {
     @content;
   }
-}
-
-.portfolio-box {
 }
 
 .portfolio-component {
@@ -88,36 +85,30 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
 
     /deep/ .swiper-button-prev {
-      background: url("~assets/arrow-left.svg") no-repeat center center /
-        contain;
+      background: url('~assets/arrow-left.svg') no-repeat center center / contain;
     }
     /deep/ .swiper-button-next {
-      background: url("~assets/arrow-right.svg") no-repeat center center /
-        contain;
+      background: url('~assets/arrow-right.svg') no-repeat center center / contain;
     }
 
     @include tab {
       /deep/ .swiper-button-prev {
-        background: url("~assets/arrow-left.svg") no-repeat center center /
-          contain;
+        background: url('~assets/arrow-left.svg') no-repeat center center / contain;
         display: none;
       }
       /deep/ .swiper-button-next {
-        background: url("~assets/arrow-right.svg") no-repeat center center /
-          contain;
+        background: url('~assets/arrow-right.svg') no-repeat center center / contain;
         display: none;
       }
     }
 
     @include sp {
       /deep/ .swiper-button-prev {
-        background: url("~assets/arrow-left.svg") no-repeat center center /
-          contain;
+        background: url('~assets/arrow-left.svg') no-repeat center center / contain;
         display: none;
       }
       /deep/ .swiper-button-next {
-        background: url("~assets/arrow-right.svg") no-repeat center center /
-          contain;
+        background: url('~assets/arrow-right.svg') no-repeat center center / contain;
         display: none;
       }
     }
@@ -154,7 +145,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
         }
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           width: 10px;
           height: 10px;
