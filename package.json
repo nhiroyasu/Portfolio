@@ -9,7 +9,8 @@
     "dev-server": "NUXT_HOST=0.0.0.0 NUXT_PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "nuxt build && nuxt generate && firebase deploy"
   },
   "dependencies": {
     "aos": "^2.3.4",
