@@ -1,5 +1,5 @@
 <template>
-  <div class="container main-container">
+  <div class="container-fluid main-container">
     <div class="row main-container__contents">
       <div class="col-6 col-md-4 main-container__contents__item twitter">
         <a href="https://twitter.com/cyan_0FBCF9" target="_blank">
@@ -60,17 +60,9 @@ $sp: 544px; // スマホ
 
 .main-container {
   position: relative;
-  margin: 0px;
-  padding: 0px;
-  width: 100vw;
-  height: 100vh;
 
   &__contents {
     position: relative;
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
-    height: 100vh;
 
     &__item {
       height: 50vh;
@@ -78,13 +70,13 @@ $sp: 544px; // スマホ
       align-items: center;
       justify-content: center;
       text-align: center;
-      font: normal 3rem/5rem "Baloo Bhai", cursive;
+      font: normal 3rem/5rem 'Baloo Bhai', cursive;
       @include tab {
-        font: normal 2.2rem/3rem "Baloo Bhai", cursive;
+        font: normal 2.2rem/3rem 'Baloo Bhai', cursive;
       }
       @include sp {
         height: 33vh;
-        font: normal 2rem/3rem "Baloo Bhai", cursive;
+        font: normal 2rem/3rem 'Baloo Bhai', cursive;
       }
 
       a {
@@ -137,7 +129,7 @@ $sp: 544px; // スマホ
           // }
         }
         .green {
-          content: "";
+          content: '';
           position: absolute;
           top: 25%;
           width: 100%;
@@ -154,7 +146,7 @@ $sp: 544px; // スマホ
           }
         }
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 50%;
           width: 100%;
@@ -169,7 +161,7 @@ $sp: 544px; // スマホ
           transform: translateX(0%);
         }
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 75%;
           width: 100%;
