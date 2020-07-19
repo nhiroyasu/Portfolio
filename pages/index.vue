@@ -1,34 +1,31 @@
 <template>
-  <div class="container-fuild">
-    <!-- "Cyan" Sign -->
-    <banner />
-
-    <div id="home-container-place" class="main-view">
-      <div class="row justify-content-center align-items-stretch">
-        <!-- Portfolio Space -->
-        <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-9">
-          <h1 class="plate__title">RECENT PORTFOLIO</h1>
-          <hr class="plate__bar" />
-          <portfolio-swiper />
-        </div>
-
-        <!-- About Space -->
-        <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
-          <h1 class="plate__title">ABOUT</h1>
-          <hr class="plate__bar" />
-          <about-content />
-        </div>
-
-        <!-- TODO : My Skill -->
-
-        <!-- Contact Space -->
-        <div id="contact-place" class="plate mb-3 mb-md-5 col-12 col-md-10 col-lg-9">
-          <h1 class="plate__title">SNS</h1>
-          <hr class="plate__bar" />
-          <sns-content />
-        </div>
-        <!-- Context View -->
+  <div class="container-fluid main-view">
+    <div id="home-container-place" class="row justify-content-center align-items-stretch">
+      <!-- "Cyan" Sign -->
+      <banner />
+      <!-- Portfolio Space -->
+      <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-8">
+        <h1 class="plate__title">RECENT PORTFOLIO</h1>
+        <hr class="plate__bar" />
+        <portfolio-swiper />
       </div>
+
+      <!-- About Space -->
+      <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
+        <h1 class="plate__title">ABOUT</h1>
+        <hr class="plate__bar" />
+        <about-content />
+      </div>
+
+      <!-- TODO : My Skill -->
+
+      <!-- Contact Space -->
+      <div id="contact-place" class="plate mb-3 mb-md-5 col-12 col-md-10 col-lg-9">
+        <h1 class="plate__title">SNS</h1>
+        <hr class="plate__bar" />
+        <sns-content />
+      </div>
+      <!-- Context View -->
     </div>
   </div>
 </template>
