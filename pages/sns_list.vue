@@ -8,7 +8,7 @@
         </a>
       </div>
       <div class="col-6 col-md-4 main-container__contents__item github">
-        <a href="https://github.com/namid11" target="_blank">
+        <a href="https://github.com/cyan-0fbcf9" target="_blank">
           <i class="fab fa-github"></i>
           <br />Github
         </a>
