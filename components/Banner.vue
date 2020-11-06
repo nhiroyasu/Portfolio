@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="text-center box-button">
-      <a class="open-button" href="#" v-scroll-to="'#home-container-place'">
+      <a class="open-button" href="#" v-scroll-to="'#portfolio-place'">
         <i class="fas fa-chevron-down"></i>
       </a>
     </div>
