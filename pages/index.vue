@@ -84,7 +84,7 @@ $sp: 544px; // スマホ
   --my-active-color: #0fbcf9;
   --my-active2-color: #0da8e0;
   --my-sub-color: #03fdb7;
-  --my-dark-blue: #3d4df5;
+  --my-dark-blue: #426AE0;
   --my-primary-blue: #b5f8fd;
   --my-black: #1e272e;
   --my-gray: #636e72;
