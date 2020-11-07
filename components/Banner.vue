@@ -45,7 +45,7 @@ $sp: 544px; // スマホ
   padding: 0px;
   margin: 0px;
   overflow: hidden;
-  font-family: "Fredoka One", cursive;
+  font-family: 'Fredoka One', cursive;
   user-select: none;
   background-color: var(--my-active-color);
 }
@@ -64,6 +64,18 @@ $sp: 544px; // スマホ
   }
   @include sp {
     font-size: 2.8rem;
+  }
+
+  .my-icon-wrapper {
+    background-color: white;
+    border-radius: 50%;
+    margin: 0px 20px;
+    padding: 0px 20px 10px 0px;
+
+    img {
+      filter: drop-shadow(20px 10px 4px var(--my-gray));
+      width: 250px;
+    }
   }
 
   .sign-space {
@@ -87,48 +99,16 @@ $sp: 544px; // スマホ
       }
 
       .sign-forward {
-        color: var(--my-active-color);
-        text-shadow: 7px 7px 0px #333333a8;
+        color: white;
         transition: all 0.3s ease-in-out 0s;
-        &:hover {
-          color: white;
-        }
-        animation: font_shadow 4s linear 0s infinite forwards;
+        text-shadow: 7px 7px 0px #333333a8;
       }
 
       .sign-back {
-        color: var(--my-sub-color);
-        text-shadow: 7px 7px 0px #333333a8;
+        color: var(--my-dark-blue);
         transition: all 0.3s ease-in-out 0s;
-        &:hover {
-          color: white;
-        }
-
-        animation: font_shadow 4s linear 0s infinite forwards;
+        text-shadow: 7px 7px 0px #333333a8;
       }
-    }
-  }
-
-  @keyframes font_shadow {
-    0% {
-      text-shadow: 7px 7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(-20deg) rotateZ(0deg);
-    }
-    25% {
-      text-shadow: -7px 7px 0px #333333a8;
-      transform: rotateY(-20deg) rotateX(-20deg) rotateZ(0deg);
-    }
-    50% {
-      text-shadow: -7px -7px 0px #333333a8;
-      transform: rotateY(-20deg) rotateX(20deg) rotateZ(0deg);
-    }
-    75% {
-      text-shadow: 7px -7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(20deg) rotateZ(0deg);
-    }
-    100% {
-      text-shadow: 7px 7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(-20deg) rotateZ(0deg);
     }
   }
 }
