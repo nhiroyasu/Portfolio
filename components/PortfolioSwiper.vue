@@ -38,10 +38,6 @@ export default {
         // },
         loop: true,
         speed: 600,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: true,
-        },
       },
     };
   },
