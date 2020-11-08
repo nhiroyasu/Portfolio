@@ -13,7 +13,7 @@
 
       <!-- Portfolio Space -->
       <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-8">
-        <h1 class="plate__title">RECENT PORTFOLIO</h1>
+        <h1 class="plate__title">RECENT PORTFOLIOS</h1>
         <hr class="plate__bar" />
         <portfolio-swiper />
       </div>
@@ -26,7 +26,7 @@
       </div>
 
       <div id="skill-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
-        <h1 class="plate__title">SKILL</h1>
+        <h1 class="plate__title">SKILLS</h1>
         <hr class="plate__bar" />
         <skill />
       </div>      
