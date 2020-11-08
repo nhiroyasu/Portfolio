@@ -1,6 +1,11 @@
 <template>
   <div class="skill-container">
-    
+    <div class="languages-wrapper" v-for="(item, index) in languages" :key="index">
+      <language-item :lang="item" />
+    </div>
+    <div class="frameworks-wrapper" v-for="(item, index) in frameworks" :key="index">
+      <framework-item :framework="item" />
+    </div>
   </div>
 </template>
 
@@ -10,6 +15,22 @@ import FrameworkItem from './FrameworkItem.vue';
 import ProgramLanguage from '~/scripts/types/ProgramLanguage';
 import Framework from '~/scripts/types/Framework';
 
+import JS from '~/assets/icons/languages/js.png';
+import SIWFT from '~/assets/icons/languages/swift.svg';
+import KOTLIN from '~/assets/icons/languages/kotlin.png';
+import PYTHON from '~/assets/icons/languages/python.png';
+import CS from '~/assets/icons/languages/c-sharp.svg';
+import TS from '~/assets/icons/languages/ts.png';
+import DART from '~/assets/icons/languages/dart.png';
+
+import NUXT from '~/assets/icons/frameworks/nuxt.png';
+import BOOTSTRAP from '~/assets/icons/frameworks/bootstrap.png';
+import ANDROID from '~/assets/icons/frameworks/android.png';
+import ANGULAR from '~/assets/icons/frameworks/angular.png';
+import IONIC from '~/assets/icons/frameworks/ionic.png';
+import VUE from '~/assets/icons/frameworks/vue.svg';
+import FLUTTER from '~/assets/icons/frameworks/flutter.png';
+
 export default {
   components: {
     LanguageItem,
@@ -18,31 +39,40 @@ export default {
   data() {
     return {
       languages: [
-        new ProgramLanguage('Javascript', '~/assets/icons/languages/js.png', 4),
-        new ProgramLanguage('Kotlin', '~/assets/icons/languages/kotlin.png', 4),
-        new ProgramLanguage('Swift', '~/assets/icons/languages/swift.svg', 4),
-        new ProgramLanguage('Python', '~/assets/icons/languages/python.png', 3),
-        new ProgramLanguage('C#', '~/assets/icons/languages/c-sharp.svg', 2),
-        new ProgramLanguage('Typescript', '~/assets/icons/languages/ts.png', 2),
-        new ProgramLanguage('Dart', '~/assets/icons/languages/dart.png', 2),
+        new ProgramLanguage('Javascript', JS, 4),
+        new ProgramLanguage('Kotlin', KOTLIN, 4),
+        new ProgramLanguage('Swift', SIWFT, 4),
+        new ProgramLanguage('Python', PYTHON, 3),
+        new ProgramLanguage('C#', CS, 2),
+        new ProgramLanguage('Typescript', TS, 2),
+        new ProgramLanguage('Dart', DART, 2),
       ],
       frameworks: [
-        new Framework('Nuxt', '~/assets/icons/frameworks/nuxt.png', 4),
-        new Framework('Bootstrap', '~/assets/icons/frameworks/bootstrap.png', 4),
-        new Framework('Android Native', '~/assets/icons/frameworks/android.png', 4),
-        new Framework('iOS Native', '~/assets/icons/languages/swift.png', 4),
-        new Framework('Angular', '~/assets/icons/frameworks/angular.png', 3),
-        new Framework('Ionic', '~/assets/icons/frameworks/ionic.png', 3),
-        new Framework('Vue', '~/assets/icons/frameworks/vue.png', 2),
-        new Framework('Flutter', '~/assets/icons/frameworks/flutter.png', 2),
-      ]
-    }
+        new Framework('Nuxt', NUXT, 4),
+        new Framework('Bootstrap', BOOTSTRAP, 4),
+        new Framework('Android Native', ANDROID, 4),
+        new Framework('iOS Native', SIWFT, 4),
+        new Framework('Angular', ANGULAR, 3),
+        new Framework('Ionic', IONIC, 3),
+        new Framework('Vue', VUE, 2),
+        new Framework('Flutter', FLUTTER, 2),
+      ],
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .skill-container {
+  background: white;
+  box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
+  border-radius: 15px;
+  padding: 10px;
 
+  .languages-wrapper {
+  }
+
+  .frameworks-wrapper {
+  }
 }
 </style>
