@@ -1,13 +1,12 @@
 <template>
   <div class="component-root">
-    <div class="row align-items-center justify-content-center sign-tile">
-      <div class="col-12 sign-space">
-        <span class="welcome-text">Welcome to</span>
-        <br />
-        <div class="d-flex align-items-center justify-content-center name-box">
-          <!-- <img class="mx-3 mx-md-4" src="~assets/cyan_icon.svg" alt="#" width="100" /> -->
-          <span class="sign-forward">CYA</span>
-          <span class="sign-back">N</span>
+    <div class="d-flex flex-column align-items-center justify-content-center sign-tile">
+      <div class="my-icon-wrapper">
+        <img src="~assets/cyan-icon-transparent.png" alt="icon" />
+      </div>
+      <div class="sign-space">
+        <div class="name-box">
+          <span class="sign-forward">HIROYASU'S<br />PORTFOLIO SITE</span>
         </div>
       </div>
     </div>
@@ -70,10 +69,11 @@ $sp: 544px; // スマホ
     background-color: white;
     border-radius: 50%;
     margin: 0px 20px;
-    padding: 0px 20px 10px 0px;
+    padding: 10px;
 
     img {
       filter: drop-shadow(20px 10px 4px var(--my-gray));
+      transform: translateX(-5px);
       width: 250px;
     }
   }
@@ -89,19 +89,23 @@ $sp: 544px; // スマホ
     }
 
     .name-box {
-      font-size: 10rem;
+      font-size: 7rem;
 
       @include tab {
-        font-size: 8rem;
+        font-size: 4rem;
       }
       @include sp {
-        font-size: 6rem;
+        font-size: 3rem;
       }
 
       .sign-forward {
         color: white;
         transition: all 0.3s ease-in-out 0s;
         text-shadow: 7px 7px 0px #333333a8;
+
+        @include sp {
+          text-shadow: 4px 4px 0px #333333a8;
+        }
       }
 
       .sign-back {

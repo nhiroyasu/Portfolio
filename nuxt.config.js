@@ -4,19 +4,19 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Cyan ポートフォリオサイト',
+    title: "Hiroyasu's Portfolio Site",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Cyan(Hiroyasu:広康)のポートフォリオサイト',
+        content: 'Hiroyasu（広康）のポートフォリオサイト',
       },
       { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'og:title', content: 'Cyanポートフォリオサイト' },
-      { name: 'og:site_name', content: 'Cyan ポートフォリオサイト' },
+      { name: 'og:title', content: "Hiroyasu's Portfolio Site" },
+      { name: 'og:site_name', content: "Hiroyasu's Portfolio Site" },
       { name: 'og:description', content: '' },
       {
         name: 'og:image',
