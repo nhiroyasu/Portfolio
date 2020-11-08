@@ -3,6 +3,14 @@
     <div id="home-container-place" class="row justify-content-center align-items-stretch">
       <!-- "Cyan" Sign -->
       <banner />
+
+      <!-- Career Space -->
+      <div id="career-place" class="plate col-11 col-md-10 col-lg-8">
+        <h1 class="plate__title">CAREER</h1>
+        <hr class="plate__bar" />
+        <career-content />
+      </div>
+
       <!-- Portfolio Space -->
       <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-8">
         <h1 class="plate__title">RECENT PORTFOLIO</h1>
@@ -35,6 +43,7 @@ import PortfolioSwiper from '~/components/PortfolioSwiper.vue';
 import AboutContent from '~/components/MyAbout.vue';
 import SnsContent from '~/components/MySns.vue';
 import Banner from '~/components/Banner.vue';
+import CareerContent from '~/components/Career.vue';
 
 import firestore from '~/plugins/fb_firestore.js';
 
@@ -44,6 +53,7 @@ export default {
     AboutContent,
     SnsContent,
     Banner,
+    CareerContent,
   },
   data: function() {
     return {};
