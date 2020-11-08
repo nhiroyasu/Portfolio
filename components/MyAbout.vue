@@ -4,7 +4,7 @@
       <div class="about-container__top-icon col-12 mb-md-4 mb-3">
         <img
           class="rounded-circle"
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2FMy%20preview.png?alt=media&token=20b23f8d-c722-4048-b25b-cad6793a0dd3"
+          src="~assets/my-preview.png"
           alt="CYAN"
           width="200px"
         />

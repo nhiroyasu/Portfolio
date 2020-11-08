@@ -1,18 +1,17 @@
 <template>
   <div class="component-root">
-    <div class="row align-items-center justify-content-center sign-tile">
-      <div class="col-12 sign-space">
-        <span class="welcome-text">Welcome to</span>
-        <br />
-        <div class="d-flex align-items-center justify-content-center name-box">
-          <!-- <img class="mx-3 mx-md-4" src="~assets/cyan_icon.svg" alt="#" width="100" /> -->
-          <span class="sign-forward">CYA</span>
-          <span class="sign-back">N</span>
+    <div class="d-flex flex-column align-items-center justify-content-center sign-tile">
+      <div class="my-icon-wrapper">
+        <img src="~assets/cyan-icon-transparent.png" alt="icon" />
+      </div>
+      <div class="sign-space">
+        <div class="name-box">
+          <span class="sign-forward">HIROYASU'S<br />PORTFOLIO SITE</span>
         </div>
       </div>
     </div>
     <div class="text-center box-button">
-      <a class="open-button" href="#" v-scroll-to="'#portfolio-place'">
+      <a class="open-button" href="#" v-scroll-to="'#career-place'">
         <i class="fas fa-chevron-down"></i>
       </a>
     </div>
@@ -45,7 +44,7 @@ $sp: 544px; // スマホ
   padding: 0px;
   margin: 0px;
   overflow: hidden;
-  font-family: "Fredoka One", cursive;
+  font-family: 'Fredoka One', cursive;
   user-select: none;
   background-color: var(--my-active-color);
 }
@@ -57,13 +56,26 @@ $sp: 544px; // スマホ
   margin: 0px;
   text-align: center;
   font-size: 6rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 
   @include tab {
     font-size: 5rem;
   }
   @include sp {
     font-size: 2.8rem;
+  }
+
+  .my-icon-wrapper {
+    background-color: white;
+    border-radius: 50%;
+    margin: 0px 20px;
+    padding: 10px;
+
+    img {
+      filter: drop-shadow(20px 10px 4px var(--my-gray));
+      transform: translateX(-5px);
+      width: 250px;
+    }
   }
 
   .sign-space {
@@ -77,58 +89,34 @@ $sp: 544px; // スマホ
     }
 
     .name-box {
-      font-size: 10rem;
+      font-size: 7rem;
 
       @include tab {
-        font-size: 8rem;
+        font-size: 3.5rem;
       }
       @include sp {
-        font-size: 6rem;
+        font-size: 3rem;
       }
 
       .sign-forward {
-        color: var(--my-active-color);
-        text-shadow: 7px 7px 0px #333333a8;
+        color: white;
         transition: all 0.3s ease-in-out 0s;
-        &:hover {
-          color: white;
+        text-shadow: 5px 5px 0px #333333a8;
+
+        @include tab {
+          text-shadow: 4px 4px 0px #333333a8;
         }
-        animation: font_shadow 4s linear 0s infinite forwards;
+
+        @include sp {
+          text-shadow: 2.5px 2.5px 0px #333333a8;
+        }
       }
 
       .sign-back {
-        color: var(--my-sub-color);
-        text-shadow: 7px 7px 0px #333333a8;
+        color: var(--my-dark-blue);
         transition: all 0.3s ease-in-out 0s;
-        &:hover {
-          color: white;
-        }
-
-        animation: font_shadow 4s linear 0s infinite forwards;
+        text-shadow: 7px 7px 0px #333333a8;
       }
-    }
-  }
-
-  @keyframes font_shadow {
-    0% {
-      text-shadow: 7px 7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(-20deg) rotateZ(0deg);
-    }
-    25% {
-      text-shadow: -7px 7px 0px #333333a8;
-      transform: rotateY(-20deg) rotateX(-20deg) rotateZ(0deg);
-    }
-    50% {
-      text-shadow: -7px -7px 0px #333333a8;
-      transform: rotateY(-20deg) rotateX(20deg) rotateZ(0deg);
-    }
-    75% {
-      text-shadow: 7px -7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(20deg) rotateZ(0deg);
-    }
-    100% {
-      text-shadow: 7px 7px 0px #333333a8;
-      transform: rotateY(20deg) rotateX(-20deg) rotateZ(0deg);
     }
   }
 }
