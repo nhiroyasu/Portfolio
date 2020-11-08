@@ -5,7 +5,7 @@
       <banner />
 
       <!-- Career Space -->
-      <div id="career-place" class="plate col-11 col-md-10 col-lg-8">
+      <div id="career-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-8">
         <h1 class="plate__title">CAREER</h1>
         <hr class="plate__bar" />
         <career-content />
@@ -43,7 +43,7 @@ import PortfolioSwiper from '~/components/PortfolioSwiper.vue';
 import AboutContent from '~/components/MyAbout.vue';
 import SnsContent from '~/components/MySns.vue';
 import Banner from '~/components/Banner.vue';
-import CareerContent from '~/components/Career.vue';
+import CareerContent from '~/components/Career/Career.vue';
 
 import firestore from '~/plugins/fb_firestore.js';
 
