@@ -145,45 +145,6 @@ $sp: 544px; // スマホ
       font-weight: 700;
       color: white;
       transition: all ease-out 0.3s;
-      // background: var(--my-dark-blue);
-      // &:hover {
-      //   // text-shadow: 10px 10px 0px rgba(34, 46, 58, 0.5);
-      // }
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   display: flex;
-      //   top: 0px;
-      //   left: 0px;
-      //   width: 100%;
-      //   height: 1px;
-      //   transform: translateX(0%) scaleX(0%);
-      //   transform-origin: top left;
-      //   transition: all ease-out 0.3s;
-      //   background-color: white;
-      //   z-index: -1;
-      // }
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   display: flex;
-      //   bottom: 0px;
-      //   left: 0px;
-      //   width: 100%;
-      //   height: 1px;
-      //   transform: translateX(0%) scaleX(0%);
-      //   transition: all ease-out 0.3s;
-      //   transform-origin: top right;
-      //   background-color: white;
-      //   z-index: -1;
-      //   // animation: bar_progress 2s linear 0s infinite alternate forwards;
-      // }
-      // &:hover::before {
-      //   transform: translateX(0%) scaleX(100%);
-      // }
-      // &:hover::after {
-      //   transform: translateX(0%) scaleX(100%);
-      // }
     }
     p {
       font-family: "M PLUS Rounded 1c", serif;
@@ -195,8 +156,6 @@ $sp: 544px; // スマホ
     }
 
     &__desc {
-      h4 {
-      }
       p {
         font-size: 0.9rem;
         margin-bottom: 0.4rem;
