@@ -25,7 +25,11 @@
         <about-content />
       </div>
 
-      <!-- TODO : My Skill -->
+      <div id="skill-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
+        <h1 class="plate__title">SKILL</h1>
+        <hr class="plate__bar" />
+        <skill />
+      </div>      
 
       <!-- Contact Space -->
       <div id="contact-place" class="plate mb-3 mb-md-5 col-12 col-md-10 col-lg-9">
@@ -44,6 +48,7 @@ import AboutContent from '~/components/MyAbout.vue';
 import SnsContent from '~/components/MySns.vue';
 import Banner from '~/components/Banner.vue';
 import CareerContent from '~/components/Career/Career.vue';
+import Skill from '~/components/Skill/Skill.vue';
 
 import firestore from '~/plugins/fb_firestore.js';
 
@@ -54,6 +59,7 @@ export default {
     SnsContent,
     Banner,
     CareerContent,
+    Skill
   },
   data: function() {
     return {};
