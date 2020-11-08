@@ -1,10 +1,12 @@
 <template>
   <div class="skill-container">
-    <div class="languages-wrapper" v-for="(item, index) in languages" :key="index">
-      <language-item :lang="item" />
+    <div class="languages-wrapper wrapper">
+      <div class="title text-center">LANGUAGES</div>
+      <language-item v-for="(item, index) in languages" :key="index" :lang="item" />
     </div>
-    <div class="frameworks-wrapper" v-for="(item, index) in frameworks" :key="index">
-      <framework-item :framework="item" />
+    <div class="frameworks-wrapper wrapper">
+      <div class="title text-center">FRAMEWORKS</div>
+      <framework-item v-for="(item, index) in frameworks" :key="index" :framework="item" />
     </div>
   </div>
 </template>
@@ -39,23 +41,23 @@ export default {
   data() {
     return {
       languages: [
-        new ProgramLanguage('Javascript', JS, 4),
+        new ProgramLanguage('JavaScript', JS, 4),
+        new ProgramLanguage('TypeScript', TS, 2),
         new ProgramLanguage('Kotlin', KOTLIN, 4),
         new ProgramLanguage('Swift', SIWFT, 4),
+        new ProgramLanguage('Dart', DART, 2),
         new ProgramLanguage('Python', PYTHON, 3),
         new ProgramLanguage('C#', CS, 2),
-        new ProgramLanguage('Typescript', TS, 2),
-        new ProgramLanguage('Dart', DART, 2),
       ],
       frameworks: [
         new Framework('Nuxt', NUXT, 4),
-        new Framework('Bootstrap', BOOTSTRAP, 4),
-        new Framework('Android Native', ANDROID, 4),
-        new Framework('iOS Native', SIWFT, 4),
+        new Framework('Vue', VUE, 2),
         new Framework('Angular', ANGULAR, 3),
         new Framework('Ionic', IONIC, 3),
-        new Framework('Vue', VUE, 2),
+        new Framework('Android', ANDROID, 4),
+        new Framework('iOS', SIWFT, 4),
         new Framework('Flutter', FLUTTER, 2),
+        new Framework('Bootstrap', BOOTSTRAP, 4),
       ],
     };
   },
@@ -67,12 +69,20 @@ export default {
   background: white;
   box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
   border-radius: 15px;
-  padding: 10px;
+  padding: 20px;
 
-  .languages-wrapper {
-  }
+  .wrapper {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0px 40px 0px;
 
-  .frameworks-wrapper {
+    .title {
+      font-size: 2.2rem;
+      letter-spacing: 0.1rem;
+      width: 100%;
+    }
   }
 }
 </style>

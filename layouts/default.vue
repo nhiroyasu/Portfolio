@@ -42,6 +42,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap'); /* font-family: 'Noto Serif JP', serif; */
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); /* font-family: 'Fredoka One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap'); // font-family: 'Source Code Pro', monospace;
 
 :root {
   --my-active-color: #0fbcf9;

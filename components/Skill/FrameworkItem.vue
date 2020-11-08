@@ -4,18 +4,23 @@
       {{ framework.name }}
     </div>
     <div class="icon-field">
-      <img :src="framework.icon" alt="icon">
+      <img :src="framework.icon" alt="icon" />
     </div>
     <div class="level-field">
-      {{ framework.level }}
+      <small>Level</small>
+      <b-icon-star-fill v-for="(value, index) in framework.level" :key="index"></b-icon-star-fill>
     </div>
   </div>
 </template>
 
 <script>
 import Framework from '~/scripts/types/Framework';
+import { BIconStarFill } from 'bootstrap-vue';
 
 export default {
+  components: {
+    BIconStarFill,
+  },
   props: {
     framework: {
       type: Framework,
@@ -27,16 +32,37 @@ export default {
 
 <style lang="scss" scoped>
 .framework-item-container {
+  align-items: center;
+  // background-color: var(--my-active2-color);
+  // box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
+  border-radius: 15px;
+  // color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin: 12px 10px;
+  padding: 12px;
+
   .name-field {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5em;
+    text-align: center;
   }
 
   .icon-field {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
     img {
-      width: 128px;
+      width: 64px;
     }
   }
 
   .level-field {
+    small {
+      padding-right: 8px;
+    }
+    color: var(--my-dark-blue);
   }
 }
 </style>
