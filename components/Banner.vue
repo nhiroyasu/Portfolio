@@ -62,7 +62,7 @@ $sp: 544px; // スマホ
     font-size: 5rem;
   }
   @include sp {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   .my-icon-wrapper {

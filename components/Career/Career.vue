@@ -50,6 +50,11 @@ export default {
           product_link: 'https://github.com/cyan-0fbcf9/DAILY-GAME',
         },
         {
+          date: '2020/06/01',
+          title: '株式会社TwoGate アルバイト',
+          official_site: 'https://twogate.com/',
+        },
+        {
           date: '2020/09/30',
           title: 'Civictech Challenge Cup',
           official_site: 'https://ccc2020.code4japan.org/',
