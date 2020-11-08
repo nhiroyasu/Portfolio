@@ -41,7 +41,6 @@ export default {
   padding: 12px;
 
   .name-field {
-    font-family: 'Source Code Pro', monospace;
     font-size: 1.5em;
     text-align: center;
   }

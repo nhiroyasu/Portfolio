@@ -44,7 +44,6 @@ export default {
   padding: 12px;
 
   .name-field {
-    font-family: 'Source Code Pro', monospace;
     font-size: 1.5em;
     text-align: center;
   }
@@ -58,10 +57,10 @@ export default {
     }
   }
 
-  .level-field {
-    small {
+  .level-field {    small {
       padding-right: 8px;
     }
+
     color: var(--my-dark-blue);
   }
 }
