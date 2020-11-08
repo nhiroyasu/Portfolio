@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <loading v-bind:on_load="loading" v-bind:on_loaded="loaded" /> -->
     <menu-component />
     <nuxt />
   </div>
@@ -15,22 +14,6 @@ export default {
     MenuComponent,
     Loading,
   },
-  // data: function() {
-  //   return {
-  //     loading: false,
-  //     loaded: false
-  //   };
-  // },
-  // mounted() {
-  //   this.$nextTick(() => {
-  //     this.$nuxt.$loading.start();
-  //     this.loading = true;
-  //     setTimeout(() => {
-  //       this.$nuxt.$loading.finish();
-  //       this.loaded = true;
-  //     }, 2000);
-  //   });
-  // }
 };
 </script>
 

@@ -37,7 +37,6 @@
         <hr class="plate__bar" />
         <sns-content />
       </div>
-      <!-- Context View -->
     </div>
   </div>
 </template>

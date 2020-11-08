@@ -33,10 +33,7 @@ export default {
 <style lang="scss" scoped>
 .framework-item-container {
   align-items: center;
-  // background-color: var(--my-active2-color);
-  // box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
   border-radius: 15px;
-  // color: white;
   display: flex;
   flex-direction: column;
   font-size: 1rem;
