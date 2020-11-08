@@ -56,7 +56,7 @@ $sp: 544px; // スマホ
   margin: 0px;
   text-align: center;
   font-size: 6rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 
   @include tab {
     font-size: 5rem;
@@ -92,7 +92,7 @@ $sp: 544px; // スマホ
       font-size: 7rem;
 
       @include tab {
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
       @include sp {
         font-size: 3rem;
@@ -101,10 +101,14 @@ $sp: 544px; // スマホ
       .sign-forward {
         color: white;
         transition: all 0.3s ease-in-out 0s;
-        text-shadow: 7px 7px 0px #333333a8;
+        text-shadow: 5px 5px 0px #333333a8;
+
+        @include tab {
+          text-shadow: 4px 4px 0px #333333a8;
+        }
 
         @include sp {
-          text-shadow: 4px 4px 0px #333333a8;
+          text-shadow: 2.5px 2.5px 0px #333333a8;
         }
       }
 
