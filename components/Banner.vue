@@ -6,7 +6,7 @@
       </div>
       <div class="sign-space">
         <div class="name-box">
-          <span class="sign-forward">HIROYASU'S<br />PORTFOLIO SITE</span>
+          <span class="sign-forward">HIROYASU<br />PORTFOLIO SITE</span>
         </div>
       </div>
     </div>
