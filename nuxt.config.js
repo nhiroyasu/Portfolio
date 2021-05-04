@@ -1,17 +1,17 @@
 export default {
-  mode: 'spa',
+  ssr: false,
   /*
    ** Headers of the page
    */
   head: {
-    title: "Hiroyasu's Portfolio Site",
+    title: "Hiroyasu Portfolio Site",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Hiroyasu（広康）のポートフォリオサイト',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
       },
       { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
