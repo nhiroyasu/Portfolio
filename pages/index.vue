@@ -107,7 +107,7 @@ $sp: 544px; // スマホ
 .main-view {
   position: relative;
   font-family: 'Muli', sans-serif;
-  background-color: var(--my-active-color);
+  background-color: $my-active-color;
 
   .plate {
     margin: 10px 0px;

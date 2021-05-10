@@ -13,6 +13,7 @@
     "deploy": "nuxt build && nuxt generate && firebase deploy"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "aos": "^2.3.4",
     "bootstrap-vue": "^2.21.2",
     "firebase": "^7.24.0",

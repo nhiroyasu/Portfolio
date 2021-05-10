@@ -48,7 +48,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['swiper/dist/css/swiper.css', '~/assets/transition.scss'],
+  css: [
+    'swiper/dist/css/swiper.css',
+    '~/assets/styles/scss/transition.scss'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -56,7 +59,9 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/style-resources',
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -92,5 +97,18 @@ export default {
         ];
       },
     },
+  },
+  /**
+   * Style modules
+   */
+  styleResources: {
+    // your settings here
+    sass: [],
+    scss: [
+      './assets/styles/scss/color.scss',
+      './assets/styles/scss/variable.scss',
+    ],
+    less: [],
+    stylus: []
   },
 };
