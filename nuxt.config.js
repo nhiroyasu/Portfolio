@@ -1,17 +1,17 @@
 export default {
-  mode: 'spa',
+  ssr: false,
   /*
    ** Headers of the page
    */
   head: {
-    title: "Hiroyasu's Portfolio Site",
+    title: "Hiroyasuのポートフォリオサイト",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Hiroyasu（広康）のポートフォリオサイト',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
       },
       { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -48,7 +48,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['swiper/dist/css/swiper.css', '~/assets/transition.scss'],
+  css: [
+    'swiper/dist/css/swiper.css',
+    '~/assets/styles/scss/transition.scss'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -56,7 +59,9 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/style-resources',
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -92,5 +97,18 @@ export default {
         ];
       },
     },
+  },
+  /**
+   * Style modules
+   */
+  styleResources: {
+    // your settings here
+    sass: [],
+    scss: [
+      './assets/styles/scss/color.scss',
+      './assets/styles/scss/variable.scss',
+    ],
+    less: [],
+    stylus: []
   },
 };
