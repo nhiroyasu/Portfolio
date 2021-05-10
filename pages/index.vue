@@ -1,76 +1,82 @@
 <template>
-  <div class="box">
-    <!-- "Cyan" Sign -->
-    <banner />
+  <div class='container-fluid main-view'>
+    <div id='home-container-place' class='row justify-content-center align-items-stretch'>
+      <!-- "Cyan" Sign -->
+      <banner />
 
-    <div id="home-container-place" class="container main-view">
-      <div class="row justify-content-center align-items-stretch">
-        <!-- Portfolio Space -->
-        <div id="portfolio-place" class="plate col-11 col-md-10 col-lg-9">
-          <h1 class="plate__title">RECENT PORTFOLIO</h1>
-          <hr class="plate__bar" />
-          <portfolio-swiper />
-        </div>
+      <!-- Career Space -->
+      <div id='career-place' class='plate mb-3 mb-md-5 col-11 col-md-10 col-lg-8'>
+        <div class='plate__title'>CAREER</div>
+        <hr class='plate__bar' />
+        <career-content />
+      </div>
 
-        <!-- About Space -->
-        <div id="about-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
-          <h1 class="plate__title">ABOUT</h1>
-          <hr class="plate__bar" />
-          <about-content />
-        </div>
+      <!-- Portfolio Space -->
+      <div id='portfolio-place' class='plate col-11 col-md-10 col-lg-8'>
+        <div class='plate__title'>RECENT PORTFOLIOS</div>
+        <hr class='plate__bar' />
+        <portfolio-swiper />
+      </div>
 
-        <!-- TODO : My Skill -->
+      <!-- About Space -->
+      <div id='about-place' class='plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9'>
+        <div class='plate__title'>ABOUT</div>
+        <hr class='plate__bar' />
+        <about-content />
+      </div>
 
-        <!-- Contact Space -->
-        <div id="contact-place" class="plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9">
-          <h1 class="plate__title">SNS</h1>
-          <hr class="plate__bar" />
-          <sns-content />
-        </div>
-        <!-- Context View -->
+      <div id='skill-place' class='plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9'>
+        <div class='plate__title'>SKILLS</div>
+        <hr class='plate__bar' />
+        <skill />
+      </div>
+
+      <!-- Contact Space -->
+      <div id='contact-place' class='plate mb-3 mb-md-5 col-12 col-md-10 col-lg-9'>
+        <div class='plate__title'>SNS</div>
+        <hr class='plate__bar' />
+        <sns-content />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import PortfolioSwiper from "~/components/PortfolioSwiper.vue";
-import AboutContent from "~/components/MyAbout.vue";
-import SnsContent from "~/components/MySns.vue";
-import Banner from "~/components/Banner.vue";
+import PortfolioSwiper from '~/components/PortfolioSwiper.vue';
+import AboutContent from '~/components/MyAbout.vue';
+import SnsContent from '~/components/MySns.vue';
+import Banner from '~/components/Banner.vue';
+import CareerContent from '~/components/Career/Career.vue';
+import Skill from '~/components/Skill/Skill.vue';
 
-import firestore from "~/plugins/fb_firestore.js";
+import firestore from '~/plugins/fb_firestore.js';
 
 export default {
   components: {
     PortfolioSwiper,
     AboutContent,
     SnsContent,
-    Banner
+    Banner,
+    CareerContent,
+    Skill,
   },
   data: function() {
     return {};
   },
-  asyncData() {
-    return new Promise(resolve => {});
-  },
-  computed: {
-
-  },
+  computed: {},
   created: function() {
     firestore.load_ptf_datas(this.$store);
   },
-  mounted() {},
-  methods: {
-    menu_clicked: function() {}
+  mounted() {
   },
-  asyncData({ params }) {
-    return {};
-  }
+  methods: {
+    menu_clicked: function() {
+    },
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang='scss'>
 $tab: 768px; // タブレット
 $sp: 544px; // スマホ
 
@@ -79,6 +85,7 @@ $sp: 544px; // スマホ
     @content;
   }
 }
+
 @mixin sp {
   @media (max-width: ($sp)) {
     @content;
@@ -89,7 +96,7 @@ $sp: 544px; // スマホ
   --my-active-color: #0fbcf9;
   --my-active2-color: #0da8e0;
   --my-sub-color: #03fdb7;
-  --my-dark-blue: #3d4df5;
+  --my-dark-blue: #426AE0;
   --my-primary-blue: #b5f8fd;
   --my-black: #1e272e;
   --my-gray: #636e72;
@@ -97,33 +104,25 @@ $sp: 544px; // スマホ
   --my-barkblue: #15293d;
 }
 
-.box {
-  position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
 .main-view {
   position: relative;
-  font-family: "Muli", sans-serif;
-  min-width: 100vw;
-  height: 100%;
-  background-color: var(--my-active-color);
+  font-family: 'Muli', sans-serif;
+  background-color: $my-active-color;
 
   .plate {
     margin: 10px 0px;
+
     &__title {
       text-align: center;
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
     }
+
     &__bar {
       background-color: var(--my-black);
     }
-  }
-
-  h1 {
-    color: white;
-    font-family: "Fredoka One", cursive;
-    letter-spacing: 0.2rem;
   }
 }
 

@@ -4,7 +4,7 @@
       <div class="about-container__top-icon col-12 mb-md-4 mb-3">
         <img
           class="rounded-circle"
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2FMy%20preview.png?alt=media&token=20b23f8d-c722-4048-b25b-cad6793a0dd3"
+          src="~assets/my-preview.png"
           alt="CYAN"
           width="200px"
         />
@@ -145,45 +145,6 @@ $sp: 544px; // スマホ
       font-weight: 700;
       color: white;
       transition: all ease-out 0.3s;
-      // background: var(--my-dark-blue);
-      // &:hover {
-      //   // text-shadow: 10px 10px 0px rgba(34, 46, 58, 0.5);
-      // }
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   display: flex;
-      //   top: 0px;
-      //   left: 0px;
-      //   width: 100%;
-      //   height: 1px;
-      //   transform: translateX(0%) scaleX(0%);
-      //   transform-origin: top left;
-      //   transition: all ease-out 0.3s;
-      //   background-color: white;
-      //   z-index: -1;
-      // }
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   display: flex;
-      //   bottom: 0px;
-      //   left: 0px;
-      //   width: 100%;
-      //   height: 1px;
-      //   transform: translateX(0%) scaleX(0%);
-      //   transition: all ease-out 0.3s;
-      //   transform-origin: top right;
-      //   background-color: white;
-      //   z-index: -1;
-      //   // animation: bar_progress 2s linear 0s infinite alternate forwards;
-      // }
-      // &:hover::before {
-      //   transform: translateX(0%) scaleX(100%);
-      // }
-      // &:hover::after {
-      //   transform: translateX(0%) scaleX(100%);
-      // }
     }
     p {
       font-family: "M PLUS Rounded 1c", serif;
@@ -195,8 +156,6 @@ $sp: 544px; // スマホ
     }
 
     &__desc {
-      h4 {
-      }
       p {
         font-size: 0.9rem;
         margin-bottom: 0.4rem;

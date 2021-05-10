@@ -1,5 +1,5 @@
 <template>
-  <div class="container main-container">
+  <div class="container-fluid main-container">
     <div class="row justify-content-around main-container__contents">
       <div
         class="col-10 col-lg-8 main-container__contents__swiper"
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import firestore from "~/plugins/fb_firestore.js";
-import CyanSwiper from "~/components/PortfolioSwiperBody.vue";
+import firestore from '~/plugins/fb_firestore.js';
+import CyanSwiper from '~/components/PortfolioSwiperBody.vue';
 
 export default {
   components: {
-    CyanSwiper
+    CyanSwiper,
   },
   created() {
     if (this.$store.state.portfolio.portfolios_data.length <= 0) {
@@ -28,24 +28,18 @@ export default {
   computed: {
     portfolio_list() {
       return this.$store.state.portfolio.portfolios_data;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .main-container {
   position: relative;
-  margin: 0px;
-  padding: 0px;
-  min-width: 100vw;
-  min-height: 100vh;
   background-color: var(--my-active-color);
 
   &__contents {
-    min-width: 100vw;
-    height: 100%;
-    margin: 0px;
+    min-width: 100%;
     padding: 30px 0px;
 
     &__swiper {
