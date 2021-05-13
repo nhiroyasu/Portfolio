@@ -4,24 +4,24 @@ export default class AwardListItem {
    * コンテストの名前
    * @type {String}
    */
-  contestName: String
+  contestName
   /**
    * the link of contest web page
    * コンテストのWebページのリンク
    * @type {String}
    */
-  contestLink: String
+  contestLink
   /**
    * awarded things of contest
    * コンテストで受賞したもの
    * @type {Array<String>}
    */
-  awards: Array<String>
+  awards
   /**
    * date held of contest
    * @type {String}
    */
-  date: String
+  date
 
   /**
    * AwardListItem

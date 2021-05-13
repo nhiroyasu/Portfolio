@@ -1,6 +1,6 @@
 export default class IconTextButton {
-  title: String
-  icon: String
+  title
+  icon
 
   /**
    * IconTextButton

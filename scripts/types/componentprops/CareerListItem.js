@@ -3,17 +3,17 @@ export default class CareerListItem {
    * title
    * @type {String}
    */
-  title: String
+  title
   /**
    * subtitle: nullable
    * @type {String}
    */
-  subTitle: String
+  subTitle
   /**
    * date
    * @type {String}
    */
-  date: String
+  date
 
   /**
    * CareerListItem

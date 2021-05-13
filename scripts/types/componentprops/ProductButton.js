@@ -1,8 +1,8 @@
 export default class ProductButton {
-  title: String
-  description: String
-  date: String
-  icon: String
+  title
+  description
+  date
+  icon
 
   /**
    * ProductButton

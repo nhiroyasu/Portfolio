@@ -1,7 +1,7 @@
 export default class InductionButton {
-  title: String
-  description: String
-  icon: String
+  title
+  description
+  icon
 
   /**
    * InductionButton

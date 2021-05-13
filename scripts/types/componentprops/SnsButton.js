@@ -3,17 +3,17 @@ export default class SnsButton {
    * sns name
    * @type {String}
    */
-  name: String
+  name
   /**
    * sns icon image url
    * @type {String}
    */
-  icon: String
+  icon
 
   /**
    * SnsButton
-   * @param name
-   * @param icon
+   * @param {String} name
+   * @param {String} icon
    */
   constructor(name, icon) {
     this.name = name
