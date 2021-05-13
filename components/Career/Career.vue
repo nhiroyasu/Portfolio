@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import CareerItem from './CareerItem.vue';
+import CareerItem from './CareerItem.vue'
 
 export default {
   components: {
@@ -20,7 +20,7 @@ export default {
           date: '2019/09/06',
           title: 'HACK U 2019 SENDAI',
           official_site: 'https://hacku.yahoo.co.jp/hacku2019sendai/',
-          product_link: 'https://github.com/cyan-0fbcf9/HackU'
+          product_link: 'https://github.com/cyan-0fbcf9/HackU',
         },
         {
           date: '2019/10/26 - 2019/10/27',
@@ -33,7 +33,7 @@ export default {
           title: 'JPHacks Award Day',
           offical_site: 'https://jphacks.com/information/result-report2019/',
           product_link: 'https://github.com/jphacks/SD_1903',
-          result: 'イノベーター認定 | ビズリーチ賞 | リクルート賞'
+          result: 'イノベーター認定 | ビズリーチ賞 | リクルート賞',
         },
         {
           date: '2019/12/07 - 2019/12/08',
@@ -58,7 +58,7 @@ export default {
           date: '2020/09/30',
           title: 'Civictech Challenge Cup',
           official_site: 'https://ccc2020.code4japan.org/',
-          product_link: 'https://github.com/CCC-Shirouto'
+          product_link: 'https://github.com/CCC-Shirouto',
         },
         {
           date: '2020/10/17 - 2020/10/18',
@@ -67,9 +67,9 @@ export default {
           result: '優秀賞',
         },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

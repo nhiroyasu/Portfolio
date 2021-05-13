@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import CyanSwiper from '~/components/PortfolioSwiperBody.vue';
+import CyanSwiper from '~/components/PortfolioSwiperBody.vue'
 
-import firestore from '~/plugins/fb_firestore.js';
+import firestore from '~/plugins/fb_firestore.js'
 
 export default {
   components: {
@@ -39,14 +39,14 @@ export default {
         loop: true,
         speed: 600,
       },
-    };
+    }
   },
   computed: {
     portfolio_list(event) {
-      return this.$store.state.portfolio.portfolios_data.slice(0, 5);
+      return this.$store.state.portfolio.portfolios_data.slice(0, 5)
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

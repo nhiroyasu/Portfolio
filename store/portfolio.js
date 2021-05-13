@@ -1,15 +1,15 @@
 export const state = () => ({
   value: 'myvalue',
-  portfolios_data: []
+  portfolios_data: [],
 })
 
 export const getters = {
-  getterValue: state => {
+  getterValue: (state) => {
     return state.value
   },
-  getPtfsData: state => {
+  getPtfsData: (state) => {
     return state.portfolios_data
-  }
+  },
 }
 
 export const mutations = {
@@ -17,12 +17,12 @@ export const mutations = {
     state.value = payload
   },
   updatePtfsData: (state, payload) => {
-    state.portfolios_data = payload;
-  }
+    state.portfolios_data = payload
+  },
 }
 
 export const actions = {
   updateActionValue({ commit }) {
     commit('updateValue', payload)
-  }
+  },
 }

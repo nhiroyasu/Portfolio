@@ -12,26 +12,26 @@
 </template>
 
 <script>
-import LanguageItem from './LanguageItem.vue';
-import FrameworkItem from './FrameworkItem.vue';
-import ProgramLanguage from '~/scripts/types/ProgramLanguage';
-import Framework from '~/scripts/types/Framework';
+import LanguageItem from './LanguageItem.vue'
+import FrameworkItem from './FrameworkItem.vue'
+import ProgramLanguage from '~/scripts/types/ProgramLanguage'
+import Framework from '~/scripts/types/Framework'
 
-import JS from '~/assets/icons/languages/js.png';
-import SIWFT from '~/assets/icons/languages/swift.svg';
-import KOTLIN from '~/assets/icons/languages/kotlin.png';
-import PYTHON from '~/assets/icons/languages/python.png';
-import CS from '~/assets/icons/languages/c-sharp.svg';
-import TS from '~/assets/icons/languages/ts.png';
-import DART from '~/assets/icons/languages/dart.png';
+import JS from '~/assets/icons/languages/js.png'
+import SIWFT from '~/assets/icons/languages/swift.svg'
+import KOTLIN from '~/assets/icons/languages/kotlin.png'
+import PYTHON from '~/assets/icons/languages/python.png'
+import CS from '~/assets/icons/languages/c-sharp.svg'
+import TS from '~/assets/icons/languages/ts.png'
+import DART from '~/assets/icons/languages/dart.png'
 
-import NUXT from '~/assets/icons/frameworks/nuxt.png';
-import BOOTSTRAP from '~/assets/icons/frameworks/bootstrap.png';
-import ANDROID from '~/assets/icons/frameworks/android.png';
-import ANGULAR from '~/assets/icons/frameworks/angular.png';
-import IONIC from '~/assets/icons/frameworks/ionic.png';
-import VUE from '~/assets/icons/frameworks/vue.svg';
-import FLUTTER from '~/assets/icons/frameworks/flutter.png';
+import NUXT from '~/assets/icons/frameworks/nuxt.png'
+import BOOTSTRAP from '~/assets/icons/frameworks/bootstrap.png'
+import ANDROID from '~/assets/icons/frameworks/android.png'
+import ANGULAR from '~/assets/icons/frameworks/angular.png'
+import IONIC from '~/assets/icons/frameworks/ionic.png'
+import VUE from '~/assets/icons/frameworks/vue.svg'
+import FLUTTER from '~/assets/icons/frameworks/flutter.png'
 
 export default {
   components: {
@@ -59,9 +59,9 @@ export default {
         new Framework('Flutter', FLUTTER, 2),
         new Framework('Bootstrap', BOOTSTRAP, 4),
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

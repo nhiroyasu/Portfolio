@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import ProgramingLanguage from '~/scripts/types/ProgramLanguage';
-import { BIconStarFill } from 'bootstrap-vue';
+import ProgramingLanguage from '~/scripts/types/ProgramLanguage'
+import { BIconStarFill } from 'bootstrap-vue'
 
 export default {
   components: {
@@ -27,7 +27,7 @@ export default {
       default: {},
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

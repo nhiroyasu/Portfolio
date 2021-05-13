@@ -80,20 +80,20 @@
 </template>
 
 <script>
-import PopupButton from '@/components/PopupButton.vue';
+import PopupButton from '@/components/PopupButton.vue'
 
 export default {
   components: {
     PopupButton,
   },
   created() {
-    let date = this.slider_info.date.toDate();
-    this.date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    let date = this.slider_info.date.toDate()
+    this.date = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
   },
   data() {
     return {
       date: '',
-    };
+    }
   },
   props: {
     slider_info: {
@@ -107,34 +107,34 @@ export default {
   computed: {
     git_hub_link() {
       if ('github' in this.slider_info) {
-        return this.slider_info.github;
+        return this.slider_info.github
       } else {
-        return null;
+        return null
       }
     },
     event_link() {
       if ('event_link' in this.slider_info) {
-        return this.slider_info.event_link;
+        return this.slider_info.event_link
       } else {
-        return null;
+        return null
       }
     },
     google_play_link() {
       if ('google_play_link' in this.slider_info) {
-        return this.slider_info.google_play_link;
+        return this.slider_info.google_play_link
       } else {
-        return null;
+        return null
       }
     },
     web_app_link() {
       if ('web_app_link' in this.slider_info) {
-        return this.slider_info.web_app_link;
+        return this.slider_info.web_app_link
       } else {
-        return null;
+        return null
       }
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

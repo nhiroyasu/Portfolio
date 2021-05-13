@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import Framework from '~/scripts/types/Framework';
-import { BIconStarFill } from 'bootstrap-vue';
+import Framework from '~/scripts/types/Framework'
+import { BIconStarFill } from 'bootstrap-vue'
 
 export default {
   components: {
@@ -27,7 +27,7 @@ export default {
       default: {},
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -54,7 +54,8 @@ export default {
     }
   }
 
-  .level-field {    small {
+  .level-field {
+    small {
       padding-right: 8px;
     }
 

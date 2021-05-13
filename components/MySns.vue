@@ -1,54 +1,34 @@
 <template>
   <div class="sns-container container">
     <div class="row justify-content-around align-items-center">
-      <div
-        class="col-10 col-md-5 col-lg-5
-      sns-container__to_link"
-      >
+      <div class="col-10 col-md-5 col-lg-5 sns-container__to_link">
         <!-- Twitter -->
-        <div
-          class="
-        sns-container__to_link__item twitter"
-        >
+        <div class="sns-container__to_link__item twitter">
           <a href="https://twitter.com/cyan_0FBCF9" target="_blank">
             <i class="fab fa-twitter"></i>
             Twitter
           </a>
         </div>
         <!-- Gihub -->
-        <div
-          class="
-        sns-container__to_link__item github"
-        >
+        <div class="sns-container__to_link__item github">
           <a href="https://github.com/namid11" target="_blank">
             <i class="fab fa-github"></i>
             Github
           </a>
         </div>
         <!-- Qiita -->
-        <div
-          class="
-        sns-container__to_link__item qiita"
-        >
-          <a href="https://qiita.com/cyan" target="_blank">
-            Qiita
-          </a>
+        <div class="sns-container__to_link__item qiita">
+          <a href="https://qiita.com/cyan" target="_blank"> Qiita </a>
         </div>
         <!-- More -->
-        <div
-          class="
-        sns-container__to_link__item more"
-        >
+        <div class="sns-container__to_link__item more">
           <nuxt-link to="/sns_list">
             <i class="fas fa-long-arrow-alt-right"></i>
             More
           </nuxt-link>
         </div>
       </div>
-      <div
-        class="col-12 col-md-6 col-lg-5
-      sns-container__timeline"
-      >
+      <div class="col-12 col-md-6 col-lg-5 sns-container__timeline">
         <div class="overflow-auto">
           <a
             class="twitter-timeline"
@@ -57,11 +37,7 @@
             href="https://twitter.com/cyan_0FBCF9?ref_src=twsrc%5Etfw"
             >Tweets by cyan_0FBCF9</a
           >
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>
@@ -69,7 +45,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -99,7 +75,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       margin: 0px 0px;
       a {
         display: block;
-        font: normal 2rem/4rem "Baloo Bhai", cursive;
+        font: normal 2rem/4rem 'Baloo Bhai', cursive;
         text-decoration: none;
         color: white;
       }

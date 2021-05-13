@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Hiroyasuのポートフォリオサイト",
+    title: 'Hiroyasuのポートフォリオサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -52,7 +52,7 @@ export default {
     'swiper/dist/css/swiper.css',
     '~/assets/styles/scss/transition.scss',
     '~/assets/styles/css/imports.css',
-    '~/assets/styles/css/global.css'
+    '~/assets/styles/css/global.css',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -61,9 +61,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/style-resources',
-  ],
+  buildModules: ['@nuxtjs/style-resources'],
   /*
    ** Nuxt.js modules
    */
@@ -96,7 +94,7 @@ export default {
               corejs: { version: 3 },
             },
           ],
-        ];
+        ]
       },
     },
   },
@@ -106,11 +104,8 @@ export default {
   styleResources: {
     // your settings here
     sass: [],
-    scss: [
-      './assets/styles/scss/color.scss',
-      './assets/styles/scss/variable.scss',
-    ],
+    scss: ['./assets/styles/scss/color.scss', './assets/styles/scss/variable.scss'],
     less: [],
-    stylus: []
+    stylus: [],
   },
-};
+}

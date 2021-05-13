@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import firestore from '~/plugins/fb_firestore.js';
-import CyanSwiper from '~/components/PortfolioSwiperBody.vue';
+import firestore from '~/plugins/fb_firestore.js'
+import CyanSwiper from '~/components/PortfolioSwiperBody.vue'
 
 export default {
   components: {
@@ -22,15 +22,15 @@ export default {
   },
   created() {
     if (this.$store.state.portfolio.portfolios_data.length <= 0) {
-      firestore.load_ptf_datas(this.$store);
+      firestore.load_ptf_datas(this.$store)
     }
   },
   computed: {
     portfolio_list() {
-      return this.$store.state.portfolio.portfolios_data;
+      return this.$store.state.portfolio.portfolios_data
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -4,7 +4,7 @@ export default class IconTextButton {
 
   /**
    * IconTextButton
-    * @param {String} title
+   * @param {String} title
    * @param {String} icon
    */
   constructor(title, icon) {

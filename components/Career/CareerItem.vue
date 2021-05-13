@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { BIconTrophy, BIconBoxArrowUpRight } from 'bootstrap-vue';
+import { BIconTrophy, BIconBoxArrowUpRight } from 'bootstrap-vue'
 
 export default {
   components: {
@@ -39,7 +39,7 @@ export default {
       },
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -16,10 +16,9 @@ export default class ProgramLanguage {
    */
   level
 
-
   constructor(name, icon, level) {
-    this.name = name;
-    this.icon = icon;
-    this.level = level;
+    this.name = name
+    this.icon = icon
+    this.level = level
   }
 }

@@ -13,9 +13,9 @@ export default {
   props: {
     content: String,
     link: String,
-    icon: String
-  }
-};
+    icon: String,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -67,7 +67,7 @@ export default {
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         display: block;
         height: 10px;

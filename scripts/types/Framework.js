@@ -2,23 +2,23 @@ export default class Framework {
   /**
    * @type {String}
    */
-  name;
+  name
 
   /**
    * @type {String}
    */
-  icon;
+  icon
 
   /**
    * max: 5
    * min: 1
    * @type {Number}
    */
-  level;
+  level
 
   constructor(name, icon, level) {
-    this.name = name;
-    this.icon = icon;
-    this.level = level;
+    this.name = name
+    this.icon = icon
+    this.level = level
   }
 }

@@ -2,32 +2,21 @@
   <div class="about-container container">
     <div class="row">
       <div class="about-container__top-icon col-12 mb-md-4 mb-3">
-        <img
-          class="rounded-circle"
-          src="~assets/my-preview.png"
-          alt="CYAN"
-          width="200px"
-        />
+        <img class="rounded-circle" src="~assets/my-preview.png" alt="CYAN" width="200px" />
       </div>
 
       <div class="row justify-content-around align-items-center about-container__contents">
         <div class="col-10 col-sm-5 mt-4 mt-sm-0 about-container__group">
           <div class="about-container__item about-container__name text-center col-12">
-            <h4 class="rounded-pill">
-              <i class="fas fa-user px-2"></i>NAME
-            </h4>
+            <h4 class="rounded-pill"><i class="fas fa-user px-2"></i>NAME</h4>
             <p>Hiroyasu</p>
           </div>
           <div class="about-container__item about-container__age text-center col-12">
-            <h4 class="rounded-pill">
-              <i class="fas fa-smile px-2"></i>AGE
-            </h4>
+            <h4 class="rounded-pill"><i class="fas fa-smile px-2"></i>AGE</h4>
             <p>19</p>
           </div>
           <div class="about-container__item about-container__address text-center col-12">
-            <h4 class="rounded-pill">
-              <i class="fas fa-graduation-cap px-2"></i>PROFESSION
-            </h4>
+            <h4 class="rounded-pill"><i class="fas fa-graduation-cap px-2"></i>PROFESSION</h4>
             <p>高専生</p>
           </div>
         </div>
@@ -50,11 +39,8 @@
               </p>
               <p>
                 主に
-                <i>Swift</i> や
-                <i>Kotlin</i>で、アプリ開発の勉強しています。
-                最近は、
-                <i>Vue.js</i> や
-                <i>Nuxt.js</i> を使ってWeb系の分野にも手を出しています。
+                <i>Swift</i> や <i>Kotlin</i>で、アプリ開発の勉強しています。 最近は、
+                <i>Vue.js</i> や <i>Nuxt.js</i> を使ってWeb系の分野にも手を出しています。
               </p>
             </div>
           </div>
@@ -65,7 +51,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -141,13 +127,13 @@ $sp: 544px; // スマホ
       margin-bottom: 4px;
       padding: 0.2rem;
       font-size: 1.5rem;
-      font-family: "Baloo Bhai", cursive;
+      font-family: 'Baloo Bhai', cursive;
       font-weight: 700;
       color: white;
       transition: all ease-out 0.3s;
     }
     p {
-      font-family: "M PLUS Rounded 1c", serif;
+      font-family: 'M PLUS Rounded 1c', serif;
       font-size: 1.2rem;
       transition: all ease-out 0.3s;
       &:hover {

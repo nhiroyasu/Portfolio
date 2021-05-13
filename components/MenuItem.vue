@@ -1,6 +1,6 @@
 <template>
   <div class="nav-item">
-    <nuxt-link class="nav-link cus-nav-link p-2 p-md-3" v-bind:to="link">{{value}}</nuxt-link>
+    <nuxt-link class="nav-link cus-nav-link p-2 p-md-3" v-bind:to="link">{{ value }}</nuxt-link>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   props: {
     value: String,
-    link: String
+    link: String,
   },
 }
 </script>
