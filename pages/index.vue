@@ -60,21 +60,21 @@ export default {
     CareerContent,
     Skill,
   },
-  data: function () {
+  data: function() {
     return {}
   },
   computed: {},
-  created: function () {
+  created: function() {
     firestore.load_ptf_datas(this.$store)
   },
   mounted() {},
   methods: {
-    menu_clicked: function () {},
+    menu_clicked: function() {},
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $tab: 768px; // タブレット
 $sp: 544px; // スマホ
 
