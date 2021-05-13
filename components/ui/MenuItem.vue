@@ -1,5 +1,5 @@
 <template>
-  <div class="component-root clickable" @click="onClickComponent">
+  <div class="component-root clickable" @click="onClick">
     <img class="icon" :src="data.icon" alt="icon" />
     <div class="title">
       {{ data.title }}
@@ -16,7 +16,7 @@ export default {
     data: MenuItem,
   },
   methods: {
-    onClickComponent() {
+    onClick() {
       this.$router.push(this.data.link)
     },
   },
