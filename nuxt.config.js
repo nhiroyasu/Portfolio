@@ -15,9 +15,9 @@ export default {
       },
       { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'og:title', content: "Hiroyasu's Portfolio Site" },
-      { name: 'og:site_name', content: "Hiroyasu's Portfolio Site" },
-      { name: 'og:description', content: '' },
+      { name: 'og:title', content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト' },
+      { name: 'og:site_name', content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト' },
+      { name: 'og:description', content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト' },
       {
         name: 'og:image',
         content:
