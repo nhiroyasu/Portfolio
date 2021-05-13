@@ -66,7 +66,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    'bootstrap-vue/nuxt',
     [
       'vue-scrollto/nuxt',
       {
@@ -104,7 +103,11 @@ export default {
   styleResources: {
     // your settings here
     sass: [],
-    scss: ['./assets/styles/scss/color.scss', './assets/styles/scss/variable.scss'],
+    scss: [
+      './assets/styles/scss/color.scss',
+      './assets/styles/scss/variable.scss',
+      './assets/styles/scss/classes.scss',
+    ],
     less: [],
     stylus: [],
   },
