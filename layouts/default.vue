@@ -1,20 +1,11 @@
 <template>
   <div>
-    <menu-component />
     <nuxt />
   </div>
 </template>
 
 <script>
-import MenuComponent from '@/components/Menu.vue'
-import Loading from '@/components/Loading.vue'
-
-export default {
-  components: {
-    MenuComponent,
-    Loading,
-  },
-}
+export default {}
 </script>
 
 <style lang="scss">
