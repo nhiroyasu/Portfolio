@@ -5,24 +5,16 @@ import MenuItem from '@/scripts/types/componentprops/MenuItem'
  * @type {Array<MenuItem>}
  */
 export const menuItemData = [
-  {
-    title: 'HOME',
-    link: '/',
-    icon: require('@/assets/icons/commons/home.svg'),
-  },
-  {
-    title: 'ABOUT',
-    link: '/about',
-    icon: require('@/assets/icons/commons/cyan logo white.svg'),
-  },
-  {
-    title: 'APPLICATION',
-    link: '/apps',
-    icon: require('@/assets/icons/commons/apps.svg'),
-  },
-  {
-    title: 'SNS',
-    link: '/sns',
-    icon: require('@/assets/icons/commons/chat.svg'),
-  },
+  new MenuItem('HOME', '/', require('@/assets/icons/commons/home.svg')),
+  new MenuItem(
+    'ABOUT',
+    '/about',
+    require('@/assets/icons/commons/cyan logo white.svg')
+  ),
+  new MenuItem(
+    'APPLICATION',
+    '/apps',
+    require('@/assets/icons/commons/apps.svg')
+  ),
+  new MenuItem('SNS', '/sns', require('@/assets/icons/commons/chat.svg')),
 ]

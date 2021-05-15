@@ -1,6 +1,15 @@
 export default class InductionButton {
+  /**
+   * @type {String}
+   */
   title
+  /**
+   * @type {String}
+   */
   description
+  /**
+   * @type {String}
+   */
   icon
 
   /**
