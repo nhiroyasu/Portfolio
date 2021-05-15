@@ -2,11 +2,19 @@
   <div class="skill-container">
     <div class="languages-wrapper wrapper">
       <div class="title text-center">LANGUAGES</div>
-      <language-item v-for="(item, index) in languages" :key="index" :lang="item" />
+      <language-item
+        v-for="(item, index) in languages"
+        :key="index"
+        :lang="item"
+      />
     </div>
     <div class="frameworks-wrapper wrapper">
       <div class="title text-center">FRAMEWORKS</div>
-      <framework-item v-for="(item, index) in frameworks" :key="index" :framework="item" />
+      <framework-item
+        v-for="(item, index) in frameworks"
+        :key="index"
+        :framework="item"
+      />
     </div>
   </div>
 </template>

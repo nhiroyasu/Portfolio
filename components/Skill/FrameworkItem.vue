@@ -8,7 +8,10 @@
     </div>
     <div class="level-field">
       <small>Level</small>
-      <b-icon-star-fill v-for="(value, index) in framework.level" :key="index"></b-icon-star-fill>
+      <b-icon-star-fill
+        v-for="(value, index) in framework.level"
+        :key="index"
+      ></b-icon-star-fill>
     </div>
   </div>
 </template>

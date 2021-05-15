@@ -1,26 +1,51 @@
 <template>
   <div class="menu-container">
-    <div class="menu-container__hidden" :class="{ visible_on: !menu_flag, visible_off: menu_flag }">
+    <div
+      class="menu-container__hidden"
+      :class="{ visible_on: !menu_flag, visible_off: menu_flag }"
+    >
       <div class="menu-item" @click="menu_flag = !menu_flag">
-        <img v-show="menu_flag === false" src="~assets/menu.svg" alt="menu icon" />
-        <img v-show="menu_flag === true" src="~assets/close.svg" alt="menu icon" />
+        <img
+          v-show="menu_flag === false"
+          src="~assets/menu.svg"
+          alt="menu icon"
+        />
+        <img
+          v-show="menu_flag === true"
+          src="~assets/close.svg"
+          alt="menu icon"
+        />
       </div>
     </div>
-    <div class="menu-container__open" :class="{ visible_on: menu_flag, visible_off: !menu_flag }">
-      <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
+    <div
+      class="menu-container__open"
+      :class="{ visible_on: menu_flag, visible_off: !menu_flag }"
+    >
+      <div
+        class="rounded-pill menu-item selection"
+        @click="menu_flag = !menu_flag"
+      >
         <nuxt-link to="/">
           <i class="fas fa-home mr-2"></i>
           <span>HOME</span>
         </nuxt-link>
       </div>
-      <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
+      <div
+        class="rounded-pill menu-item selection"
+        @click="menu_flag = !menu_flag"
+      >
         <nuxt-link class="nuxt-link" to="/portfolio_list">
           <i class="fas fa-file-code mr-2"></i>
           <span>PORTFOLIO</span>
         </nuxt-link>
       </div>
-      <div class="rounded-pill menu-item selection" @click="menu_flag = !menu_flag">
-        <nuxt-link to="/sns_list"> <i class="fas fa-comments mr-2"></i>SNS </nuxt-link>
+      <div
+        class="rounded-pill menu-item selection"
+        @click="menu_flag = !menu_flag"
+      >
+        <nuxt-link to="/sns_list">
+          <i class="fas fa-comments mr-2"></i>SNS
+        </nuxt-link>
       </div>
     </div>
   </div>

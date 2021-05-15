@@ -2,26 +2,64 @@
   <div class="about-container container">
     <div class="row">
       <div class="about-container__top-icon col-12 mb-md-4 mb-3">
-        <img class="rounded-circle" src="~assets/my-preview.png" alt="CYAN" width="200px" />
+        <img
+          class="rounded-circle"
+          src="~assets/my-preview.png"
+          alt="CYAN"
+          width="200px"
+        />
       </div>
 
-      <div class="row justify-content-around align-items-center about-container__contents">
+      <div
+        class="
+          row
+          justify-content-around
+          align-items-center
+          about-container__contents
+        "
+      >
         <div class="col-10 col-sm-5 mt-4 mt-sm-0 about-container__group">
-          <div class="about-container__item about-container__name text-center col-12">
+          <div
+            class="
+              about-container__item about-container__name
+              text-center
+              col-12
+            "
+          >
             <h4 class="rounded-pill"><i class="fas fa-user px-2"></i>NAME</h4>
             <p>Hiroyasu</p>
           </div>
-          <div class="about-container__item about-container__age text-center col-12">
+          <div
+            class="
+              about-container__item about-container__age
+              text-center
+              col-12
+            "
+          >
             <h4 class="rounded-pill"><i class="fas fa-smile px-2"></i>AGE</h4>
             <p>19</p>
           </div>
-          <div class="about-container__item about-container__address text-center col-12">
-            <h4 class="rounded-pill"><i class="fas fa-graduation-cap px-2"></i>PROFESSION</h4>
+          <div
+            class="
+              about-container__item about-container__address
+              text-center
+              col-12
+            "
+          >
+            <h4 class="rounded-pill">
+              <i class="fas fa-graduation-cap px-2"></i>PROFESSION
+            </h4>
             <p>高専生</p>
           </div>
         </div>
         <!-- <div class="about-container__gap col-md-2 col-12"></div> -->
-        <div class="col-10 col-sm-5 my-4 my-sm-0 about-container__item about-container__group">
+        <div
+          class="
+            col-10 col-sm-5
+            my-4 my-sm-0
+            about-container__item about-container__group
+          "
+        >
           <div class="col-12 about-container__item__desc">
             <h4 class="text-center rounded-pill">
               <i class="fas fa-comment px-1"></i>
@@ -35,12 +73,14 @@
               <p>
                 ITエンジニアを目指して日々勉強している者です。
                 <br />ネット上では
-                <i>Cyan</i>と名乗って活動しているので、SNS等で交流してくれるとうれしいです。
+                <i>Cyan</i
+                >と名乗って活動しているので、SNS等で交流してくれるとうれしいです。
               </p>
               <p>
                 主に
-                <i>Swift</i> や <i>Kotlin</i>で、アプリ開発の勉強しています。 最近は、
-                <i>Vue.js</i> や <i>Nuxt.js</i> を使ってWeb系の分野にも手を出しています。
+                <i>Swift</i> や <i>Kotlin</i>で、アプリ開発の勉強しています。
+                最近は、 <i>Vue.js</i> や
+                <i>Nuxt.js</i> を使ってWeb系の分野にも手を出しています。
               </p>
             </div>
           </div>

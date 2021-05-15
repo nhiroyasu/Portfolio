@@ -2,7 +2,10 @@
   <swiper-slide class="swiper-slide col-12 my-5 my-md-4 p-md-3">
     <div class="slider-item row justify-content-around align-items-center">
       <div class="slider-item__img col-7 col-md-5 col-lg-4 p-md-3 p-xl-5">
-        <div class="img-cover" :style="{ backgroundImage: 'url(' + slider_info.img_link + ')' }">
+        <div
+          class="img-cover"
+          :style="{ backgroundImage: 'url(' + slider_info.img_link + ')' }"
+        >
           <div class="one-more">
             <img class :src="slider_info.img_link" alt />
           </div>
@@ -20,22 +23,34 @@
           <div class="meta__content">
             <hr class="meta__hr-text" data-content="LANGUAGE" />
             <div class="meta__data meta__platform">
-              <span class="px-1" v-for="(value, index) in slider_info.lang" :key="index">{{
-                value
-              }}</span>
+              <span
+                class="px-1"
+                v-for="(value, index) in slider_info.lang"
+                :key="index"
+                >{{ value }}</span
+              >
             </div>
           </div>
           <div class="meta__content">
             <hr class="meta__hr-text" data-content="PLATFORM" />
             <div class="meta__data meta__lang">
-              <span class="px-1" v-for="(value, index) in slider_info.platform" :key="index">{{
-                value
-              }}</span>
+              <span
+                class="px-1"
+                v-for="(value, index) in slider_info.platform"
+                :key="index"
+                >{{ value }}</span
+              >
             </div>
           </div>
         </div>
         <div
-          class="d-flex align-items-center justify-content-center slider-item__links text-center"
+          class="
+            d-flex
+            align-items-center
+            justify-content-center
+            slider-item__links
+            text-center
+          "
         >
           <!-- <div class="slider-item__links__event" v-if="event_link">
             <a class="rounded-pill" target="_blank" :href="event_link">EVENT</a>
@@ -231,7 +246,12 @@ $sp: 544px; // スマホ（Bootstrap - sm）
           content: '';
           // use the linear-gradient for the fading effect
           // use a solid background color for a solid bar
-          background: linear-gradient(to right, transparent, var(--my-dark-blue), transparent);
+          background: linear-gradient(
+            to right,
+            transparent,
+            var(--my-dark-blue),
+            transparent
+          );
           position: absolute;
           left: 0;
           top: 50%;

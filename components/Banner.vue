@@ -1,6 +1,14 @@
 <template>
   <div class="component-root">
-    <div class="d-flex flex-column align-items-center justify-content-center sign-tile">
+    <div
+      class="
+        d-flex
+        flex-column
+        align-items-center
+        justify-content-center
+        sign-tile
+      "
+    >
       <div class="my-icon-wrapper">
         <img src="~assets/cyan-icon-transparent.png" alt="icon" />
       </div>

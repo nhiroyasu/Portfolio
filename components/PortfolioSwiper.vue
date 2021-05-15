@@ -8,7 +8,10 @@
           :key="index"
           :slider_info="value"
         />
-        <div class="swiper-pagination portfolio-component__pagination" slot="pagination"></div>
+        <div
+          class="swiper-pagination portfolio-component__pagination"
+          slot="pagination"
+        ></div>
         <!-- <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
@@ -19,7 +22,7 @@
 <script>
 import CyanSwiper from '~/components/PortfolioSwiperBody.vue'
 
-import firestore from '~/plugins/fb_firestore.js'
+import firestore from '~/services/fb_firestore'
 
 export default {
   components: {
@@ -81,30 +84,36 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
 
     /deep/ .swiper-button-prev {
-      background: url('~assets/arrow-left.svg') no-repeat center center / contain;
+      background: url('~assets/arrow-left.svg') no-repeat center center /
+        contain;
     }
     /deep/ .swiper-button-next {
-      background: url('~assets/arrow-right.svg') no-repeat center center / contain;
+      background: url('~assets/arrow-right.svg') no-repeat center center /
+        contain;
     }
 
     @include tab {
       /deep/ .swiper-button-prev {
-        background: url('~assets/arrow-left.svg') no-repeat center center / contain;
+        background: url('~assets/arrow-left.svg') no-repeat center center /
+          contain;
         display: none;
       }
       /deep/ .swiper-button-next {
-        background: url('~assets/arrow-right.svg') no-repeat center center / contain;
+        background: url('~assets/arrow-right.svg') no-repeat center center /
+          contain;
         display: none;
       }
     }
 
     @include sp {
       /deep/ .swiper-button-prev {
-        background: url('~assets/arrow-left.svg') no-repeat center center / contain;
+        background: url('~assets/arrow-left.svg') no-repeat center center /
+          contain;
         display: none;
       }
       /deep/ .swiper-button-next {
-        background: url('~assets/arrow-right.svg') no-repeat center center / contain;
+        background: url('~assets/arrow-right.svg') no-repeat center center /
+          contain;
         display: none;
       }
     }

@@ -29,7 +29,10 @@
         </a>
       </div>
       <div class="col-6 col-md-4 main-container__contents__item google_play">
-        <a href="https://play.google.com/store/apps/developer?id=cyaN" target="_blank">
+        <a
+          href="https://play.google.com/store/apps/developer?id=cyaN"
+          target="_blank"
+        >
           <i class="fab fa-google-play"></i>
           <br />GooglePlay
         </a>

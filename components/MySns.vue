@@ -37,7 +37,11 @@
             href="https://twitter.com/cyan_0FBCF9?ref_src=twsrc%5Etfw"
             >Tweets by cyan_0FBCF9</a
           >
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
         </div>
       </div>
     </div>

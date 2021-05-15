@@ -1,7 +1,13 @@
 <template>
   <div class="main-container">
     <div class="link-btn">
-      <a id="target" :href="link" target="_blank" ontouchstart :data-content="content">
+      <a
+        id="target"
+        :href="link"
+        target="_blank"
+        ontouchstart
+        :data-content="content"
+      >
         <i :class="icon"></i>
       </a>
     </div>
@@ -80,7 +86,8 @@ export default {
         transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(0);
         -webkit-transition: all 0.3s ease-out 0s;
         -webkit-transform-origin: center center;
-        -webkit-transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(0);
+        -webkit-transform: translateX(-50%) translateY(-150%) rotateZ(45deg)
+          scale(0);
       }
       &:hover::after {
         transform: translateX(-50%) translateY(-150%) rotateZ(45deg) scale(1);

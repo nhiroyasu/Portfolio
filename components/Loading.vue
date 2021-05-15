@@ -1,5 +1,9 @@
 <template>
-  <div v-if="!is_end" v-bind:class="{ 'disapper-view': disapper }" class="fixed-top icon-parent">
+  <div
+    v-if="!is_end"
+    v-bind:class="{ 'disapper-view': disapper }"
+    class="fixed-top icon-parent"
+  >
     <div class="icon-field">
       <img
         class="cyan-icon"
@@ -137,7 +141,8 @@ $sp: 480px; // スマホ
 }
 .loading-icon {
   animation: loading_icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s forwards;
-  -webkit-animation: loading_icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s forwards;
+  -webkit-animation: loading_icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s
+    forwards;
 }
 
 @keyframes up_icon {

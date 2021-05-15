@@ -15,7 +15,10 @@
         </a>
       </div>
       <div v-if="value.result" class="result-field">
-        <b-icon-trophy class="mr-1" style="color: var(--my-dark-blue)"></b-icon-trophy>
+        <b-icon-trophy
+          class="mr-1"
+          style="color: var(--my-dark-blue)"
+        ></b-icon-trophy>
         {{ value.result }}
       </div>
     </div>
