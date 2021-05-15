@@ -4,7 +4,7 @@ import MenuItem from '@/scripts/types/componentprops/MenuItem'
  * Menu Item Values
  * @type {Array<MenuItem>}
  */
-export const menuItemValues = [
+export const menuItemData = [
   {
     title: 'HOME',
     link: '/',
