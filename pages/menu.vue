@@ -1,6 +1,6 @@
 <template>
   <div class="page-root">
-    <div class="close-btn clickable move-to-top">
+    <div class="close-btn clickable move-to-top" @click="routeBack">
       <img src="@/assets/icons/commons/close.svg" alt="close-btn" />
     </div>
     <div class="content">
@@ -27,6 +27,11 @@ export default {
     return {
       menuItemData,
     }
+  },
+  methods: {
+    routeBack() {
+      this.$router.back()
+    },
   },
 }
 </script>
