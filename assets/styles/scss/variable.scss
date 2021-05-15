@@ -1,12 +1,13 @@
 $default-border-radius: 5px;
 $icon-default-size: 28px;
-$menu-icon-size: 28px;
+$_menu-icon-img-size: 28px;
 $menu-icon-pad: 16px;
+$menu-icon-size: $_menu-icon-img-size + 2 * $menu-icon-pad;
 
 $pd-sm: 4px;
 $pd-md: 6px;
 $pd-lg: 12px;
 
-$mg-for-child: 4px;
-$mg-for-item: 8px;
-$mg-for-content: 16px;
+$mg-for-child: 6px;
+$mg-for-item: 16px;
+$mg-for-content: 28px;
