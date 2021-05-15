@@ -1,6 +1,6 @@
 <template>
   <div class="component-root clickable" @click="onClick">
-    <img class="icon" :src="data.icon" alt="icon" />
+    <img class="icon img-block" :src="data.icon" alt="icon" />
     <div class="title">
       {{ data.title }}
     </div>
@@ -41,7 +41,6 @@ export default {
 }
 
 img.icon {
-  display: block;
   height: $icon-default-size;
   margin: 0 $mg-for-child;
   width: $icon-default-size;

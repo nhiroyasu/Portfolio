@@ -1,12 +1,12 @@
 <template>
   <div class="page-root">
-    <div class="close-btn clickable">
+    <div class="close-btn clickable move-to-top">
       <img src="@/assets/icons/commons/close.svg" alt="close-btn" />
     </div>
     <div class="content">
       <menu-item
         class="menu-item"
-        v-for="(data, index) in menuItemValues"
+        v-for="(data, index) in menuItemData"
         :key="index"
         :data="data"
       />
@@ -16,16 +16,16 @@
 
 <script>
 import MenuItem from '@/components/ui/MenuItem'
-import { menuItemValues } from '~/scripts/static/menu-item-values'
+import { menuItemData } from '~/scripts/static/menu-item-data'
 
 export default {
   name: 'menu',
   components: {
     MenuItem,
   },
-  data: function() {
+  data: function () {
     return {
-      menuItemValues,
+      menuItemData,
     }
   },
 }
@@ -45,7 +45,6 @@ export default {
   margin: $mg-for-item;
   padding: $pd-sm;
   position: absolute;
-  z-index: 100;
   img {
     height: $icon-default-size;
     width: $icon-default-size;
