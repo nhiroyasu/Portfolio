@@ -1,3 +1,11 @@
 .clickable {
   cursor: pointer;
 }
+
+img.img-block {
+  display: block;
+}
+
+.move-to-top {
+  z-index: 100;
+}
