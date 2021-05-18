@@ -15,9 +15,18 @@ export default {
       },
       { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'og:title', content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト' },
-      { name: 'og:site_name', content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト' },
-      { name: 'og:description', content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト' },
+      {
+        name: 'og:title',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
+      },
+      {
+        name: 'og:site_name',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
+      },
+      {
+        name: 'og:description',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
+      },
       {
         name: 'og:image',
         content:
@@ -57,7 +66,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fb_init.js', { src: '~plugins/vue-awesome-swiper', ssr: false }],
+  plugins: [
+    '~/plugins/fb_init.js',
+    { src: '~plugins/vue-awesome-swiper', ssr: false },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
