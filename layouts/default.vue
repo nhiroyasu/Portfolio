@@ -20,4 +20,8 @@ export default {}
   --my-white: #ecf0f1;
   --my-barkblue: #15293d;
 }
+
+html {
+  color: $font-dark-color;
+}
 </style>
