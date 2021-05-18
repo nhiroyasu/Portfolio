@@ -1,8 +1,12 @@
 <template>
   <div class="component-root">
-    <div class="icon">
-      <img :src="img" alt="icon" />
-    </div>
+    <img
+      class="icon img-block"
+      :src="img"
+      alt=""
+      :width="size"
+      :height="size"
+    />
   </div>
 </template>
 
@@ -11,8 +15,17 @@ export default {
   name: 'MacLikeIcon',
   props: {
     img: String,
+    size: {
+      type: Number,
+      default: 32,
+    },
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.icon {
+  border-radius: 20%;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+}
+</style>
