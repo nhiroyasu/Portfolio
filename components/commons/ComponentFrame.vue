@@ -21,15 +21,13 @@ export default {
     rgba(15, 188, 249, 1) 100%
   );
   border-radius: $default-border-radius;
-  margin: 16px 16px;
-  min-width: 100%;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 
   .content {
     background-color: #ffffff;
     border-radius: $default-border-radius - 2px;
     margin: 3px;
-    height: 100%;
-    width: 100%;
   }
 }
 </style>

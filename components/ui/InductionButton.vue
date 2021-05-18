@@ -1,10 +1,8 @@
 <template>
-  <div class="component-root">
+  <div class="component-root clickable non-selectable">
     <component-frame>
       <div class="content">
-        <div class="btn-icon">
-          <img :src="data.icon" alt="icon" />
-        </div>
+        <img class="btn-icon img-block" :src="data.icon" alt="icon" />
         <div class="title">
           {{ data.title }}
         </div>
@@ -31,4 +29,41 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+$title-height: 26px;
+$description-height: 16px;
+$img-size: $title-height + $description-height;
+
+.content {
+  display: grid;
+  grid-template-columns: $img-size auto;
+  grid-template-rows: $title-height $description-height;
+  padding: 8px;
+
+  img.btn-icon {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    margin: 2px;
+  }
+
+  .title,
+  .description {
+    margin-left: $mg-for-item;
+  }
+
+  .title {
+    color: $font-dark-color;
+    font-size: 24px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    line-height: $title-height;
+  }
+
+  .description {
+    color: $font-gray-color;
+    font-size: 12px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+</style>
