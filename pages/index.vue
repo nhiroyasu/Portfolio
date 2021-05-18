@@ -141,7 +141,7 @@ export default {
 
 .induction-links-container {
   & > * {
-    margin: $mg-for-item;
+    margin: $mg-for-item + 6px $mg-for-item;
   }
   & > *:first-child {
     margin-top: $mg-for-item * 2;

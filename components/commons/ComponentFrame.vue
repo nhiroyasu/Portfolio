@@ -21,7 +21,7 @@ export default {
     rgba(15, 188, 249, 1) 100%
   );
   border-radius: $default-border-radius;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.16);
   overflow: hidden;
 
   .content {
