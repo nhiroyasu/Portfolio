@@ -1,5 +1,5 @@
 <template>
-  <div class="component-root clickable non-selectable">
+  <div class="component-root clickable non-selectable" @click="onClick">
     <component-frame>
       <div class="content">
         <img class="btn-icon img-block" :src="data.icon" alt="icon" />
@@ -25,6 +25,11 @@ export default {
   },
   props: {
     data: InductionButton,
+  },
+  methods: {
+    onClick() {
+      this.$router.push(this.data.pageLink)
+    },
   },
 }
 </script>
@@ -53,7 +58,7 @@ $img-size: $title-height + $description-height;
 
   .title {
     color: $font-dark-color;
-    font-size: 24px;
+    font-size: 1.5em;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     line-height: $title-height;
@@ -61,7 +66,7 @@ $img-size: $title-height + $description-height;
 
   .description {
     color: $font-gray-color;
-    font-size: 12px;
+    font-size: 0.8em;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }

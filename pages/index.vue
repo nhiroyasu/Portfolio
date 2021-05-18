@@ -129,12 +129,12 @@ export default {
     text-align: right;
 
     .title {
-      font-size: 24px;
+      font-size: 1.5em;
       margin-bottom: $mg-for-child;
     }
 
     .sub-title {
-      font-size: 14px;
+      font-size: 0.9em;
     }
   }
 }
@@ -152,5 +152,16 @@ export default {
 }
 
 .end-container {
+  color: $font-gray-color;
+  font-size: 0.9em;
+  margin-bottom: $mg-for-item;
+  text-align: center;
+
+  .powered-by {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .copyright {
+  }
 }
 </style>
