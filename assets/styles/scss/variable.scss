@@ -1,8 +1,8 @@
 $default-border-radius: 5px;
 $icon-default-size: 28px;
-$_menu-icon-img-size: 28px;
+$menu-icon-img-size: 28px;
 $menu-icon-pad: 16px;
-$menu-icon-size: $_menu-icon-img-size + 2 * $menu-icon-pad;
+$menu-icon-size: $menu-icon-img-size + 2 * $menu-icon-pad;
 
 $pd-sm: 4px;
 $pd-md: 6px;

@@ -9,3 +9,10 @@ img.img-block {
 .move-to-top {
   z-index: 100;
 }
+
+.non-selectable {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
