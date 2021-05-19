@@ -2,7 +2,7 @@
   <div class="component-root">
     <img
       class="menu-btn img-block clickable move-to-top"
-      src="~assets/icons/commons/menu.svg"
+      src="@/assets/icons/commons/menu.svg"
       alt="menu icon"
       @click="onClickedMenuBtn"
     />
@@ -35,7 +35,7 @@ export default {
       rgba(66, 106, 224, 0.8) 57%,
       rgba(15, 188, 249, 0.8) 100%
     ),
-    url('~assets/logos/cyan/logo.svg') center center/80% no-repeat;
+    url('@/assets/logos/cyan/logo.svg') center center/80% no-repeat;
   color: $font-light-color;
   display: flex;
   height: $menu-icon-size;
