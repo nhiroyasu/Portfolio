@@ -3,10 +3,11 @@
     <v-bar-style-list-item-frame>
       <div class="content">
         <div class="duration">
-          {{ data.duration.start.toDateString() }}
-          <template v-if="data.duration.end">
-            {{ data.duration.end.toDateString() }}
-          </template>
+          <span v-text="data.duration.start.toDateString()"></span>
+          <span
+            v-if="data.duration.end"
+            v-text="data.duration.end.toDateString()"
+          ></span>
         </div>
         <div class="contest">
           <a :href="data.contestLink">
