@@ -12,7 +12,10 @@ export default {
   name: 'VBarStyleListItemFrame',
   props: {
     // reverseLayout ? bar placed on right : bar placed on left;
-    reverseLayout: (Boolean = false),
+    reverseLayout: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>

@@ -2,15 +2,18 @@
   <div class="component-root">
     <v-bar-style-list-item-frame>
       <div class="content">
-        <div class="date">
-          {{ data.date }}
+        <div class="duration">
+          {{ data.duration.start.toDateString() }}
+          <template v-if="data.duration.end">
+            {{ data.duration.end.toDateString() }}
+          </template>
         </div>
         <div class="contest">
           <a :href="data.contestLink">
-            {{ data.contestName }}
+            {{ data.contest }}
           </a>
         </div>
-        <div class="award">
+        <div class="awards">
           <span v-for="(award, index) in data.awards" :key="index">
             {{ award }}
           </span>

@@ -2,14 +2,19 @@
   <div class="component-root">
     <v-bar-style-list-item-frame :reverse-layout="true">
       <div class="content">
-        <div class="date">
-          {{ data.date }}
+        <div class="duration">
+          <span v-text="data.duration.start.toDateString()"></span>
+          <span
+            v-if="data.duration.end"
+            v-text="data.duration.end.toDateString()"
+          >
+          </span>
         </div>
-        <div class="title">
-          {{ data.title }}
+        <div class="career">
+          {{ data.career }}
         </div>
-        <div v-if="data.subTitle" class="sub-title">
-          {{ data.subTitle }}
+        <div v-if="data.detail" class="detail">
+          {{ data.detail }}
         </div>
       </div>
     </v-bar-style-list-item-frame>
@@ -17,8 +22,8 @@
 </template>
 
 <script>
-import VBarStyleListItemFrame from 'components/commons/VBarStyleListItemFrame'
-import CareerListItem from 'scripts/types/componentprops/CareerListItem'
+import VBarStyleListItemFrame from '@/components/commons/VBarStyleListItemFrame'
+import CareerListItem from '@/scripts/types/componentprops/CareerListItem'
 
 export default {
   name: 'CareerListItem',
