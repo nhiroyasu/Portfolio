@@ -1,39 +1,41 @@
+import Duration from '@/scripts/types/commons/Duration'
+
 export default class AwardListItem {
   /**
-   * contest name
-   * コンテストの名前
-   * @type {String}
+   * 大会の期間
+   * @type Duration
    */
-  contestName
-  /**
-   * the link of contest web page
-   * コンテストのWebページのリンク
-   * @type {String}
-   */
-  contestLink
-  /**
-   * awarded things of contest
-   * コンテストで受賞したもの
-   * @type {Array<String>}
-   */
-  awards
-  /**
-   * date held of contest
-   * @type {String}
-   */
-  date
+  duration
 
   /**
-   * AwardListItem
-   * @param {String} contestName
-   * @param {String} contestLink
-   * @param {Array<String>} awards
-   * @param {String} date
+   * 大会の名前
+   * @type String
    */
-  constructor(contestName, contestLink, awards, date) {
-    this.contestName = contestName
-    this.contestLink = contestLink
+  contest
+
+  /**
+   * 受賞リスト
+   * @type Array<String>
+   */
+  awards
+
+  /**
+   * コンテストのサイトリンク
+   * @type String
+   */
+  contestLink
+
+  /**
+   * Award
+   * @param {Duration} duration
+   * @param {String} contest
+   * @param {Array<String>} awards
+   * @param {String} contestLink
+   */
+  constructor(duration, contest, awards, contestLink) {
+    this.duration = duration
+    this.contest = contest
     this.awards = awards
-    this.date = date
+    this.contestLink = contestLink
   }
 }

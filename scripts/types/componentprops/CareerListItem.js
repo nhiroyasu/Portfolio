@@ -1,29 +1,33 @@
+import Duration from '@/scripts/types/commons/Duration'
+
 export default class CareerListItem {
   /**
-   * title
-   * @type {String}
+   * @type Duration
    */
-  title
-  /**
-   * subtitle: nullable
-   * @type {String}
-   */
-  subTitle
-  /**
-   * date
-   * @type {String}
-   */
-  date
+  duration
 
   /**
-   * CareerListItem
-   * @param {String} title
-   * @param {String} date
-   * @param {String} subTitle nullable
+   * キャリア内容
+   * @type String
    */
-  constructor(title, date, subTitle) {
-    this.title = title
-    this.date = date
-    this.subTitle = subTitle === undefined ? null : subTitle
+  career
+
+  /**
+   * キャリア詳細
+   * @type String
+   * @Nullable
+   */
+  detail
+
+  /**
+   * Career
+   * @param {Duration} duration
+   * @param {String} career
+   * @param {String} detail
+   */
+  constructor(duration, career, detail) {
+    this.duration = duration
+    this.career = career
+    this.detail = detail
   }
 }
