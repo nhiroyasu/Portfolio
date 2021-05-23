@@ -3,18 +3,14 @@
     <v-bar-style-list-item-frame>
       <div class="content">
         <div class="duration">
-          <span v-text="data.duration.start.toDateString()"></span>
-          <span
-            v-if="data.duration.end"
-            v-text="data.duration.end.toDateString()"
-          ></span>
+          {{ data.duration.toStringForDisplay() }}
         </div>
         <div class="contest">
           <a :href="data.contestLink">
             {{ data.contest }}
           </a>
         </div>
-        <div class="awards">
+        <div v-if="data.awards.length !== 0" class="awards">
           <span v-for="(award, index) in data.awards" :key="index">
             {{ award }}
           </span>
@@ -39,4 +35,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+$list-item-between-size: 4px;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 $pd-md;
+
+  & > * {
+    margin: $list-item-between-size 0;
+  }
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="component-root">
-    <div class="content">
-      <div :class="{ reverse: reverseLayout }" class="bar"></div>
+    <div class="content" :class="{ reverse: reverseLayout }">
+      <div class="bar"></div>
       <slot />
     </div>
   </div>
@@ -21,6 +21,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.content {
+  display: flex;
+
+  &.reverse > * {
+    text-align: right;
+  }
+}
+
 .reverse {
+  flex-direction: row-reverse;
+}
+
+.bar {
+  background-color: $primary-color;
+  width: 3px;
 }
 </style>
