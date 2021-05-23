@@ -97,7 +97,7 @@ export default {
   grid-template-rows: 1fr 3fr 1fr;
   height: 100vh;
   place-items: center stretch;
-  width: 100vw;
+  width: 100%;
 
   .central-wrapper {
     align-self: center;
