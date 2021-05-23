@@ -1,4 +1,4 @@
-import Award from '@/scripts/types/Award'
+import Award from '@/scripts/types/componentprops/AwardListItem'
 import Duration from '~/scripts/types/commons/Duration'
 
 /**

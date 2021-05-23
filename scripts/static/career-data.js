@@ -1,4 +1,4 @@
-import Career from '@/scripts/types/Career'
+import Career from '@/scripts/types/componentprops/CareerListItem'
 import Duration from '~/scripts/types/commons/Duration'
 
 /**

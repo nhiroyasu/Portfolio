@@ -1,4 +1,5 @@
 import Duration from '@/scripts/types/commons/Duration'
+import { formatDate } from '@/scripts/functions/data-formatting'
 
 export default class CareerListItem {
   /**
