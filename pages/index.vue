@@ -18,7 +18,7 @@
           <mac-like-icon
             v-for="(data, index) in recentPortfolio"
             :key="index"
-            :img="data.img_link"
+            :img="data.imgLink"
             :size="48"
           />
         </div>

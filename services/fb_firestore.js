@@ -3,7 +3,12 @@
 
 import * as firebase from 'firebase/app'
 import 'firebase/firestore'
+import PortfolioBuilder from '~/scripts/types/builder/PortfolioBuilder'
 
+/**
+ * ポートフォリオデータを取得
+ * @return {Promise<Array<Portfolio>>}
+ */
 export async function loadPortfoliosData() {
   const snapshot = await firebase
     .firestore()
@@ -14,9 +19,13 @@ export async function loadPortfoliosData() {
       console.error('response error of firestore api')
       return []
     })
+
+  /**
+   * @type {Array<Portfolio>}
+   */
   const docsData = []
   snapshot.forEach((doc) => {
-    docsData.push(doc.data())
+    docsData.push(PortfolioBuilder.build(doc.data()))
   })
   return docsData
 }
