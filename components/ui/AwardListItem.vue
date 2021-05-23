@@ -6,7 +6,7 @@
           {{ data.duration.toStringForDisplay() }}
         </div>
         <div class="contest">
-          <a :href="data.contestLink">
+          <a :href="data.contestLink" target="_blank">
             {{ data.contest }}
           </a>
         </div>
