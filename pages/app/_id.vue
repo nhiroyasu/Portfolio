@@ -28,7 +28,7 @@
   </div>
 </template>
 
-script>
+<script>
 import AppMenu from '@/components/layouts/Menu'
 import MacLikeIcon from '@/components/ui/MacLikeIcon'
 import IconTextButton from '@/components/ui/IconTextButton'
