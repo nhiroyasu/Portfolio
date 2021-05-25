@@ -75,6 +75,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.component-root {
+  & > *:last-child {
+    margin-bottom: $mg-for-content;
+  }
+}
 .content {
   align-items: center;
   display: flex;
