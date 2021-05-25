@@ -1,5 +1,5 @@
 <template>
-  <div class="component-root">
+  <div class="frame-root">
     <div class="content" :class="{ reverse: reverseLayout }">
       <div class="bar"></div>
       <slot />

@@ -1,5 +1,5 @@
 <template>
-  <div class="component-frame">
+  <div class="frame-root">
     <div class="content">
       <slot />
     </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.component-frame {
+.frame-root {
   background-image: linear-gradient(
     121deg,
     rgba(37, 60, 128, 1) 0%,
