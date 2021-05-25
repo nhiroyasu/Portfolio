@@ -1,5 +1,5 @@
 <template>
-  <div class="component-root" @click="onClick">
+  <div class="component-root clickable" @click="onClick">
     <img
       src="@/assets/images/google-play-badge.png"
       alt="play"
