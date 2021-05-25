@@ -9,7 +9,7 @@
         {{ data.title }}
       </div>
       <div class="icon-wrapper">
-        <mac-like-icon :img="data.imgLink" size="220" />
+        <mac-like-icon :img="data.imgLink" :size="220" />
       </div>
       <div class="detail">
         {{ data.detail }}
@@ -46,6 +46,7 @@ import MacLikeIcon from '@/components/ui/MacLikeIcon'
 import IconTextButton from '@/components/ui/IconTextButton'
 import GithubButton from '@/components/ui/GithubButton'
 import GooglePlayButton from '@/components/ui/GooglePlayButton'
+import { fetchPortfolio } from '@/services/fb_firestore'
 
 export default {
   name: 'present_app',
@@ -56,10 +57,19 @@ export default {
     GithubButton,
     GooglePlayButton,
   },
-  computed: {
-    data() {
-      return this.$store.getters['portfolio/findOne'](this.$route.params.id)
-    },
+  data: function () {
+    return {
+      data: {},
+    }
+  },
+  async asyncData({ store, route }) {
+    let foundData = store.getters['portfolio/findOne'](route.params.id)
+    if (foundData == null) {
+      foundData = await fetchPortfolio(route.params.id)
+    }
+    return {
+      data: foundData,
+    }
   },
 }
 </script>

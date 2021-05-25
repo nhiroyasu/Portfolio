@@ -30,3 +30,22 @@ export async function loadPortfoliosData() {
   })
   return docsData
 }
+
+/**
+ * 指定したIDのポートフォリオデータを取得
+ * @param {String} id
+ * @return {Promise<Portfolio>}
+ */
+export async function fetchPortfolio(id) {
+  const snapshot = await firebase
+    .firestore()
+    .collection('portfolios')
+    .doc(id)
+    .get()
+    .catch((err) => {
+      console.error('response error of firestore api')
+      return null
+    })
+
+  return snapshot !== null ? PortfolioBuilder.build(snapshot) : null
+}
