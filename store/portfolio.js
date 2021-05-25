@@ -8,6 +8,9 @@ export const getters = {
   data: (state) => {
     return [...state.data]
   },
+  findOne: (state) => (id) => {
+    return state.data.find((portfolio) => portfolio.id === id)
+  },
 }
 
 export const mutations = {
