@@ -18,10 +18,22 @@
         <google-play-button
           v-if="data.googlePlayLink !== null"
           :google-play-link="data.googlePlayLink"
+          class="google-play-btn"
         />
         <github-button
           v-if="data.githubLink !== null"
           :github-link="data.githubLink"
+        />
+        <icon-text-button
+          title="ダウンロード"
+          :icon="require('@/assets/icons/commons/download.svg')"
+          link=""
+        />
+        <icon-text-button
+          v-if="data.webAppLink !== null"
+          title="アプリケーションサイト"
+          :icon="require('@/assets/icons/commons/open_in_new.svg')"
+          :link="data.webAppLink"
         />
       </div>
     </div>
@@ -57,7 +69,7 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 36px;
+  padding: 0 48px;
   overflow: hidden;
 
   & > *:first-child {
@@ -66,12 +78,12 @@ export default {
 }
 
 .date {
-  align-self: start;
+  align-self: end;
   font-size: 0.8em;
 }
 
 .title {
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin: $mg-for-item 0;
 }
 
@@ -80,12 +92,15 @@ export default {
 }
 
 .btn-wrapper {
-  align-self: stretch;
   display: inline-flex;
   flex-direction: column;
 
   & > * {
     margin: $mg-for-item 0;
+  }
+
+  & > .google-play-btn {
+    margin: 0;
   }
 }
 </style>
