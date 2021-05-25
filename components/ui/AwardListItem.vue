@@ -46,5 +46,22 @@ $list-item-between-size: 4px;
   & > * {
     margin: $list-item-between-size 0;
   }
+
+  .contest {
+    & > a {
+      color: $secondary-dark-color;
+      text-decoration: underline;
+    }
+
+    & > a:link {
+      color: $secondary-dark-color;
+      text-decoration: underline;
+    }
+
+    & > a:visited {
+      color: $secondary-dark-color;
+      text-decoration: underline;
+    }
+  }
 }
 </style>

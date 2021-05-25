@@ -34,7 +34,7 @@ export default {
 }
 
 .bar {
-  background-color: $primary-color;
+  background-color: $secondary-dark-color;
   width: 3px;
 }
 </style>
