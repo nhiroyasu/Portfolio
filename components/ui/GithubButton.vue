@@ -27,7 +27,6 @@ export default {
 .component-root {
   align-items: center;
   background-color: $github-theme;
-  border-radius: 8px;
   display: flex;
   justify-content: center;
   height: $btn-sm-height;
