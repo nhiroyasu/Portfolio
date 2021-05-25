@@ -4,7 +4,7 @@
  * 例) MM月dd日
  * @param {Date} date 対象のDateインスタンス
  * @param {String} format フォーマット形式
- * @returns {*}
+ * @returns {String}
  */
 export function formatDate(date, format) {
   format = format.replace(/yyyy/g, date.getFullYear())

@@ -1,4 +1,12 @@
+import { formatDate } from '@/scripts/functions/data-formatting'
+
 export default class Portfolio {
+  /**
+   * id
+   * @type {String}
+   */
+  id
+
   /**
    * タイトル
    * @type {String}
@@ -63,6 +71,7 @@ export default class Portfolio {
   webAppLink
 
   constructor(
+    id,
     title,
     detail,
     date,
@@ -73,6 +82,7 @@ export default class Portfolio {
     googlePlayLink,
     webAppLink
   ) {
+    this.id = id
     this.title = title
     this.detail = detail
     this.date = date
@@ -82,5 +92,10 @@ export default class Portfolio {
     this.githubLink = githubLink
     this.googlePlayLink = googlePlayLink
     this.webAppLink = webAppLink
+  }
+
+  get dateString() {
+    const format = 'yyyy年MM月dd日'
+    return formatDate(this.date, format)
   }
 }

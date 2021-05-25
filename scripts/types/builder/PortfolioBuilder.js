@@ -3,10 +3,11 @@ import Portfolio from '@/scripts/types/commons/Portfolio'
 export default class PortfolioBuilder {
   /**
    * Firestoreから取得したデータオブジェクト
-   * @param {Object} firestoreData
+   * @param {DocumentSnapshot} documentSnapshot
    * @return {Portfolio}
    */
-  static build(firestoreData) {
+  static build(documentSnapshot) {
+    const firestoreData = documentSnapshot.data()
     const date = firestoreData.date.toDate()
     const imgLink = firestoreData.img_link ? firestoreData.img_link : null
     const githubLink = firestoreData.github ? firestoreData.github : null
@@ -18,6 +19,7 @@ export default class PortfolioBuilder {
       : null
 
     return new Portfolio(
+      documentSnapshot.id,
       firestoreData.title,
       firestoreData.detail,
       date,

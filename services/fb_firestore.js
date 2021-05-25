@@ -4,6 +4,7 @@
 import * as firebase from 'firebase/app'
 import 'firebase/firestore'
 import PortfolioBuilder from '~/scripts/types/builder/PortfolioBuilder'
+import Portfolio from '@/scripts/types/commons/Portfolio'
 
 /**
  * ポートフォリオデータを取得
@@ -25,7 +26,7 @@ export async function loadPortfoliosData() {
    */
   const docsData = []
   snapshot.forEach((doc) => {
-    docsData.push(PortfolioBuilder.build(doc.data()))
+    docsData.push(PortfolioBuilder.build(doc))
   })
   return docsData
 }
