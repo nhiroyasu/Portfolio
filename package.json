@@ -17,13 +17,10 @@
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "aos": "^2.3.4",
-    "bootstrap-vue": "^2.21.2",
     "firebase": "^7.24.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.15.4",
-    "sass-loader": "^8.0.2",
-    "vue-awesome-swiper": "^3.1.3",
-    "vue-scrollto": "^2.20.0"
+    "sass-loader": "^8.0.2"
   },
   "devDependencies": {
     "prettier": "2.3.0"
