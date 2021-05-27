@@ -1,131 +1,167 @@
 <template>
-  <div class='container-fluid main-view'>
-    <div id='home-container-place' class='row justify-content-center align-items-stretch'>
-      <!-- "Cyan" Sign -->
-      <banner />
-
-      <!-- Career Space -->
-      <div id='career-place' class='plate mb-3 mb-md-5 col-11 col-md-10 col-lg-8'>
-        <div class='plate__title'>CAREER</div>
-        <hr class='plate__bar' />
-        <career-content />
+  <div class="page-root">
+    <img
+      class="menu-icon img-block clickable move-to-top"
+      src="@/assets/icons/commons/menu.svg"
+      alt="menu-icon"
+      @click="onMenuClicked"
+    />
+    <div class="top-container">
+      <div class="central-wrapper">
+        <img
+          class="cyan-logo img-block"
+          src="@/assets/logos/cyan/logo white border.svg"
+          alt="cyan-logo"
+          draggable="false"
+        />
+        <div class="app-icons-wrapper">
+          <mac-like-icon
+            v-for="(data, index) in recentPortfolio"
+            :key="index"
+            :img="data.imgLink"
+            :size="48"
+          />
+        </div>
       </div>
-
-      <!-- Portfolio Space -->
-      <div id='portfolio-place' class='plate col-11 col-md-10 col-lg-8'>
-        <div class='plate__title'>RECENT PORTFOLIOS</div>
-        <hr class='plate__bar' />
-        <portfolio-swiper />
+      <div class="summary non-selectable">
+        <div class="title">
+          HIROYASUの<br />
+          ポートフォリオサイト
+        </div>
+        <div class="sub-title">Webアプリ, スマホアプリ開発</div>
       </div>
-
-      <!-- About Space -->
-      <div id='about-place' class='plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9'>
-        <div class='plate__title'>ABOUT</div>
-        <hr class='plate__bar' />
-        <about-content />
-      </div>
-
-      <div id='skill-place' class='plate mb-3 mb-md-5 col-11 col-md-10 col-lg-9'>
-        <div class='plate__title'>SKILLS</div>
-        <hr class='plate__bar' />
-        <skill />
-      </div>
-
-      <!-- Contact Space -->
-      <div id='contact-place' class='plate mb-3 mb-md-5 col-12 col-md-10 col-lg-9'>
-        <div class='plate__title'>SNS</div>
-        <hr class='plate__bar' />
-        <sns-content />
-      </div>
+    </div>
+    <div class="induction-links-container">
+      <induction-button
+        v-for="(data, index) in inductionLinkData"
+        :key="index"
+        :data="data"
+      />
+    </div>
+    <div class="end-container">
+      <div class="powered-by">Powered by Nuxt.js</div>
+      <div class="copyright">&copy;Hiroyasu Niitsuma</div>
     </div>
   </div>
 </template>
 
 <script>
-import PortfolioSwiper from '~/components/PortfolioSwiper.vue';
-import AboutContent from '~/components/MyAbout.vue';
-import SnsContent from '~/components/MySns.vue';
-import Banner from '~/components/Banner.vue';
-import CareerContent from '~/components/Career/Career.vue';
-import Skill from '~/components/Skill/Skill.vue';
+import InductionButton from '@/components/ui/InductionButton'
+import MacLikeIcon from '@/components/ui/MacLikeIcon'
 
-import firestore from '~/plugins/fb_firestore.js';
+import { inductionLinkData } from '@/scripts/static/induction-link-data'
 
 export default {
   components: {
-    PortfolioSwiper,
-    AboutContent,
-    SnsContent,
-    Banner,
-    CareerContent,
-    Skill,
+    InductionButton,
+    MacLikeIcon,
   },
-  data: function() {
-    return {};
+  data: function () {
+    return {
+      inductionLinkData,
+    }
   },
-  computed: {},
-  created: function() {
-    firestore.load_ptf_datas(this.$store);
+  async fetch({ store }) {
+    await store.dispatch('portfolio/loadData')
   },
-  mounted() {
-  },
-  methods: {
-    menu_clicked: function() {
+  fetchOnServer: false,
+  computed: {
+    recentPortfolio() {
+      return this.$store.getters['portfolio/data'].slice(0, 3)
     },
   },
-};
+  methods: {
+    onMenuClicked() {
+      this.$router.push('/menu')
+    },
+  },
+}
 </script>
 
-<style lang='scss'>
-$tab: 768px; // タブレット
-$sp: 544px; // スマホ
-
-@mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
+<style lang="scss" scoped>
+.menu-icon {
+  height: $menu-icon-size;
+  padding: $menu-icon-pad;
+  position: absolute;
+  width: $menu-icon-size;
 }
 
-@mixin sp {
-  @media (max-width: ($sp)) {
-    @content;
-  }
-}
+.top-container {
+  background-color: $primary-color;
+  color: $font-light-color;
+  display: grid;
+  grid-template-areas:
+    '.'
+    'images'
+    'summary';
+  grid-template-rows: 1fr 3fr 1fr;
+  height: 100vh;
+  place-items: center stretch;
+  width: 100%;
 
-:root {
-  --my-active-color: #0fbcf9;
-  --my-active2-color: #0da8e0;
-  --my-sub-color: #03fdb7;
-  --my-dark-blue: #426AE0;
-  --my-primary-blue: #b5f8fd;
-  --my-black: #1e272e;
-  --my-gray: #636e72;
-  --my-white: #ecf0f1;
-  --my-barkblue: #15293d;
-}
+  .central-wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: images;
+    justify-self: center;
 
-.main-view {
-  position: relative;
-  font-family: 'Muli', sans-serif;
-  background-color: $my-active-color;
-
-  .plate {
-    margin: 10px 0px;
-
-    &__title {
-      text-align: center;
-      color: white;
-      font-family: 'Fredoka One', cursive;
-      font-size: 2.5rem;
-      letter-spacing: 0.2rem;
+    img.cyan-logo {
+      height: 256px;
+      width: 256px;
     }
 
-    &__bar {
-      background-color: var(--my-black);
+    .app-icons-wrapper {
+      display: flex;
+      justify-content: center;
+
+      & > * {
+        margin: 0 $mg-for-child;
+      }
+    }
+  }
+
+  .summary {
+    align-self: end;
+    grid-area: summary;
+    justify-self: end;
+    margin: $mg-for-item;
+    text-align: right;
+
+    .title {
+      font-size: 1.5em;
+      margin-bottom: $mg-for-child;
+    }
+
+    .sub-title {
+      font-size: 0.9em;
     }
   }
 }
 
-@media screen and (orientation: portrait) {
+.induction-links-container {
+  & > * {
+    margin: $mg-for-item + 6px $mg-for-item;
+  }
+  & > *:first-child {
+    margin-top: $mg-for-item * 2;
+  }
+  & > *:last-child {
+    margin-bottom: $mg-for-item * 2;
+  }
+}
+
+.end-container {
+  color: $font-gray-color;
+  font-size: 0.9em;
+  margin-bottom: $mg-for-item;
+  text-align: center;
+
+  .powered-by {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .copyright {
+  }
 }
 </style>

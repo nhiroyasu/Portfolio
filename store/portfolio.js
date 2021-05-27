@@ -1,28 +1,30 @@
+import { loadPortfoliosData } from '@/services/fb_firestore'
+
 export const state = () => ({
-  value: 'myvalue',
-  portfolios_data: []
+  data: [],
 })
 
 export const getters = {
-  getterValue: state => {
-    return state.value
+  data: (state) => {
+    return [...state.data]
   },
-  getPtfsData: state => {
-    return state.portfolios_data
-  }
+  findOne: (state) => (id) => {
+    return state.data.find((portfolio) => portfolio.id === id)
+  },
 }
 
 export const mutations = {
-  updateValue: (state, payload) => {
-    state.value = payload
+  setData: (state, payload) => {
+    state.data = payload
   },
-  updatePtfsData: (state, payload) => {
-    state.portfolios_data = payload;
-  }
 }
 
 export const actions = {
-  updateActionValue({ commit }) {
-    commit('updateValue', payload)
-  }
+  /**
+   * @param context
+   */
+  async loadData(context) {
+    const data = await loadPortfoliosData()
+    context.commit('setData', data)
+  },
 }

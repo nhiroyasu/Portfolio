@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Hiroyasuのポートフォリオサイト",
+    title: 'Hiroyasuのポートフォリオサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -15,9 +15,18 @@ export default {
       },
       { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'og:title', content: "Hiroyasu's Portfolio Site" },
-      { name: 'og:site_name', content: "Hiroyasu's Portfolio Site" },
-      { name: 'og:description', content: '' },
+      {
+        name: 'og:title',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
+      },
+      {
+        name: 'og:site_name',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
+      },
+      {
+        name: 'og:description',
+        content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
+      },
       {
         name: 'og:image',
         content:
@@ -42,31 +51,33 @@ export default {
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#0fbcf9',
-    height: '10px',
+    // color: '#0fbcf9',
+    // height: '10px',
   },
   /*
    ** Global CSS
    */
   css: [
     'swiper/dist/css/swiper.css',
-    '~/assets/styles/scss/transition.scss'
+    '~/assets/styles/scss/transition.scss',
+    '~/assets/styles/css/imports.css',
+    '~/assets/styles/css/global.css',
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fb_init.js', { src: '~plugins/vue-awesome-swiper', ssr: false }],
+  plugins: [
+    '~/plugins/fb_init.js',
+    { src: '~plugins/vue-awesome-swiper', ssr: false },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/style-resources',
-  ],
+  buildModules: ['@nuxtjs/style-resources'],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    'bootstrap-vue/nuxt',
     [
       'vue-scrollto/nuxt',
       {
@@ -94,7 +105,7 @@ export default {
               corejs: { version: 3 },
             },
           ],
-        ];
+        ]
       },
     },
   },
@@ -107,8 +118,9 @@ export default {
     scss: [
       './assets/styles/scss/color.scss',
       './assets/styles/scss/variable.scss',
+      './assets/styles/scss/classes.scss',
     ],
     less: [],
-    stylus: []
+    stylus: [],
   },
-};
+}
