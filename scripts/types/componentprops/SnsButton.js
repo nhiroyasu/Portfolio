@@ -9,14 +9,21 @@ export default class SnsButton {
    * @type {String}
    */
   icon
+  /**
+   * sns link
+   * @type {String}
+   */
+  link
 
   /**
    * SnsButton
    * @param {String} name
    * @param {String} icon
+   * @param {String} link
    */
-  constructor(name, icon) {
+  constructor(name, icon, link) {
     this.name = name
     this.icon = icon
+    this.link = link
   }
 }
