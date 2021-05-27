@@ -57,11 +57,6 @@ export default {
     GithubButton,
     GooglePlayButton,
   },
-  data: function () {
-    return {
-      data: {},
-    }
-  },
   async asyncData({ store, route }) {
     let foundData = store.getters['portfolio/findOne'](route.params.id)
     if (foundData == null) {
