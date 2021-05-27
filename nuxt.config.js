@@ -33,27 +33,14 @@ export default {
           'https://firebasestorage.googleapis.com/v0/b/portfolio-87c41.appspot.com/o/PublicMaterial%2FCyan%20Twitter%20Card%20v1.0.png?alt=media&token=5541cb6a-3ab4-422c-8208-40a627733a88',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [],
-    bodyAttrs: {
-      class: 'body-class',
-      'data-spy': 'scroll',
-      'data-target': '#Navbar',
-    },
+    bodyAttrs: {},
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: {
-    // color: '#0fbcf9',
-    // height: '10px',
-  },
+  loading: {},
   /*
    ** Global CSS
    */
@@ -66,10 +53,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/fb_init.js',
-    { src: '~plugins/vue-awesome-swiper', ssr: false },
-  ],
+  plugins: ['~/plugins/fb_init.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -77,14 +61,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    [
-      'vue-scrollto/nuxt',
-      {
-        duration: 1000,
-      },
-    ],
-  ],
+  modules: [],
   /*
    ** Build configuration
    */
@@ -93,7 +70,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
-    vendor: ['vue-awesome-swiper'],
     babel: {
       presets({ isServer }) {
         return [
