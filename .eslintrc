@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "extends": [
+    "@nuxtjs",
+    "plugin:vue/recommended",
+    "plugin:prettier-vue/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "prettier-vue/prettier": [
+      "error",
+      {
+        // Override all options of `prettier` here
+        "tabWidth": 2,
+        "useTabs": false,
+        "printWidth": 80,
+        "trailingComma": "es5",
+        "semi": false,
+        "singleQuote": true,
+        "endOfLine": "lf"
+      }
+    ]
+  }
+}
