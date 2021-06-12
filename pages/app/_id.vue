@@ -49,7 +49,7 @@ import GooglePlayButton from '@/components/ui/GooglePlayButton'
 import { fetchPortfolio } from '@/services/fb_firestore'
 
 export default {
-  name: 'present_app',
+  name: 'PresentApp',
   components: {
     AppMenu,
     MacLikeIcon,
@@ -75,6 +75,7 @@ export default {
     margin-bottom: $mg-for-content;
   }
 }
+
 .content {
   align-items: center;
   display: flex;

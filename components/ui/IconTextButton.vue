@@ -11,9 +11,18 @@
 export default {
   name: 'IconTextButton',
   props: {
-    title: String,
-    icon: String,
-    link: String,
+    title: {
+      type: String,
+      default: '',
+    },
+    icon: {
+      type: String,
+      default: '',
+    },
+    link: {
+      type: String,
+      default: '',
+    },
   },
   methods: {
     onClick() {

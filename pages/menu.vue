@@ -5,9 +5,9 @@
     </div>
     <div class="content">
       <menu-item
-        class="menu-item"
         v-for="(data, index) in menuItemData"
         :key="index"
+        class="menu-item"
         :data="data"
       />
     </div>
@@ -19,11 +19,11 @@ import MenuItem from '@/components/ui/MenuItem'
 import { menuItemData } from '~/scripts/static/menu-item-data'
 
 export default {
-  name: 'menu',
+  name: 'Menu',
   components: {
     MenuItem,
   },
-  data: function () {
+  data() {
     return {
       menuItemData,
     }

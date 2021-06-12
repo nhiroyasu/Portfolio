@@ -13,7 +13,10 @@
 export default {
   name: 'GithubButton',
   props: {
-    githubLink: String,
+    githubLink: {
+      type: String,
+      default: '',
+    },
   },
   methods: {
     onClick() {

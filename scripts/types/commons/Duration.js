@@ -5,19 +5,6 @@ import { formatDate } from '@/scripts/functions/data-formatting'
  */
 export default class Duration {
   /**
-   * 期間のはじめ
-   * @type {Date}
-   */
-  start
-
-  /**
-   * 期間のおわり
-   * @type {Date}
-   * @Nullable
-   */
-  end
-
-  /**
    * Duration
    * @param {Date} start
    * @param {Date} end

@@ -14,7 +14,10 @@
 export default {
   name: 'MacLikeIcon',
   props: {
-    img: String,
+    img: {
+      type: String,
+      default: '',
+    },
     size: {
       type: Number,
       default: 32,

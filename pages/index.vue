@@ -56,7 +56,7 @@ export default {
     InductionButton,
     MacLikeIcon,
   },
-  data: function () {
+  data() {
     return {
       inductionLinkData,
     }
@@ -143,9 +143,11 @@ export default {
   & > * {
     margin: $mg-for-item + 6px $mg-for-item;
   }
+
   & > *:first-child {
     margin-top: $mg-for-item * 2;
   }
+
   & > *:last-child {
     margin-bottom: $mg-for-item * 2;
   }

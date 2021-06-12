@@ -16,7 +16,7 @@ import AppMenu from '@/components/layouts/Menu'
 import ProductButton from '@/components/ui/ProductButton'
 
 export default {
-  name: 'apps',
+  name: 'Apps',
   components: {
     AppMenu,
     ProductButton,

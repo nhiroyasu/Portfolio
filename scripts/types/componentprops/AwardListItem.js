@@ -1,31 +1,4 @@
-import Duration from '@/scripts/types/commons/Duration'
-import { formatDate } from '@/scripts/functions/data-formatting'
-
 export default class AwardListItem {
-  /**
-   * 大会の期間
-   * @type Duration
-   */
-  duration
-
-  /**
-   * 大会の名前
-   * @type String
-   */
-  contest
-
-  /**
-   * 受賞リスト
-   * @type Array<String>
-   */
-  awards
-
-  /**
-   * コンテストのサイトリンク
-   * @type String
-   */
-  contestLink
-
   /**
    * Award
    * @param {Duration} duration

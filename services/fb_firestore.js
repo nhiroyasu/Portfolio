@@ -4,7 +4,6 @@
 import * as firebase from 'firebase/app'
 import 'firebase/firestore'
 import PortfolioBuilder from '~/scripts/types/builder/PortfolioBuilder'
-import Portfolio from '@/scripts/types/commons/Portfolio'
 
 /**
  * ポートフォリオデータを取得
@@ -16,7 +15,8 @@ export async function loadPortfoliosData() {
     .collection('portfolios')
     .orderBy('date', 'desc')
     .get()
-    .catch((err) => {
+    .catch((_) => {
+      // eslint-disable-next-line no-console
       console.error('response error of firestore api')
       return []
     })
@@ -42,7 +42,8 @@ export async function fetchPortfolio(id) {
     .collection('portfolios')
     .doc(id)
     .get()
-    .catch((err) => {
+    .catch((_) => {
+      // eslint-disable-next-line no-console
       console.error('response error of firestore api')
       return null
     })

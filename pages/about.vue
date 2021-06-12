@@ -66,13 +66,13 @@ import { awardData } from '@/scripts/static/award-data'
 import { careerData } from '@/scripts/static/career-data'
 
 export default {
-  name: 'about',
+  name: 'About',
   components: {
     AppMenu,
     CareerListItem,
     AwardListItem,
   },
-  data: function () {
+  data() {
     return {
       awardData,
       careerData,

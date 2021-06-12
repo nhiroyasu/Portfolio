@@ -12,7 +12,10 @@
 export default {
   name: 'GooglePlayButton',
   props: {
-    googlePlayLink: String,
+    googlePlayLink: {
+      type: String,
+      default: '',
+    },
   },
   methods: {
     onClick() {

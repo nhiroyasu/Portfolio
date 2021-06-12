@@ -1,22 +1,5 @@
 export default class InductionButton {
   /**
-   * @type {String}
-   */
-  title
-  /**
-   * @type {String}
-   */
-  description
-  /**
-   * @type {String}
-   */
-  icon
-  /**
-   * @type {String}
-   */
-  pageLink
-
-  /**
    * InductionButton
    * @param {String} title
    * @param {String} description

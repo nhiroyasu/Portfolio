@@ -19,12 +19,12 @@ import SnsButton from '@/components/ui/SnsButton'
 import { snsData } from '@/scripts/static/sns-data'
 
 export default {
-  name: 'sns',
+  name: 'Sns',
   components: {
     SnsButton,
     AppMenu,
   },
-  data: function () {
+  data() {
     return {
       snsData,
     }
