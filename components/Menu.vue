@@ -4,25 +4,25 @@
       class='menu-container__hidden'
       :class='{ visible_on : !menu_flag, visible_off: menu_flag }'
     >
-      <div class='menu-item' @click='menu_flag = !menu_flag'>
+      <div class='menu-item' @click='switchMenu'>
         <img v-show='menu_flag === false' src='~assets/menu.svg' alt='menu icon'>
         <img v-show='menu_flag === true' src='~assets/close.svg' alt='menu icon'>
       </div>
     </div>
-    <div class='menu-container__open' :class='{ visible_on : menu_flag, visible_off: !menu_flag }'>
-      <div class='rounded-pill menu-item selection' @click='menu_flag = !menu_flag'>
+    <div class='menu-container__open' :class='{ visible_on : menu_flag, visible_off: !menu_flag, hidden: is_hidden }'>
+      <div class='rounded-pill menu-item selection' @click='switchMenu'>
         <nuxt-link to='/'>
           <i class='fas fa-home mr-2'></i>
           <span>HOME</span>
         </nuxt-link>
       </div>
-      <div class='rounded-pill menu-item selection' @click='menu_flag = !menu_flag'>
+      <div class='rounded-pill menu-item selection' @click='switchMenu'>
         <nuxt-link class='nuxt-link' to='/portfolio_list'>
           <i class='fas fa-file-code mr-2'></i>
           <span>PORTFOLIO</span>
         </nuxt-link>
       </div>
-      <div class='rounded-pill menu-item selection' @click='menu_flag = !menu_flag'>
+      <div class='rounded-pill menu-item selection' @click='switchMenu'>
         <nuxt-link to='/sns_list'>
           <i class='fas fa-comments mr-2'></i>SNS
         </nuxt-link>
@@ -42,8 +42,35 @@ export default {
   data() {
     return {
       menu_flag: false,
+      is_hidden: true,
     };
   },
+  methods: {
+    switchMenu() {
+      if (this.menu_flag) {
+        this.closeMenu();
+      } else {
+        this.openMenu();
+      }
+    },
+    openMenu() {
+      this.is_hidden = false;
+      setTimeout(() => {
+        this.menu_flag = true;
+      }, 100)
+    },
+    closeMenu() {
+      this.setMenuStyle(false, () => {
+        this.is_hidden = true;
+      })
+    },
+    setMenuStyle(flag, callback) {
+      this.menu_flag = flag;
+      setTimeout(() => {
+        callback();
+      }, 600)
+    }
+  }
 };
 </script>
 
@@ -141,5 +168,9 @@ $sp: 544px; // スマホ
       opacity: 0;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
 </style>
