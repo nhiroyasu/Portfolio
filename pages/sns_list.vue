@@ -8,16 +8,16 @@
         </a>
       </div>
       <div class="col-6 col-md-4 main-container__contents__item github">
-        <a href="https://github.com/cyan-0fbcf9" target="_blank">
+        <a href="https://github.com/nhiroyasu" target="_blank">
           <i class="fab fa-github"></i>
           <br />Github
         </a>
       </div>
       <div class="col-6 col-md-4 main-container__contents__item qiita">
-        <a href="https://qiita.com/cyan" target="_blank">Qiita</a>
+        <a href="https://qiita.com/nhiroyasu" target="_blank">Qiita</a>
       </div>
       <div class="col-6 col-md-4 main-container__contents__item codepen">
-        <a href="https://codepen.io/cyan-0fbcf9" target="_blank">
+        <a href="https://codepen.io/nhiroyasu" target="_blank">
           <i class="fab fa-codepen"></i>
           <br />CodePen
         </a>
