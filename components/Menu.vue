@@ -101,12 +101,14 @@ $sp: 544px; // スマホ
   }
 
   .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px 0;
     width: 60px;
     height: 60px;
     background-color: rgba(45, 52, 54, 0.9);
     border-radius: 50%;
-    font-size: 2rem;
     text-align: center;
     cursor: pointer;
 
