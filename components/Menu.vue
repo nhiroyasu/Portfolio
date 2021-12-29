@@ -10,19 +10,19 @@
       </div>
     </div>
     <div class='menu-container__open' :class='{ visible_on : menu_flag, visible_off: !menu_flag, hidden: is_hidden }'>
-      <div class='rounded-pill menu-item selection' @click='switchMenu'>
+      <div class='menu-item selection' @click='switchMenu'>
         <nuxt-link to='/'>
           <i class='fas fa-home mr-2'></i>
           <span>HOME</span>
         </nuxt-link>
       </div>
-      <div class='rounded-pill menu-item selection' @click='switchMenu'>
+      <div class='menu-item selection' @click='switchMenu'>
         <nuxt-link class='nuxt-link' to='/portfolio_list'>
           <i class='fas fa-file-code mr-2'></i>
           <span>PORTFOLIO</span>
         </nuxt-link>
       </div>
-      <div class='rounded-pill menu-item selection' @click='switchMenu'>
+      <div class='menu-item selection' @click='switchMenu'>
         <nuxt-link to='/sns_list'>
           <i class='fas fa-comments mr-2'></i>SNS
         </nuxt-link>
@@ -107,10 +107,11 @@ $sp: 544px; // スマホ
     margin: 10px 0;
     width: 60px;
     height: 60px;
-    background-color: rgba(45, 52, 54, 0.9);
-    border-radius: 50%;
+    background-color: rgba(45, 52, 54, 1.0);
+    border-radius: 15px;
     text-align: center;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     a {
       color: #ffffff;
@@ -118,6 +119,10 @@ $sp: 544px; // スマホ
       padding: 0 30px;
       width: 100%;
       text-decoration: none;
+    }
+
+    &:hover {
+      box-shadow: 5px 5px 0px rgba(34, 46, 58, 0.5);
     }
   }
 
