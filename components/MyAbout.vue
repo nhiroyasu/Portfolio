@@ -4,7 +4,7 @@
       <div class="about-container__top-icon col-12 mb-md-4 mb-3">
         <img
           class="rounded-circle"
-          src="~assets/my-preview.png"
+          src="~assets/me.jpg"
           alt="CYAN"
           width="200px"
         />
@@ -16,19 +16,19 @@
             <h4 class="rounded-pill">
               <i class="fas fa-user px-2"></i>NAME
             </h4>
-            <p>Hiroyasu</p>
+            <p>新妻広康</p>
           </div>
           <div class="about-container__item about-container__age text-center col-12">
             <h4 class="rounded-pill">
               <i class="fas fa-smile px-2"></i>AGE
             </h4>
-            <p>19</p>
+            <p>21</p>
           </div>
           <div class="about-container__item about-container__address text-center col-12">
             <h4 class="rounded-pill">
               <i class="fas fa-graduation-cap px-2"></i>PROFESSION
             </h4>
-            <p>高専生</p>
+            <p>iOSエンジニア</p>
           </div>
         </div>
         <!-- <div class="about-container__gap col-md-2 col-12"></div> -->
@@ -38,24 +38,8 @@
               <i class="fas fa-comment px-1"></i>
               COMMENT
             </h4>
-            <div class="px-3">
-              <p>
-                こんにちは！ポートフォリオサイトを見てくださりありがとうございます。
-                <br />
-              </p>
-              <p>
-                ITエンジニアを目指して日々勉強している者です。
-                <br />ネット上では
-                <i>Cyan</i>と名乗って活動しているので、SNS等で交流してくれるとうれしいです。
-              </p>
-              <p>
-                主に
-                <i>Swift</i> や
-                <i>Kotlin</i>で、アプリ開発の勉強しています。
-                最近は、
-                <i>Vue.js</i> や
-                <i>Nuxt.js</i> を使ってWeb系の分野にも手を出しています。
-              </p>
+            <div class="px-3 text-center">
+                わさびドレッシングうめぇ
             </div>
           </div>
         </div>
@@ -100,6 +84,7 @@ $sp: 544px; // スマホ
 
   &__contents {
     margin: 30px 0px;
+    width: 100%;
     // padding-top: 100px; // for image
   }
 

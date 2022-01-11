@@ -7,8 +7,7 @@
       <img :src="lang.icon" alt="icon" />
     </div>
     <div class="level-field">
-      <small>Level</small>
-      <b-icon-star-fill v-for="(value, index) in lang.level" :key="index"></b-icon-star-fill>
+      <small>{{ convertLevel(lang.level) }}</small>
     </div>
   </div>
 </template>
@@ -25,6 +24,23 @@ export default {
     lang: {
       type: ProgramingLanguage,
       default: {},
+    },
+  },
+  methods: {
+    convertLevel(level) {
+      switch (level) {
+        case 1:
+          return '勉強中';
+        case 2:
+          return '忘れた';
+        case 3:
+          return 'たまに使う';
+        case 4:
+          return '結構使う';
+        case 5:
+          return '大好き！';
+      }
+      return '?';
     },
   },
 };

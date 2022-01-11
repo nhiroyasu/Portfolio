@@ -7,8 +7,7 @@
       <img :src="framework.icon" alt="icon" />
     </div>
     <div class="level-field">
-      <small>Level</small>
-      <b-icon-star-fill v-for="(value, index) in framework.level" :key="index"></b-icon-star-fill>
+      <small>{{ convertLevel(framework.level) }}</small>
     </div>
   </div>
 </template>
@@ -25,6 +24,23 @@ export default {
     framework: {
       type: Framework,
       default: {},
+    },
+  },
+  methods: {
+    convertLevel(level) {
+      switch (level) {
+        case 1:
+          return 'ほぼ覚えてない';
+        case 2:
+          return 'しばらく使ってない';
+        case 3:
+          return 'たまに使う';
+        case 4:
+          return '結構使う';
+        case 5:
+          return '大好き！';
+      }
+      return "?"
     },
   },
 };
@@ -54,7 +70,8 @@ export default {
     }
   }
 
-  .level-field {    small {
+  .level-field {
+    small {
       padding-right: 8px;
     }
 
