@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Hiroyasuのポートフォリオサイト",
+    title: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -48,10 +48,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    'swiper/dist/css/swiper.css',
-    '~/assets/styles/scss/transition.scss'
-  ],
+  css: ['swiper/dist/css/swiper.css', '~/assets/styles/scss/transition.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -59,9 +56,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/style-resources',
-  ],
+  buildModules: ['@nuxtjs/style-resources'],
   /*
    ** Nuxt.js modules
    */
@@ -104,11 +99,8 @@ export default {
   styleResources: {
     // your settings here
     sass: [],
-    scss: [
-      './assets/styles/scss/color.scss',
-      './assets/styles/scss/variable.scss',
-    ],
+    scss: ['./assets/styles/scss/color.scss', './assets/styles/scss/variable.scss'],
     less: [],
-    stylus: []
+    stylus: [],
   },
 };

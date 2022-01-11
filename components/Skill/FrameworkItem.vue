@@ -30,7 +30,7 @@ export default {
     convertLevel(level) {
       switch (level) {
         case 1:
-          return 'ほぼ覚えてない';
+          return '勉強中';
         case 2:
           return 'しばらく使ってない';
         case 3:
