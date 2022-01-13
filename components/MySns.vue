@@ -20,7 +20,7 @@
           class="
         sns-container__to_link__item github"
         >
-          <a href="https://github.com/namid11" target="_blank">
+          <a href="https://github.com/nhiroyasu" target="_blank">
             <i class="fab fa-github"></i>
             Github
           </a>
@@ -30,7 +30,7 @@
           class="
         sns-container__to_link__item qiita"
         >
-          <a href="https://qiita.com/cyan" target="_blank">
+          <a href="https://qiita.com/nhiroyasu" target="_blank">
             Qiita
           </a>
         </div>
