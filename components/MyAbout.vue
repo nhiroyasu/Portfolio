@@ -39,7 +39,7 @@
               COMMENT
             </h4>
             <div class="px-3 text-center">
-                わさびドレッシングうめぇ
+              ものづくりを極めたい
             </div>
           </div>
         </div>
