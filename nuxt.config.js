@@ -77,8 +77,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
-    vendor: ['vue-awesome-swiper'],
     babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
       presets({ isServer }) {
         return [
           [
