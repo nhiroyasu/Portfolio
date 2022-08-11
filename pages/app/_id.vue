@@ -20,8 +20,7 @@
           <google-play-button v-if="data.googlePlayLink !== null" :google-play-link="data.googlePlayLink"
             class="google-play-btn" />
           <github-button v-if="data.githubLink !== null" :github-link="data.githubLink" />
-          <icon-text-button title="ダウンロード" :icon="require('@/assets/icons/commons/download.svg')" link="" />
-          <icon-text-button v-if="data.webAppLink !== null" title="アプリケーションサイト"
+          <icon-text-button v-if="data.webAppLink !== null" title="Application"
             :icon="require('@/assets/icons/commons/open_in_new.svg')" :link="data.webAppLink" />
         </div>
       </div>

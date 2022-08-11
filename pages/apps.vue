@@ -3,10 +3,8 @@
     <Background />
     <div class="contents-wrapper">
       <app-menu title="APPLICATION" />
-      <div class="contents-wrapper">
-        <div class="product-list responsive-box">
-          <product-button v-for="data in $store.getters['portfolio/data']" :key="data.id" :data="data" />
-        </div>
+      <div class="product-list responsive-box">
+        <product-button v-for="data in $store.getters['portfolio/data']" :key="data.id" :data="data" />
       </div>
     </div>
   </div>

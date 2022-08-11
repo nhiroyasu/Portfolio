@@ -21,5 +21,9 @@ export const snsData = [
     require('@/assets/logos/codepen/codepen-logo.png'),
     'https://codepen.io/nhiroyasu'
   ),
-  new SnsButton('Email: nhiro1109pri@gmail.com', require('@/assets/logos/email/email.svg'), ''),
+  new SnsButton(
+    'Email: nhiro1109pri@gmail.com',
+    require('@/assets/logos/email/email.svg'),
+    'mailto:nhiro1109pri@gmail.com'
+  ),
 ]

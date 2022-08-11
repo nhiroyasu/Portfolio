@@ -40,11 +40,11 @@ export default {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  padding: $menu-height 32px 0px 32px;
 }
 
 .sns-btn-wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  padding: $menu-height 32px 0px 32px;
 }
 </style>

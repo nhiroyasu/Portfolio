@@ -13,7 +13,6 @@ export default {
         name: 'description',
         content: '新妻広康 (Niitsuma Hiroyasu) のポートフォリオサイト',
       },
-      { name: 'theme-color', content: '#0fbcf9' },
       { name: 'twitter:card', content: 'summary_large_image' },
       {
         name: 'og:title',
