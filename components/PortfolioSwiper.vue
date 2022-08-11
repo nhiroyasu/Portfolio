@@ -80,30 +80,30 @@ $sp: 544px; // スマホ（Bootstrap - sm）
       transform: rotateX(0deg) rotateY(0deg);
     }
 
-    /deep/ .swiper-button-prev {
+    :deep() .swiper-button-prev {
       background: url('~assets/arrow-left.svg') no-repeat center center / contain;
     }
-    /deep/ .swiper-button-next {
+    :deep() .swiper-button-next {
       background: url('~assets/arrow-right.svg') no-repeat center center / contain;
     }
 
     @include tab {
-      /deep/ .swiper-button-prev {
+      :deep() .swiper-button-prev {
         background: url('~assets/arrow-left.svg') no-repeat center center / contain;
         display: none;
       }
-      /deep/ .swiper-button-next {
+      :deep() .swiper-button-next {
         background: url('~assets/arrow-right.svg') no-repeat center center / contain;
         display: none;
       }
     }
 
     @include sp {
-      /deep/ .swiper-button-prev {
+      :deep() .swiper-button-prev {
         background: url('~assets/arrow-left.svg') no-repeat center center / contain;
         display: none;
       }
-      /deep/ .swiper-button-next {
+      :deep() .swiper-button-next {
         background: url('~assets/arrow-right.svg') no-repeat center center / contain;
         display: none;
       }
@@ -111,7 +111,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
   }
 
   &__pagination {
-    /deep/ .swiper-pagination-bullet {
+    :deep() .swiper-pagination-bullet {
       width: 50px;
       height: 8px;
       margin: 10px;

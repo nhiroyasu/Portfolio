@@ -56,7 +56,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/style-resources'],
+  buildModules: ['@nuxtjs/style-resources', '@nuxt/postcss8'],
   /*
    ** Nuxt.js modules
    */

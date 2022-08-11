@@ -257,7 +257,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     margin: 20px 0px;
 
     &__web-app {
-      /deep/ #target {
+      :deep() #target {
         background-color: #a930ff;
         &::before,
         &::after {
@@ -267,7 +267,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
 
     &__google-play {
-      /deep/ #target {
+      :deep() #target {
         background-color: #4285f4;
         &::before,
         &::after {
@@ -277,7 +277,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
 
     &__github {
-      /deep/ #target {
+      :deep() #target {
         background-color: #1e272e;
         &::before,
         &::after {
@@ -287,7 +287,7 @@ $sp: 544px; // スマホ（Bootstrap - sm）
     }
 
     &__event {
-      /deep/ #target {
+      :deep() #target {
         background-color: #ff6736;
         &::before,
         &::after {
