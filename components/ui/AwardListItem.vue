@@ -49,17 +49,17 @@ $list-item-between-size: 4px;
 
   .contest {
     & > a {
-      color: $secondary-dark-color;
+      color: $font-light-color;
       text-decoration: underline;
     }
 
     & > a:link {
-      color: $secondary-dark-color;
+      color: $font-light-color;
       text-decoration: underline;
     }
 
     & > a:visited {
-      color: $secondary-dark-color;
+      color: $font-light-color;
       text-decoration: underline;
     }
   }

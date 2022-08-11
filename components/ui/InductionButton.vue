@@ -1,27 +1,25 @@
 <template>
   <div class="component-root clickable non-selectable" @click="onClick">
-    <component-frame>
-      <div class="content">
+    <div class="content">
+      <div class="img-wrapper">
         <img class="btn-icon img-block" :src="data.icon" alt="icon" />
-        <div class="title">
-          {{ data.title }}
-        </div>
-        <div class="description">
-          {{ data.description }}
-        </div>
       </div>
-    </component-frame>
+      <div class="title">
+        {{ data.title }}
+      </div>
+      <div class="description">
+        {{ data.description }}
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import ComponentFrame from '@/components/commons/ComponentFrame'
 import InductionButton from '@/scripts/types/componentprops/InductionButton'
 
 export default {
   name: 'InductionButton',
   components: {
-    ComponentFrame,
   },
   props: {
     data: InductionButton,
@@ -37,38 +35,52 @@ export default {
 <style lang="scss" scoped>
 $title-height: 26px;
 $description-height: 16px;
-$img-size: $title-height + $description-height;
+$img-size: 64px;
 
 .content {
   display: grid;
   grid-template-columns: $img-size auto;
-  grid-template-rows: $title-height $description-height;
+  // grid-template-rows: $title-height $description-height;
+  gap: 4px $mg-for-item;
   padding: 8px;
 
-  img.btn-icon {
+  .img-wrapper {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    margin: 2px;
-  }
+    align-self: center;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 68px;
+    height: 68px;
+    border-radius: 15px;
+    display: grid;
+    place-content: center center;
 
-  .title,
-  .description {
-    margin-left: $mg-for-item;
+
+    img.btn-icon {
+      width: 42px;
+      height: 42px;
+    }
   }
 
   .title {
-    color: $font-dark-color;
+    color: $font-light-color;
+    text-shadow: $text-shadow;
     font-size: 1.5em;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     line-height: $title-height;
+    align-self: flex-end;
   }
 
   .description {
-    color: $font-gray-color;
+    color: $font-light-color;
+    text-shadow: $text-shadow;
     font-size: 0.8em;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    align-self: flex-start;
   }
 }
 </style>

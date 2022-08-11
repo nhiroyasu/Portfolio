@@ -26,6 +26,6 @@ export default {
 <style lang="scss" scoped>
 .icon {
   border-radius: 20%;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 5px 3px rgba(0,0,0,0.3));
 }
 </style>

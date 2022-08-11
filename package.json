@@ -15,11 +15,11 @@
     "prettier-check": "prettier --check \"**/*.{js,jsx,json,vue}\""
   },
   "dependencies": {
-    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.2.1",
     "aos": "^2.3.4",
     "firebase": "^7.24.0",
     "node-sass": "^4.14.1",
-    "nuxt": "^2.15.4",
+    "nuxt": "^2.15.8",
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {

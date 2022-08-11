@@ -6,9 +6,6 @@
       alt="menu icon"
       @click="onClickedMenuBtn"
     />
-    <div class="menu-title non-selectable">
-      {{ title }}
-    </div>
   </div>
 </template>
 
@@ -29,16 +26,14 @@ export default {
 <style lang="scss" scoped>
 .component-root {
   align-items: center;
-  background: linear-gradient(
-      121deg,
-      rgba(37, 60, 128, 0.8) 0%,
-      rgba(66, 106, 224, 0.8) 57%,
-      rgba(15, 188, 249, 0.8) 100%
-    ),
-    url('@/assets/logos/cyan/logo.svg') center center/80% no-repeat;
   color: $font-light-color;
   display: flex;
+  position: fixed;
   height: $menu-icon-size;
+  width: 100vw;
+  box-sizing: content-box;
+  z-index: 100;
+  background-color: rgba($color: #000000, $alpha: 0.36);
 
   .menu-btn {
     height: $menu-icon-size;

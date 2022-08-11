@@ -1,6 +1,6 @@
 <template>
   <div class="component-root">
-    <v-bar-style-list-item-frame :reverse-layout="true">
+    <v-bar-style-list-item-frame :reverse-layout="false">
       <div class="content">
         <div class="duration">
           {{ data.duration.toStringForDisplay() }}

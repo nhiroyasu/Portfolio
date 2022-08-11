@@ -1,15 +1,13 @@
 <template>
   <div class="page-root">
-    <div class="close-btn clickable move-to-top" @click="routeBack">
-      <img src="@/assets/icons/commons/close.svg" alt="close-btn" />
-    </div>
-    <div class="content">
-      <menu-item
-        class="menu-item"
-        v-for="(data, index) in menuItemData"
-        :key="index"
-        :data="data"
-      />
+    <Background />
+    <div class="contents-wrapper">
+      <div class="close-btn clickable move-to-top" @click="routeBack">
+        <img src="@/assets/icons/commons/close.svg" alt="close-btn" />
+      </div>
+      <div class="content">
+        <menu-item class="menu-item" v-for="(data, index) in menuItemData" :key="index" :data="data" />
+      </div>
     </div>
   </div>
 </template>
@@ -17,11 +15,13 @@
 <script>
 import MenuItem from '@/components/ui/MenuItem'
 import { menuItemData } from '~/scripts/static/menu-item-data'
+import Background from '~/components/ui/Background.vue'
 
 export default {
   name: 'menu',
   components: {
     MenuItem,
+    Background
   },
   data: function () {
     return {
@@ -40,8 +40,17 @@ export default {
 * {
   color: $font-light-color;
 }
+
 .page-root {
   background-color: $primary-color;
+  height: 100vh;
+  width: 100vw;
+}
+
+.contents-wrapper {
+  background: $background-overwrap-color;
+  box-sizing: border-box;
+  overflow: hidden;
   height: 100vh;
   width: 100vw;
 }
@@ -50,6 +59,7 @@ export default {
   margin: $mg-for-item;
   padding: $pd-sm;
   position: absolute;
+
   img {
     height: $icon-default-size;
     width: $icon-default-size;

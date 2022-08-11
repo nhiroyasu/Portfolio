@@ -1,21 +1,19 @@
 <template>
   <div class="component-root clickable" @click="onClick">
-    <component-frame>
-      <div class="content">
-        <div class="icon-wrapper">
-          <mac-like-icon :img="data.imgLink" size="60" />
-        </div>
-        <div class="date">
-          {{ data.dateString }}
-        </div>
-        <div class="title">
-          {{ data.title }}
-        </div>
-        <div class="detail">
-          {{ data.detail }}
-        </div>
+    <div class="content">
+      <div class="icon-wrapper">
+        <mac-like-icon :img="data.imgLink" size="60" />
       </div>
-    </component-frame>
+      <div class="date">
+        {{ data.dateString }}
+      </div>
+      <div class="title">
+        {{ data.title }}
+      </div>
+      <div class="detail">
+        {{ data.detail }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -71,7 +69,7 @@ export default {
   }
 
   .detail {
-    color: $font-gray-color;
+    color: $font-light-color;
     display: -webkit-box;
     font-size: 0.8em;
     grid-area: detail;

@@ -1,3 +1,5 @@
+@import "./responsive.scss";
+
 .clickable {
   cursor: pointer;
 }
@@ -20,4 +22,13 @@ img.img-block {
 .btn-frame {
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.responsive-box {
+  width: 100vw;
+
+  @include tablet_above {
+    margin: auto;
+    width: 640px;
+  }
 }

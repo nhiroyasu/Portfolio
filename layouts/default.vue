@@ -22,6 +22,7 @@ export default {}
 }
 
 html {
-  color: $font-dark-color;
+  color: $font-light-color;
+  text-shadow: $text-shadow;
 }
 </style>

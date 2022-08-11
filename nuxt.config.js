@@ -45,7 +45,6 @@ export default {
    ** Global CSS
    */
   css: [
-    'swiper/dist/css/swiper.css',
     '~/assets/styles/scss/transition.scss',
     '~/assets/styles/css/imports.css',
     '~/assets/styles/css/global.css',
@@ -95,6 +94,7 @@ export default {
       './assets/styles/scss/color.scss',
       './assets/styles/scss/variable.scss',
       './assets/styles/scss/classes.scss',
+      './assets/styles/scss/responsive.scss',
     ],
     less: [],
     stylus: [],

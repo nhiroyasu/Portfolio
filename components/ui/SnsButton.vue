@@ -1,6 +1,8 @@
 <template>
   <div class="component-root clickable" @click="onClick">
-    <img class="btn-icon img-block" :src="data.icon" alt="icon" />
+    <div class="img-wrapper">
+      <img class="btn-icon img-block" :src="data.icon" alt="icon" />
+    </div>
     <div class="name">
       {{ data.name }}
     </div>
@@ -25,18 +27,28 @@ export default {
 
 <style lang="scss" scoped>
 .component-root {
-  padding: $mg-for-content 36px 0 36px;
+  display: flex;
+  align-items: center;
+  padding: $mg-for-item;
+}
+
+.img-wrapper {
+  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  padding: 8px;
+  margin-right: $mg-for-item;
 }
 
 img.btn-icon {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  width: 100%;
 }
 
 .name {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.2em;
-  margin: $mg-for-item;
-  text-align: center;
+  font-size: 1.1em;
 }
 </style>

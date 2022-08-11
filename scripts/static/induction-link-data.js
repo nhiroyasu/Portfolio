@@ -6,13 +6,13 @@ import InductionButton from '@/scripts/types/componentprops/InductionButton'
  */
 export const inductionLinkData = [
   new InductionButton(
-    'ABOUT',
+    'About',
     '"HIROYASU"について',
     require('@/assets/logos/cyan/logo.svg'),
     '/about'
   ),
   new InductionButton(
-    'APPLICATION',
+    'Applications',
     '開発したアプリ',
     require('@/assets/icons/colors/apps.svg'),
     '/apps'
