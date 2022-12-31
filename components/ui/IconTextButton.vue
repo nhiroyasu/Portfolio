@@ -28,9 +28,9 @@ export default {
   align-items: center;
   background: linear-gradient(
       121deg,
-      rgba(37, 60, 128, 0.95) 0%,
-      rgba(66, 106, 224, 0.95) 57%,
-      rgba(15, 188, 249, 0.95) 100%
+      rgba(37, 60, 128, 0.80) 0%,
+      rgba(66, 106, 224, 0.80) 57%,
+      rgba(15, 188, 249, 0.80) 100%
     ),
     url('@/assets/logos/cyan/logo.svg') center center/80% no-repeat;
   display: flex;
