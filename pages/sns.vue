@@ -16,7 +16,7 @@
 import AppMenu from '@/components/layouts/Menu'
 import SnsButton from '@/components/ui/SnsButton'
 import { snsData } from '@/scripts/static/sns-data'
-import Background from '~/components/ui/Background.vue'
+import Background from '@/components/ui/Background.vue'
 
 export default {
   name: 'sns',

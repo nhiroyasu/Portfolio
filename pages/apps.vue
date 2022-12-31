@@ -13,7 +13,7 @@
 <script>
 import AppMenu from '@/components/layouts/Menu'
 import ProductButton from '@/components/ui/ProductButton'
-import Background from '~/components/ui/Background.vue'
+import Background from '@/components/ui/Background.vue'
 
 export default {
   name: 'apps',

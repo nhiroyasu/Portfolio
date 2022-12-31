@@ -14,8 +14,8 @@
 
 <script>
 import MenuItem from '@/components/ui/MenuItem'
-import { menuItemData } from '~/scripts/static/menu-item-data'
-import Background from '~/components/ui/Background.vue'
+import { menuItemData } from '@/scripts/static/menu-item-data'
+import Background from '@/components/ui/Background.vue'
 
 export default {
   name: 'menu',
